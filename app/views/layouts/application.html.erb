@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Truffe</title>
+  <title><% if @page_title %><%= h(@page_title) %> | <% end %>Truffe</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<div id="wrapper">
-<%= yield %>
+<div id="wrapper" class="l">
+	<header>
+	<%= render :partial => 'shared/nav' %>
+	</header>
+
+	<%= yield %>
+
+	<footer>
+	<%= link_to 'goto login#index', login_index_path %>
+	</footer>
 </div>
 
 </body>

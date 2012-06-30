@@ -25,6 +25,8 @@ Truffe::Application.routes.draw do
   #     end
   #   end
 
+  resources :login, :collection => { :index => :get, :logout => :get }
+
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
