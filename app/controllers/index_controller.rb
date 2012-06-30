@@ -1,9 +1,13 @@
 class IndexController < ApplicationController
-	USERS = { "lifo" => "world" }
+	USERS = { "solo" => "monk" }
 
 	before_filter :authenticate
 
 	def index
+	end
+
+	def profile
+#		@introduction = BasicData.where('id = 1').first
 	end
 
 	private
