@@ -1,0 +1,2 @@
+class DiscographiesController < ApplicationController
+end
