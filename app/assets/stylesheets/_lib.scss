@@ -1,0 +1,8 @@
+$themecolor1:rgba(250,10,150,0.5);
+@mixin bg_img($file){
+  background:{
+    image:url($file);
+    repeat:no-repeat;
+    size:100% 100%;
+  }
+}

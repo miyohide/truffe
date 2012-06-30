@@ -1,0 +1,73 @@
+/*
+  *= require_self
+  *= require_tree .
+*/
+
+@charset "utf-8";
+@import 'reset';
+@import 'lib';
+
+body{
+	background-image:url('fabric_bg.jpg');
+}
+#wrapper{
+	margin:0px auto;
+	width:800px;
+	min-height:960px;
+	background-color:rgba(255,255,255,0.3);
+}
+#wrapper.l{ width:800px; }
+#wrapper.s{ width:640px; }
+
+header{
+	display:-webkit-box;
+	-webkit-box-align:center;
+	min-height:50px;
+}
+ul#nav{
+	li{
+		display:-webkit-box;
+		-webkit-box-align:center;
+		-webkit-box-pack:center;
+		float:left;
+		margin-right:5px;
+		width:95px;
+		height:30px;
+		background-color:rgba(255,255,255,0.5);
+		border:2px solid rgba(0,0,0,0.5);
+		border-radius:10px;
+		span{ font-size:9px; vertical-align:middle; }
+	}
+	li:hover{ background-color:$themecolor1 }
+}
+
+
+
+
+
+
+
+
+
+
+// Media Query の例
+
+/* Media Query
+----------------------------------- */ 
+@media screen and (max-width: 950px) {
+	#containerCover {
+		margin: 125px auto 50px;
+		padding-top: 0;
+	}
+	#containerInnr {
+		padding: 0 30px;
+	}
+}
+@media screen and (max-width: 480px) {
+	#containerCover {
+		margin: 170px auto 50px;
+	}
+	#containerInnr {
+		padding: 0 5px;
+	}
+}
