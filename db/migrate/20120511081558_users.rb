@@ -5,7 +5,7 @@ class Users < ActiveRecord::Migration
 			t.string :hashed_password, :null => false
 			t.string :name
 			t.date :birthday
-			t.boolean :administrator, :default => 0
+			t.boolean :administrator, :default => false
 			t.timestamps
 		end
   end
