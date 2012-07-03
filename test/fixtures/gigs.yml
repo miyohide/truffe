@@ -1,0 +1,30 @@
+gigs1:
+  id: 1
+  gig_date: 2012-08-10 00:00:00
+  gig_date_end: 2012-08-10 00:00:00
+  gig_title: 唐沢寧Duo
+  group: 
+  location: 1
+  charge: 0
+  players: 
+  comment: 
+gigs2:
+  id: 2
+  gig_date: 2012-10-01 00:00:00
+  gig_date_end: 2012-10-01 00:00:00
+  gig_title: 横山さん
+  group: 
+  location: 2
+  charge: 2500
+  players: 横山さん(ds)大塚義将(b)
+  comment: 
+gigs3:
+  id: 3
+  gig_date: 2012-06-05 00:00:00
+  gig_date_end: 2012-06-13 00:00:00
+  gig_title: 椎名豊トリオ
+  group: 
+  location: 1
+  charge: 0
+  players: 椎名豊(p)広瀬じゅんじ(ds)大塚義将(b)
+  comment: 北海道ツアーです。いろいろなお店でやらせてもらいます。詳細はまだ未定です。

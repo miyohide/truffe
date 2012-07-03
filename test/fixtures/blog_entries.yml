@@ -1,0 +1,21 @@
+blog_entries1:
+  id: 1
+  user_id: 1
+  blog_date: 2012-05-16
+  heading: CD発売
+  body: Sideman で参加させていただいているCDが発売になりました。よろしくお願いします。
+  note: 
+blog_entries2:
+  id: 2
+  user_id: 1
+  blog_date: 2012-05-20
+  heading: バースデーライブ
+  body: 今日は△△さんのバースデーライブでした。
+  note:  
+blog_entries3:
+  id: 3
+  user_id: 1
+  blog_date: 2012-06-02
+  heading: ツアー出発です
+  body: 今日から○○さんのツアー開始です！予定詳細決まりましたので、書いておきますね。
+  note: 
