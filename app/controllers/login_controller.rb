@@ -1,9 +1,5 @@
 # -*- encoding: utf-8 -*-
 class LoginController < ApplicationController
-  verify :method => :post,
-         :only => [ :login ],
-		 :redirect_to => 'root_path'
-
   def login
     email = params[:email]
     password = params[:password]
