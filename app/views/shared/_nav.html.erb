@@ -1,18 +1,18 @@
 <% menu_items = [
 { :link => { :controller => '/index', :action => 'profile' }, :name => 'Profile' },
 { :link => { :controller => '/gigs', :action => 'index' }, :name => 'Gigs' },
-{ :link => { :controller => '/discography', :action => 'index' }, :name => 'Discography' },
+{ :link => { :controller => '/discographies', :action => 'index' }, :name => 'Discography' },
 { :link => { :controller => '/blog_entries', :action => 'index' }, :name => 'Blog' },
 { :link => { :controller => '/index', :action => 'photos' }, :name => 'Photos', :disabled => true },
 { :link => { :controller => '/index', :action => 'contacts' }, :name => 'Contacts' },
-{ :link => { :controller => '/index', :action => 'links' }, :name => 'Links' }
+{ :link => { :controller => '/links', :action => 'index' }, :name => 'Links' }
 ]
 if @current_user and @current_user.administrator?
   menu_items << { :link => { :controller => '/admin/index', :action => 'index' }, :name => '管理ページ' }
 end %>
 
 <ul id="nav">
-	<% menu_items.each_with_index do |item, index| %>
-		<%= menu_link_to item %>
-	<% end %>
+  <% menu_items.each_with_index do |item, index| %>
+    <%= menu_link_to item %>
+  <% end %>
 </ul>

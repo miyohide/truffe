@@ -32,6 +32,12 @@ Truffe::Application.routes.draw do
     end
   end
 
+  resources :users
+  resources :gigs
+  resources :discographies
+  resources :blog_entries
+  resources :links
+
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

@@ -1,20 +1,23 @@
 class IndexController < ApplicationController
-	USERS = { "solo" => "monk" }
+  USERS = { "solo" => "monk" }
 
-	before_filter :authenticate
+  before_filter :authenticate
 
-	def index
-	end
+  def index
+  end
 
-	def profile
-#		@introduction = BasicData.where('id = 1').first
-	end
+  def profile
+#    @introduction = BasicData.where('id = 1').first
+  end
 
-	private
+  private
 
-	def authenticate
-		authenticate_or_request_with_http_digest do |username|
-			USERS[username]
-		end
-	end
+  def contacts
+  end
+
+  def authenticate
+    authenticate_or_request_with_http_digest do |username|
+      USERS[username]
+    end
+  end
 end
