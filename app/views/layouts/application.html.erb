@@ -9,15 +9,18 @@
 <body>
 
 <div id="wrapper" class="l">
-	<header>
-	<%= render :partial => 'shared/nav' %>
-	</header>
+  <header>
+    <h1 id="title"><%= link_to '', root_path %></h1>
+    <%= render :partial => 'shared/nav' %>
+  </header>
 
-	<%= yield %>
+  <div id="container">
+    <%= yield %>
+  </div>
 
-	<footer>
-	<%= link_to 'goto login#index', login_index_path %>
-	</footer>
+  <footer>
+    <%= link_to 'goto login#index', login_index_path %>
+  </footer>
 </div>
 
 </body>

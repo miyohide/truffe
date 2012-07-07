@@ -19,26 +19,35 @@ body{
 
 header{
   display:-webkit-box;
+	position:fixed;
+	z-index:10;
   -webkit-box-align:center;
   min-height:50px;
-}
-ul#nav{
-  li{
-    display:-webkit-box;
-    -webkit-box-align:center;
-    -webkit-box-pack:center;
-    float:left;
-    margin-right:5px;
-    width:95px;
-    height:30px;
-    background-color:rgba(255,255,255,0.5);
-    border:2px solid rgba(0,0,0,0.5);
-    border-radius:10px;
-    span{ font-size:9px; vertical-align:middle; }
+	padding-left:10px;
+  #title{
+  	display:block;
   }
-  li:hover{ background-color:$themecolor1 }
+  ul#nav{
+    li{
+      display:-webkit-box;
+      -webkit-box-align:center;
+      -webkit-box-pack:center;
+      float:left;
+      margin-right:5px;
+      width:95px;
+      height:30px;
+      background-color:rgba(255,255,255,0.5);
+      border:2px solid rgba(0,0,0,0.5);
+      border-radius:10px;
+      &:hover{ background-color:$themecolor1 }
+      span{ font-size:9px; vertical-align:middle; }
+    }
+  }
 }
 
+#container{
+  padding-top:50px;
+}
 
 
 
