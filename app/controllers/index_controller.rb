@@ -7,7 +7,7 @@ class IndexController < ApplicationController
   end
 
   def profile
-#    @introduction = BasicData.where('id = 1').first
+    @basic_data = BasicData.where('id = 1').first
   end
 
   private

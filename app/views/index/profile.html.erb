@@ -4,6 +4,6 @@
 
 <%= image_tag 'profile.jpg', :alt => 'profile_image' %>
 
-<% if @introduction %>
-	<div><%= @introduction.profile %></div>
+<% if @basic_data %>
+	<div><%= raw(@basic_data.profile) %></div>
 <% end %>
