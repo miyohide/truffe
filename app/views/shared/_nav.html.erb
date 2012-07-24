@@ -1,11 +1,12 @@
 <% menu_items = [
+{ :link => { :controller => '/index', :action => 'index' }, :name => 'Home' },
 { :link => { :controller => '/index', :action => 'profile' }, :name => 'Profile' },
 { :link => { :controller => '/gigs', :action => 'index' }, :name => 'Gigs' },
 { :link => { :controller => '/discographies', :action => 'index' }, :name => 'Discography' },
-{ :link => { :controller => '/blog_entries', :action => 'index' }, :name => 'Blog' },
+#{ :link => { :controller => '/blog_entries', :action => 'index' }, :name => 'Blog' },
 { :link => { :controller => '/index', :action => 'photos' }, :name => 'Photos', :disabled => true },
-{ :link => { :controller => '/index', :action => 'contacts' }, :name => 'Contacts' },
-{ :link => { :controller => '/links', :action => 'index' }, :name => 'Links' }
+{ :link => { :controller => '/index', :action => 'contacts' }, :name => 'Contacts' }
+#{ :link => { :controller => '/links', :action => 'index' }, :name => 'Links' }
 ]
 if @current_user and @current_user.administrator?
   menu_items << { :link => { :controller => '/admin/index', :action => 'index' }, :name => '管理ページ' }
