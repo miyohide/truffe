@@ -19,13 +19,18 @@ body{
 
 header{
   display:-webkit-box;
-	position:fixed;
-	z-index:10;
+  position:fixed;
+  z-index:10;
   -webkit-box-align:center;
+  width:800px;
   min-height:50px;
-	padding-left:10px;
+  background-color:#a47d57;
   #title{
-  	display:block;
+    display:block;
+    a{
+      display:block;
+      img{ vertical-align:bottom; }
+    }
   }
   ul#nav{
     li{
@@ -34,19 +39,21 @@ header{
       -webkit-box-pack:center;
       float:left;
       margin-right:5px;
-      width:95px;
+      width:85px;
       height:30px;
-      background-color:rgba(255,255,255,0.5);
-      border:2px solid rgba(0,0,0,0.5);
+      //background-color:rgba(255,255,255,0.5);
+      border:2px solid #fff;
       border-radius:10px;
-      &:hover{ background-color:$themecolor1 }
+      &:hover{
+        border-color:$themecolor1;
+      }
       span{ font-size:9px; vertical-align:middle; }
     }
   }
 }
 
 #container{
-  padding-top:50px;
+  padding-top:60px;
 }
 
 
