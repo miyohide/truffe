@@ -1,0 +1,33 @@
+<h2><%= @gig_year %>年<%= @gig_month %>月のライブスケジュール</h2>
+<p>今月のオススメライブは20日の▲▲Quartetです。ぜひお越しください。</p>
+
+<% unless @gigs.blank? %>
+  <% @gigs.each do |gig| %>
+    <div>date:<%= gig.gig_date %><% if gig.gig_date_end != gig.gig_date %>〜<%= gig.gig_date_end %><% end %></div>
+    <% if gig.gig_title %>
+      <div>title:<%= gig.gig_title %></div>
+    <% end %>
+    <% if gig.group %>
+      <div>group:<%= gig.group %></div>
+    <% end %>
+    <% if gig.location %>
+      <div>@<%= gig.location %></div>
+    <% end %>
+    <% if gig.charge %>
+      <div>charge:<%= gig.charge %></div>
+    <% end %>
+    <% if gig.players %>
+      <div>players:<%= gig.players %></div>
+    <% end %>
+    <% if gig.comment %>
+      <div>comment:<%= gig.comment %></div>
+    <% end %>
+    <% if gig.updated_at && gig.updated_at >= Date.today.advance(:weeks => -1) %>
+      <div>new</div>
+    <% end %>
+    <br>
+  <% end %>
+  <%= paginate @gigs %>
+<% else %>
+  <div>この月の出演情報はありません。</div>
+<% end %>
