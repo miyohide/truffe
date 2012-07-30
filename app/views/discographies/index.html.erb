@@ -9,7 +9,7 @@
     <div>発売日:<%= disc.release_date %></div>
     <% if disc.album_name && disc.artist %>
       <% if disc.shop_url %>
-        <div><%= link_to disc.album_name + ' / ' + disc.artist, disc.shop_url %></div>
+        <div><%= link_to disc.album_name + ' / ' + disc.artist, disc.shop_url, :target => '_blank' %></div>
       <% else %>
         <div><%= disc.album_name %>/<%= disc.artist %></div>
       <% end %>
@@ -24,7 +24,7 @@
       <div>comments:<%= disc.presentation %></div>
     <% end %>
     <% if disc.shop_url %>
-      <div><%= link_to image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140'), disc.shop_url %></div>
+      <div><%= link_to image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140'), disc.shop_url, :target => '_blank' %></div>
     <% else %>
       <div><%= image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140') %></div>
     <% end %>
