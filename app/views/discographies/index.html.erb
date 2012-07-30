@@ -1,1 +1,35 @@
-<h2>discographies#index</h2>
+<h1>Discographies</h1>
+<h2>New Release</h2>
+
+<% unless @discographies.blank? %>
+  <% @discographies.each do |disc| %>
+    <% if disc.updated_at && disc.updated_at >= Date.today.advance(:months => -1) %>
+      <div>new</div>
+    <% end %>
+    <div>発売日:<%= disc.release_date %></div>
+    <% if disc.album_name && disc.artist %>
+      <% if disc.shop_url %>
+        <div><%= link_to disc.album_name + ' / ' + disc.artist, disc.shop_url %></div>
+      <% else %>
+        <div><%= disc.album_name %>/<%= disc.artist %></div>
+      <% end %>
+    <% end %>
+    <% if disc.players %>
+      <div>players:<%= disc.players %></div>
+    <% end %>
+    <% if disc.record_co %>
+      <div>record_company:<%= disc.record_co %></div>
+    <% end %>
+    <% if disc.presentation %>
+      <div>comments:<%= disc.presentation %></div>
+    <% end %>
+    <% if disc.shop_url %>
+      <div><%= link_to image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140'), disc.shop_url %></div>
+    <% else %>
+      <div><%= image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140') %></div>
+    <% end %>
+    <br>
+  <% end %>
+<% else %>
+  <div>現在リリース情報はありません。</div>
+<% end %>
