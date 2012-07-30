@@ -1,9 +1,9 @@
 <% @page_title = 'profile' %>
 
 <h1><%= @page_title %></h1>
-
 <%= image_tag 'profile.jpg', :alt => 'profile_image' %>
 
+<h3>大塚義将（おおつかよしまさ）</h3>
 <% if @basic_data %>
-	<div><%= raw(@basic_data.profile) %></div>
+  <div><%= raw(@basic_data.profile) %></div>
 <% end %>
