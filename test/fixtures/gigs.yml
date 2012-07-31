@@ -1,17 +1,4 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
-
 gigs1:
-  id: 1
   gig_date: 2012-08-10 00:00:00
   gig_date_end: 2012-08-10 00:00:00
   gig_title: 唐沢寧Duo
@@ -23,7 +10,6 @@ gigs1:
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
 gigs2:
-  id: 2
   gig_date: 2012-10-01 00:00:00
   gig_date_end: 2012-10-01 00:00:00
   gig_title: 横山さん
@@ -35,7 +21,6 @@ gigs2:
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
 gigs3:
-  id: 3
   gig_date: 2012-06-05 00:00:00
   gig_date_end: 2012-06-13 00:00:00
   gig_title: 椎名豊トリオ
@@ -47,7 +32,6 @@ gigs3:
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
 gigs4:
-  id: 4
   gig_date: 2012-07-01 00:00:00
   gig_date_end: 2012-07-01 00:00:00
   gig_title: ジーンジャクソンQurtet
@@ -59,7 +43,6 @@ gigs4:
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
 gigs5:
-  id: 5
   gig_date: 2012-07-12 00:00:00
   gig_date_end: 2012-07-15 00:00:00
   gig_title: バースデーライブ
@@ -71,7 +54,6 @@ gigs5:
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
 gigs6:
-  id: 6
   gig_date: 2012-07-15 00:00:00
   gig_date_end: 2012-07-15 00:00:00
   gig_title: バースデーライブ
@@ -83,7 +65,6 @@ gigs6:
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
 gigs7:
-  id: 7
   gig_date: 2012-07-31 00:00:00
   gig_date_end: 2012-07-31 00:00:00
   gig_title: ▲▲トリオ
