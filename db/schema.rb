@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120630070517) do
+ActiveRecord::Schema.define(:version => 20120731053415) do
 
   create_table "basic_data", :force => true do |t|
     t.string   "site_name"
@@ -34,12 +34,12 @@ ActiveRecord::Schema.define(:version => 20120630070517) do
 
   create_table "discographies", :force => true do |t|
     t.date     "release_date"
-    t.string   "album_name"
+    t.string   "title"
     t.string   "artist"
     t.text     "players"
     t.string   "record_co"
-    t.string   "shop_url"
-    t.text     "presentation"
+    t.string   "url"
+    t.text     "comment"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
@@ -65,15 +65,23 @@ ActiveRecord::Schema.define(:version => 20120630070517) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "photos", :force => true do |t|
+    t.date     "photo_date"
+    t.string   "title"
+    t.string   "comment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "users", :force => true do |t|
-    t.string   "email",                              :null => false
+    t.string   "login_name",                         :null => false
     t.string   "hashed_password",                    :null => false
     t.string   "name"
+    t.string   "email"
     t.date     "birthday"
     t.boolean  "administrator",   :default => false
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
-    t.string   "login_name"
   end
 
 end
