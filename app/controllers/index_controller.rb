@@ -13,6 +13,9 @@ class IndexController < ApplicationController
 
   private
 
+  def photos
+  end
+
   def contacts
   end
 
