@@ -1,4 +1,9 @@
 $themecolor1:rgba(250,10,150,0.5);
+
+@mixin size($width,$height){
+  width:$width;
+	height:$height;
+}
 @mixin bg_img($file){
   background:{
     image:url($file);

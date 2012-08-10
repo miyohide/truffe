@@ -8,11 +8,7 @@ body{
   width:800px;
   min-height:960px;
   background-color:rgba(255,255,255,0.3);
-  -webkit-box-shadow:0px 0px 30px 1px rgba(0,0,0,0.2);
-  -moz-box-shadow:0px 0px 30px 1px rgba(0,0,0,0.2);
-  -o-box-shadow:0px 0px 30px 1px rgba(0,0,0,0.2);
-  -ms-box-shadow:0px 0px 30px 1px rgba(0,0,0,0.2);
-  box-shadow:0px 0px 30px 1px rgba(0,0,0,0.2);
+  @include box-shadow(0px 0px 30px 1px rgba(0,0,0,0.2));
 }
 #wrapper.l{ width:800px; }
 #wrapper.s{ width:640px; }
@@ -40,11 +36,10 @@ header{
       -webkit-box-pack:center;
       float:left;
       margin-right:5px;
-      width:85px;
-      height:30px;
+      @include size(85px,30px);
+      @include border-radius(10px);
       //background-color:rgba(255,255,255,0.5);
       border:2px solid #fff;
-      border-radius:10px;
       &:hover{
         border-color:$themecolor1;
       }
