@@ -25,6 +25,8 @@ Truffe::Application.routes.draw do
   #     end
   #   end
 
+  match 'gigs/:year(/:month)' => 'gigs#index', :constraints => { :year => /\d{4}/ }
+
   resources :login do
     collection do 
       post :login
