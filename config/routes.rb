@@ -25,6 +25,9 @@ Truffe::Application.routes.draw do
   #     end
   #   end
 
+  match 'profile' => 'index#profile'
+  match 'photos' => 'index#photos'
+  match 'contacts' => 'index#contacts'
   match 'gigs/:year(/:month)' => 'gigs#index', :constraints => { :year => /\d{4}/ }
 
   resources :login do

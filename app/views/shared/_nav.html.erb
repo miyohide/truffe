@@ -1,15 +1,15 @@
 <% menu_items = [
-{ :link => { :controller => '/index', :action => 'index' }, :name => 'Home' },
-{ :link => { :controller => '/index', :action => 'profile' }, :name => 'Profile' },
-{ :link => { :controller => '/gigs', :action => 'index' }, :name => 'Gigs' },
-{ :link => { :controller => '/discographies', :action => 'index' }, :name => 'Discography' },
-#{ :link => { :controller => '/blog_entries', :action => 'index' }, :name => 'Blog', :disabled => true },
-{ :link => { :controller => '/index', :action => 'photos' }, :name => 'Photos' },
-{ :link => { :controller => '/index', :action => 'contacts' }, :name => 'Contacts' }
-#{ :link => { :controller => '/links', :action => 'index' }, :name => 'Links' }
+{ :link => root_path,          :name => 'Home' },
+{ :link => profile_path,       :name => 'Profile' },
+{ :link => gigs_path,          :name => 'Gigs' },
+{ :link => discographies_path, :name => 'Discography' },
+#{ :link => blog_entries_path,  :name => 'Blog', :disabled => true },
+{ :link => photos_path,        :name => 'Photos' },
+{ :link => contacts_path,      :name => 'Contacts' }
+#{ :link => links_path,         :name => 'Links' }
 ]
 if @current_user and @current_user.administrator?
-  menu_items << { :link => { :controller => '/admin/index', :action => 'index' }, :name => '管理ページ' }
+  menu_items << { :link => '/admin/index', :name => '管理ページ' }
 end %>
 
 <ul id="nav">
