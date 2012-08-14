@@ -14,6 +14,7 @@ class IndexController < ApplicationController
   private
 
   def photos
+    @photos = Kaminari.paginate_array(Photos.find(:all, :limit => 100, :order => 'photo_date asc')).page(params[:page])
   end
 
   def contacts
