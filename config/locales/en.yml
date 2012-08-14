@@ -203,3 +203,19 @@ en:
   activerecord:
     errors:
       <<: *errors
+  home:
+  profile:
+    title: Profile
+    name: Yoshimasa Ohtsuka
+  gigs:
+    title: Gigs
+    this_month: this month
+    prev_month: prev month
+    next_month: next month
+    rate: yen
+  discographies:
+    title: Discographies
+  photos:
+    title: Photos
+  contacts:
+    title: Contacts

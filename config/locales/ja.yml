@@ -195,3 +195,19 @@ ja:
   activerecord:
     errors:
       <<: *errors
+  home:
+  profile:
+    title: プロフィール
+    name: 大塚 義将（おおつか よしまさ）
+  gigs:
+    title: ライブスケジュール
+    this_month: 今月
+    prev_month: 前月
+    next_month: 翌月
+    rate: 円
+  discographies:
+    title: CD・活動記録
+  photos:
+    title: ギャラリー
+  contacts:
+    title: 連絡先・レッスンの案内

@@ -32,5 +32,5 @@
   <div>この月の出演情報はありません。</div>
 <% end %>
 
-<%= link_to '<< this month >>', :path => 'gigs#index', :year => Date.today.year, :month => Date.today.month %><br>
-<%= link_to '<= prev month', :path => 'gigs#index', :year => @prev_year, :month => @prev_month %> | <%= link_to 'next month =>', :path => 'gigs#index', :year => @next_year, :month => @next_month %>
+<%= link_to "<< #{ t('gigs.this_month') } >>", :path => 'gigs#index', :year => Date.today.year, :month => Date.today.month %><br>
+<%= link_to "<= #{ t('gigs.prev_month') }", :path => 'gigs#index', :year => @prev_year, :month => @prev_month %> | <%= link_to "#{ t('gigs.next_month') } =>", :path => 'gigs#index', :year => @next_year, :month => @next_month %>

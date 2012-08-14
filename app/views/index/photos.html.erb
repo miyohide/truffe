@@ -1,4 +1,5 @@
-<h2>index#Photos</h2>
+<% @page_title = t('photos.title') -%>
+<h1><%= @page_title %></h1>
 
 <% unless @photos.blank? %>
   <% @photos.each do |photo| %>
