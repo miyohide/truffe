@@ -11,8 +11,6 @@ class IndexController < ApplicationController
     @basic_data = BasicData.where('id = 1').first
   end
 
-  private
-
   def photos
     @photos = Kaminari.paginate_array(Photos.find(:all, :limit => 100, :order => 'photo_date asc')).page(params[:page])
   end
@@ -20,6 +18,7 @@ class IndexController < ApplicationController
   def contacts
   end
 
+  private
   def authenticate
     authenticate_or_request_with_http_digest do |username|
       USERS[username]
