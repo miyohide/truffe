@@ -30,6 +30,10 @@ Truffe::Application.routes.draw do
   match 'contacts' => 'index#contacts'
   match 'gigs/:year(/:month)' => 'gigs#index', :constraints => { :year => /\d{4}/ }
 
+  namespace :admin do
+    resources :index, :users, :gigs, :discographies
+  end
+
   resources :login do
     collection do 
       post :login
@@ -40,8 +44,8 @@ Truffe::Application.routes.draw do
   resources :users
   resources :gigs
   resources :discographies
-  resources :blog_entries
-  resources :links
+  # resources :blog_entries
+  # resources :links
 
   # Sample resource route with sub-resources:
   #   resources :products do
