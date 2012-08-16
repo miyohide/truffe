@@ -1,16 +1,17 @@
 # -*- encoding: utf-8 -*-
 class LoginController < ApplicationController
   def login
-    email = params[:email]
+    login_id = params[:email]
     password = params[:password]
-    user = User.authenticate(email, password)
-    if user
+
+    if user = User.authenticate(login_id, password)
       session[:user_id] = user.id
     else
       session[:user_id] = nil
       flash[:warning] = 'ログイン失敗'
-      flash[:email] = email
+      flash[:email] = login_id
     end
+
     if params[:from]
       redirect_to params[:from]
     else
@@ -19,7 +20,8 @@ class LoginController < ApplicationController
   end
 
   def logout
-    session[:user_id] = nil
+    @_current_user = session[:user_id] = nil
+    flash[:notice] = t('messages.logout')
     redirect_to root_path
   end
 end
