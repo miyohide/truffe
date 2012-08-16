@@ -219,3 +219,5 @@ en:
     title: Photos
   contacts:
     title: Contacts
+  messages:
+    logout: You have successfully Logged out

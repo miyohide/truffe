@@ -211,3 +211,5 @@ ja:
     title: ギャラリー
   contacts:
     title: 連絡先・レッスンの案内
+  messages:
+    logout: ログアウトしました
