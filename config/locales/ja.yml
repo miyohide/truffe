@@ -211,5 +211,10 @@ ja:
     title: ギャラリー
   contacts:
     title: 連絡先・レッスンの案内
+  login:
+    title: 管理者専用ログインページ
+    login_id: ID / Email
+    password: パスワード
+    login: ログイン
   messages:
     logout: ログアウトしました

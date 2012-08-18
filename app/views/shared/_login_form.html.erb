@@ -1,15 +1,14 @@
 <% unless @current_user %>
 <div class="login_form">
-	<h2>管理者専用ログインページ</h2>
-	<%= form_tag '/login/login', :method => 'post' do %>
-		<%#= hidden_field_tag 'from', request.request_uri %>
-		<p>Email：<%= text_field_tag 'email', flash[:email], :size => 16 %><br>パスワード：<%= password_field_tag 'password', '', :size => 16 %><br><%= submit_tag 'ログイン', :class => 'button' %></p>
-	<% end %>
+  <%= form_tag '/login/login', :method => 'post' do %>
+    <%#= hidden_field_tag 'from', request.request_uri %>
+    <p><%= t('login.login_id') %>：<%= text_field_tag 'login_id', flash[:login_id], :size => 16 %><br><%= t('login.password') %>：<%= password_field_tag 'password', '', :size => 16 %><br><%= submit_tag t('login.login'), :class => 'button' %></p>
+  <% end %>
 </div>
 <% end %>
 
 <% if flash[:warning] %>
 <div class="warning">
-	<%= flash[:warning] %>
+  <%= flash[:warning] %>
 </div>
 <% end %>

@@ -219,5 +219,10 @@ en:
     title: Photos
   contacts:
     title: Contacts
+  login:
+    title: Login for Admistrator
+    login_id: ID or Email
+    password: Password
+    login: Log In
   messages:
     logout: You have successfully Logged out
