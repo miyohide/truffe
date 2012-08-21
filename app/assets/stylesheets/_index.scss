@@ -62,3 +62,10 @@ h1.title{
   visibility:hide;
 }
 h1.title.show{ visibility:normal }
+
+#records{
+  @include basic-column(100%)
+}
+#news{
+  @include basic-column(100%)
+}

@@ -2,7 +2,7 @@ $themecolor1:rgba(250,10,150,0.5);
 
 @mixin size($width,$height){
   width:$width;
-	height:$height;
+  height:$height;
 }
 @mixin bg_img($file){
   background:{
@@ -10,4 +10,13 @@ $themecolor1:rgba(250,10,150,0.5);
     repeat:no-repeat;
     size:100% 100%;
   }
+}
+
+@mixin basic-column($width:720px){
+  margin:20px;
+  padding:20px;
+  width:$width;
+  max-width:720px;
+  @include border-radius(10px);
+  background-color:rgba(255,255,255,0.6);
 }

@@ -7,7 +7,7 @@ body{
   margin:0px auto;
   width:800px;
   min-height:960px;
-  background-color:rgba(255,255,255,0.3);
+  background-color:rgba(255,255,255,0.4);
   @include box-shadow(0px 0px 30px 1px rgba(0,0,0,0.2));
 }
 #wrapper.l{ width:800px; }
@@ -38,7 +38,6 @@ header{
       margin-right:5px;
       @include size(85px,30px);
       @include border-radius(10px);
-      //background-color:rgba(255,255,255,0.5);
       border:2px solid #fff;
       &:hover{
         border-color:$themecolor1;
