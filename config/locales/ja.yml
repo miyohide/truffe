@@ -216,5 +216,7 @@ ja:
     login_id: ID / Email
     password: パスワード
     login: ログイン
+  admin:
+    admin_tool: 管理ツール
   messages:
     logout: ログアウトしました

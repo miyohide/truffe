@@ -224,5 +224,7 @@ en:
     login_id: ID or Email
     password: Password
     login: Log In
+  admin:
+    admin_tool: Admin Tool
   messages:
     logout: You have successfully Logged out
