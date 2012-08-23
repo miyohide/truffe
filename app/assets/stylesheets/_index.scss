@@ -69,3 +69,6 @@ h1.title.show{ visibility:normal }
 #news{
   @include basic-column(100%)
 }
+#profile{
+  @include basic-column(100%)
+}
