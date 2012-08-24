@@ -6,32 +6,35 @@
   
   <% unless @discographies.blank? %>
     <% @discographies.each do |disc| %>
-      <% if disc.updated_at && disc.updated_at >= Date.today.advance(:months => -1) %>
-        <div>new</div>
-      <% end %>
-      <div>発売日:<%= disc.release_date %></div>
-      <% if disc.title && disc.artist %>
+      <div class="disc">
         <% if disc.url %>
-          <div><%= link_to disc.title + ' / ' + disc.artist, disc.url, :target => '_blank' %></div>
+          <div class="disc_image"><%= link_to image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '180x180'), disc.url, :target => '_blank' %></div>
         <% else %>
-          <div><%= disc.title %>/<%= disc.artist %></div>
+          <div class="disc_image"><%= image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140') %></div>
         <% end %>
-      <% end %>
-      <% if disc.players %>
-        <div>players:<%= disc.players %></div>
-      <% end %>
-      <% if disc.record_co %>
-        <div>record_company:<%= disc.record_co %></div>
-      <% end %>
-      <% if disc.comment %>
-        <div>comments:<%= disc.comment %></div>
-      <% end %>
-      <% if disc.url %>
-        <div><%= link_to image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140'), disc.url, :target => '_blank' %></div>
-      <% else %>
-        <div><%= image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140') %></div>
-      <% end %>
-      <br>
+        <div class="disc_detail">
+          <% if disc.updated_at && disc.updated_at >= Date.today.advance(:months => -1) %>
+            <div>new</div>
+          <% end %>
+          <div>発売日:<%= disc.release_date %></div>
+          <% if disc.title && disc.artist %>
+            <% if disc.url %>
+              <div><%= link_to disc.title + ' / ' + disc.artist, disc.url, :target => '_blank' %></div>
+            <% else %>
+              <div><%= disc.title %>/<%= disc.artist %></div>
+            <% end %>
+          <% end %>
+          <% if disc.players %>
+            <div>players:<%= disc.players %></div>
+          <% end %>
+          <% if disc.record_co %>
+            <div>record_company:<%= disc.record_co %></div>
+          <% end %>
+          <% if disc.comment %>
+            <div>comments:<%= disc.comment %></div>
+          <% end %>
+        </div>
+      </div>
     <% end %>
   <% else %>
     <div>現在リリース情報はありません。</div>

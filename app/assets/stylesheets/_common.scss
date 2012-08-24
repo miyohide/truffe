@@ -65,6 +65,16 @@ header{
   }
 }
 
+.disc{
+  overflow:hidden;
+  .disc_image{
+    float:left;
+  }
+  .disc_detail{
+    margin-left:20px;
+    float:left;
+  }
+}
 
 
 
