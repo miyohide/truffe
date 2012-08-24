@@ -1,36 +1,39 @@
 <% @page_title = t('discographies.title') -%>
 <h1 class="page_title"><%= @page_title %></h1>
-<h2>New Release</h2>
 
-<% unless @discographies.blank? %>
-  <% @discographies.each do |disc| %>
-    <% if disc.updated_at && disc.updated_at >= Date.today.advance(:months => -1) %>
-      <div>new</div>
-    <% end %>
-    <div>発売日:<%= disc.release_date %></div>
-    <% if disc.title && disc.artist %>
-      <% if disc.url %>
-        <div><%= link_to disc.title + ' / ' + disc.artist, disc.url, :target => '_blank' %></div>
-      <% else %>
-        <div><%= disc.title %>/<%= disc.artist %></div>
+<div id="release">
+  <h2>New Release</h2>
+  
+  <% unless @discographies.blank? %>
+    <% @discographies.each do |disc| %>
+      <% if disc.updated_at && disc.updated_at >= Date.today.advance(:months => -1) %>
+        <div>new</div>
       <% end %>
+      <div>発売日:<%= disc.release_date %></div>
+      <% if disc.title && disc.artist %>
+        <% if disc.url %>
+          <div><%= link_to disc.title + ' / ' + disc.artist, disc.url, :target => '_blank' %></div>
+        <% else %>
+          <div><%= disc.title %>/<%= disc.artist %></div>
+        <% end %>
+      <% end %>
+      <% if disc.players %>
+        <div>players:<%= disc.players %></div>
+      <% end %>
+      <% if disc.record_co %>
+        <div>record_company:<%= disc.record_co %></div>
+      <% end %>
+      <% if disc.comment %>
+        <div>comments:<%= disc.comment %></div>
+      <% end %>
+      <% if disc.url %>
+        <div><%= link_to image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140'), disc.url, :target => '_blank' %></div>
+      <% else %>
+        <div><%= image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140') %></div>
+      <% end %>
+      <br>
     <% end %>
-    <% if disc.players %>
-      <div>players:<%= disc.players %></div>
-    <% end %>
-    <% if disc.record_co %>
-      <div>record_company:<%= disc.record_co %></div>
-    <% end %>
-    <% if disc.comment %>
-      <div>comments:<%= disc.comment %></div>
-    <% end %>
-    <% if disc.url %>
-      <div><%= link_to image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140'), disc.url, :target => '_blank' %></div>
-    <% else %>
-      <div><%= image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140') %></div>
-    <% end %>
-    <br>
+  <% else %>
+    <div>現在リリース情報はありません。</div>
   <% end %>
-<% else %>
-  <div>現在リリース情報はありません。</div>
-<% end %>
+</div>

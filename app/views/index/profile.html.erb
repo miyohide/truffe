@@ -2,10 +2,11 @@
 <h1 class="page_title"><%= @page_title %></h1>
 
 <div id="profile">
-  <%= image_tag 'profile.jpg', :alt => 'profile_image' %>
-  
-  <h3><%= t('profile.name') %></h3>
-  <% if @basic_data %>
-    <div><%= raw(@basic_data.profile) %></div>
-  <% end %>
+  <div id="profile_image"><%= image_tag 'profile.jpg', :alt => 'profile_image' %></div>
+  <div id="profile_detail">
+    <h3><%= t('profile.name') %></h3>
+    <% if @basic_data %>
+      <div id="introduction"><%= raw(@basic_data.profile) %></div>
+    <% end %>
+  </div>
 </div>

@@ -60,6 +60,9 @@ header{
     @include transform(rotate(-3deg));
     @include box-shadow(1px 1px 5px rgba(0,0,0,0.2));
   }
+  h2{
+    margin-bottom:20px;
+  }
 }
 
 

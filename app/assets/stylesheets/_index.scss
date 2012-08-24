@@ -70,5 +70,23 @@ h1.title.show{ visibility:normal }
   @include basic-column(100%)
 }
 #profile{
+  @include basic-column(100%);
+  overflow:hidden;
+  #profile_image{
+    float:left;
+  }
+  #profile_detail{
+    margin-left:20px;
+    float:left;
+    max-width:460px;
+    h3{
+      margin-bottom:20px;
+    }
+  }
+}
+#photos{
+  @include basic-column(100%)
+}
+#contacts{
   @include basic-column(100%)
 }
