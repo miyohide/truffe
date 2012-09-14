@@ -7,6 +7,7 @@ gem 'rails', '3.2.1'
 
 group :development, :test do
 	gem 'mysql2'
+  gem 'puma'
 end
 
 group :production do
