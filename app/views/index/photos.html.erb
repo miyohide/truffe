@@ -5,7 +5,7 @@
   <div id="photos">
     <% @photos.each do |photo| %>
       <div><% if photo.photo_date %><%= photo.photo_date %><% end %></div>
-      <div><% if photo.file_no %><%= image_tag('img_#{photo.file_no}.jpg', :size => '320x198', :alt => 'truffe_photos') %><% end %></div>
+      <div><% if photo.file_no %><%= image_tag('photos/photo_' + photo.file_no + '.jpg', :size => '320x240', :alt => 'truffe_photos') %><% end %></div>
       <div><% if photo.album_no %>album:<%= photo.album_no %><% end %></div>
       <div><% if photo.title %>title:<%= photo.title %><% end %></div>
       <div><% if photo.comment %>comment:<%= photo.comment %><% end %></div>
