@@ -1,3 +1,14 @@
 #release{
-  @include basic-column(100%)
+  @include basic-column(100%);
+
+  .disc {
+    .disc_image {
+      float: left;
+    }
+
+    .disc_detail {
+      float: right;
+      max-width: 520px;
+    }
+  }
 }

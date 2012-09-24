@@ -64,11 +64,22 @@ h1.title{
 h1.title.show{ visibility:normal }
 
 #records{
-  @include basic-column(100%)
+  @include basic-column(100%);
+  .disc {
+    .disc_image {
+      float: left;
+    }
+    .disc_detail {
+      float: right;
+      max-width: 560px;
+    }
+  }
 }
+
 #news{
   @include basic-column(100%)
 }
+
 #profile{
   @include basic-column(100%);
   overflow:hidden;
@@ -84,9 +95,11 @@ h1.title.show{ visibility:normal }
     }
   }
 }
+
 #photos{
   @include basic-column(100%)
 }
+
 #contacts{
   @include basic-column(100%)
 }
