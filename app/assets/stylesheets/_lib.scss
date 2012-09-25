@@ -1,22 +1,22 @@
-$themecolor1:rgba(250,10,150,0.5);
+$themecolor1: rgba(250, 10, 150, 0.5);
 
-@mixin size($width,$height){
-  width:$width;
-  height:$height;
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
 }
-@mixin bg_img($file){
-  background:{
-    image:url($file);
-    repeat:no-repeat;
-    size:100% 100%;
+@mixin bg-img($file) {
+  background: {
+    image: url($file);
+    repeat: no-repeat;
+    size: 100% 100%;
   }
 }
 
-@mixin basic-column($width:720px){
-  margin:20px;
-  padding:20px;
-  width:$width;
-  max-width:720px;
+@mixin basic-column($width: 720px) {
+  margin: 20px;
+  padding: 20px;
+  width: $width;
+  max-width: 720px;
   @include border-radius(10px);
-  background-color:rgba(255,255,255,0.6);
+  background-color: rgba(255, 255, 255, 0.6);
 }

@@ -1,105 +1,119 @@
-#gallery{
+#gallery {
   /* The width of the gallery */
-  width:800px;
-  overflow:hidden;
+  width: 800px;
+  overflow: hidden;
 }
-#wrapper.l #gallery{ width:800px; }
-#wrapper.s #gallery{ width:640px; }
+#wrapper.l #gallery { width: 800px; }
+#wrapper.s #gallery { width: 640px; }
 
 
-#slides{
-  width:640px; //jQuery changes
-  overflow:hidden;
+#slides {
+  width: 640px; //jQuery changes
+  overflow: hidden;
 }
-.slide{ float:left; }
-#wrapper.l #slides{
-  height:250px;
-  .slide{ @include size(800px,250px) }
-  .slide.a{ @include bg_img('800x250e.jpg') }
-  .slide.b{ @include bg_img('800x250f.jpg') }
-  .slide.c{ @include bg_img('800x250g.jpg') }
-  .slide.d{ @include bg_img('800x250h.jpg') }
-}
-#wrapper.s #slides{
-  height:320px;
-  .slide{ @include size(640px,320px) }
-  .slide.a{ @include bg_img('640x320e.jpg') }
-  .slide.b{ @include bg_img('640x320f.jpg') }
-  .slide.c{ @include bg_img('640x320g.jpg') }
-  .slide.d{ @include bg_img('640x320h.jpg') }
+.slide {
+  float: left;
 }
 
-ul#menu{
-  padding:5px 280px 5px 280px;
-  @include size(80px,20px);
-  li{
-    display:block;
-    float:left;
-    margin-right:5px;
-    @include size(16px,16px);
-    background-color:rgba(100,100,100,0.5);
-    -webkit-border-radius:8px;
-    &:last-child{ margin:0px }
+#wrapper.l #slides {
+  height: 250px;
+  .slide { @include size(800px, 250px) }
+  .slide.a { @include bg-img('800x250e.jpg') }
+  .slide.b { @include bg-img('800x250f.jpg') }
+  .slide.c { @include bg-img('800x250g.jpg') }
+  .slide.d { @include bg-img('800x250h.jpg') }
+}
+#wrapper.s #slides {
+  height: 320px;
+  .slide { @include size(640px, 320px) }
+  .slide.a { @include bg-img('640x320e.jpg') }
+  .slide.b { @include bg-img('640x320f.jpg') }
+  .slide.c { @include bg-img('640x320g.jpg') }
+  .slide.d { @include bg-img('640x320h.jpg') }
+}
+
+ul#menu {
+  padding: 5px 280px 5px 280px;
+  @include size(80px, 20px);
+  li {
+    display: block;
+    float: left;
+    margin-right: 5px;
+    @include size(16px, 16px);
+    background-color: rgba(100, 100, 100, 0.5);
+    -webkit-border-radius: 8px;
+    &:last-child{ margin: 0px }
   }
-  li.inact:hover{
+  li.inact:hover {
     /* The inactive state, highlighted on mouse over */
   }
-  li.act, li.act:hover{ cursor:default; background-color:$themecolor1 }
+  li.act, li.act:hover {
+    cursor: default;
+    background-color: $themecolor1
+  }
 }
-#wrapper.l ul#menu{ padding:5px 360px 5px 360px; }
+#wrapper.l ul#menu {
+  padding: 5px 360px 5px 360px;
+}
 
 
 
 
 // galleryの上にサイトタイトル置く案
-#gallery{ position:relative; }
-h1.title{
-  position:absolute;
-  top:10px;
-  left:15px;
-  color:#fff;
-  text-shadow:2px 2px 5px rgba(0,0,0,0.5);
-  visibility:hide;
+#gallery {
+  position: relative;
 }
-h1.title.show{ visibility:normal }
 
-#records{
+h1.title {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  visibility: hide;
+  &.show { visibility: normal }
+}
+
+#records {
   @include basic-column(100%);
   .disc {
     .disc_image {
       float: left;
     }
+
     .disc_detail {
-      float: right;
+      float: left;
       max-width: 560px;
     }
   }
 }
 
-#news{
+#news {
   @include basic-column(100%)
 }
 
-#profile{
+#profile {
   @include basic-column(100%);
-  overflow:hidden;
-  #profile_image{
-    float:left;
+  overflow: hidden;
+
+  #profile_image {
+    float: left;
   }
-  #profile_detail{
-    margin-left:20px;
-    float:left;
-    max-width:460px;
-    h3{
-      margin-bottom:20px;
+
+  #profile_detail {
+    margin-left: 20px;
+    float: left;
+    max-width: 460px;
+    h3 {
+      margin-bottom: 20px;
     }
   }
 }
 
-#photos{
+#photos {
   @include basic-column(100%)
 }
 
-#contacts{
+#contacts {
   @include basic-column(100%)
 }

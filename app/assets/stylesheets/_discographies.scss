@@ -1,4 +1,4 @@
-#release{
+#release {
   @include basic-column(100%);
 
   .disc {
@@ -7,7 +7,7 @@
     }
 
     .disc_detail {
-      float: right;
+      float: left;
       max-width: 520px;
     }
   }
