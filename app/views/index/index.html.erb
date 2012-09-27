@@ -25,28 +25,33 @@
         <% else %>
           <h2>Now on Sale</h2>
         <% end %>
+
         <% if disc.url %>
           <div class="disc_image"><%= link_to image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140'), disc.url, :target => '_blank' %></div>
         <% else %>
           <div class="disc_image"><%= image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140') %></div>
         <% end %>
+
         <div class="disc_detail">
-          <div>発売日:<%= disc.release_date %></div>
           <% if disc.title && disc.artist %>
             <% if disc.url %>
-              <div><%= link_to disc.title + ' / ' + disc.artist, disc.url, :target => '_blank' %></div>
+              <div class="title"><%= link_to disc.title + ' / ' + disc.artist, disc.url, :target => '_blank' %></div>
             <% else %>
-              <div><%= disc.title %>/<%= disc.artist %></div>
+              <div class="title"><%= disc.title %>/<%= disc.artist %></div>
             <% end %>
           <% end %>
+          <% if disc.updated_at && disc.updated_at >= Date.today.advance(:months => -1) %>
+            <div class="new">new</div>
+          <% end %>
+          <div class="release_date">発売日:<%= disc.release_date %></div>
           <% if disc.players %>
-            <div>players:<%= disc.players %></div>
+            <div class="players">players:<%= disc.players %></div>
           <% end %>
           <% if disc.record_co %>
-            <div>record_company:<%= disc.record_co %></div>
+            <div class="record_co">record_company:<%= disc.record_co %></div>
           <% end %>
           <% if disc.comment %>
-            <div>comments:<%= disc.comment %></div>
+            <div class="comments">comments:<%= disc.comment %></div>
           <% end %>
         </div>
       </div>

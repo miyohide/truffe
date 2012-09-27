@@ -9,6 +9,11 @@
     .disc_detail {
       float: left;
       max-width: 520px;
+
+      .title {
+        font-size: 22px;
+        font-weight: bold;
+      }
     }
   }
 }
