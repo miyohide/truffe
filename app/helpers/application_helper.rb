@@ -2,11 +2,11 @@
 module ApplicationHelper
   def menu_link_to(item)
     if current_page?(item[:link])
-      raw('<li class="selected"><p>') + image_tag('shared/nav/icon_'+item[:name]+'.png', :size => '85x30') + raw('</p></li>')
+      raw('<li class="' + item[:name] + ' selected"><p>') + item[:name] + raw('</p></li>')
     elsif item[:disabled]
       raw('<li class="disabled"><p>') + item[:name] + raw('<span>(準備中)</span></p></li>')
     else
-      raw('<li><p>') + link_to(image_tag('shared/nav/icon_'+item[:name]+'.png', :size => '85x30'), item[:link]) + raw('</p></li>')
+      raw('<li class=' + item[:name] + '>') + link_to(item[:name], item[:link]) + raw('</li>')
     end
   end
 

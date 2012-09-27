@@ -1,12 +1,12 @@
 <% menu_items = [
-{ :link => root_path,          :name => 'Home' },
-{ :link => profile_path,       :name => 'Profile' },
-{ :link => gigs_path,          :name => 'Gigs' },
-{ :link => discographies_path, :name => 'Discography' },
-#{ :link => blog_entries_path,  :name => 'Blog', :disabled => true },
-{ :link => photos_path,        :name => 'Photos' },
-{ :link => contacts_path,      :name => 'Contacts' }
-#{ :link => links_path,         :name => 'Links' }
+  { :link => root_path,          :name => 'Home' },
+  { :link => profile_path,       :name => 'Profile' },
+  { :link => gigs_path,          :name => 'Gigs' },
+  { :link => discographies_path, :name => 'Discography' },
+  #{ :link => blog_entries_path,  :name => 'Blog', :disabled => true },
+  { :link => photos_path,        :name => 'Photos' },
+  { :link => contacts_path,      :name => 'Contacts' }
+  #{ :link => links_path,         :name => 'Links' }
 ]
 if @current_user and @current_user.administrator?
   menu_items << { :link => '/admin/index', :name => '管理ページ' }
