@@ -1,5 +1,6 @@
 class GigsController < ApplicationController
   def index
+    @page_title = t('gigs.title')
     @gig_year  = Date.today.year  unless params[:year] 
     @gig_month = Date.today.month unless params[:month]
     unless params[:year].blank?

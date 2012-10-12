@@ -1,5 +1,9 @@
 # -*- encoding: utf-8 -*-
 class LoginController < ApplicationController
+  def index
+    @page_title = t('login.title')
+  end
+
   def login
     login_id = params[:email]
     password = params[:password]

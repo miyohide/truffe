@@ -8,14 +8,17 @@ class IndexController < ApplicationController
     end
 
     def profile
+      @page_title = t('profile.title')
       @basic_data = BasicData.where('id = 1').first
     end
 
     def photos
+      @page_title = t('photos.title')
       @photos = Kaminari.paginate_array(Photos.find(:all, :limit => 100, :order => 'photo_date asc')).page(params[:page])
     end
 
     def contacts
+      @page_title = t('contacts.title')
     end
 
   private
