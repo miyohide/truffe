@@ -18,7 +18,7 @@ class GigsController < ApplicationController
       end
     end
 
-    @gigs = Kaminari.paginate_array(Gigs.find(:all, :conditions => ['month(gig_date) = ? AND year(gig_date) = ?', @gig_month, @gig_year], :limit => 100, :order => 'gig_date asc')).page(params[:page])
+    @gigs = Kaminari.paginate_array(Gigs.find_by_sql(["SELECT * FROM gigs WHERE (EXTRACT(MONTH FROM gig_date) = :month AND EXTRACT(YEAR FROM gig_date) = :year) LIMIT 100 OFFSET 0;", {:month => @gig_month, :year => @gig_year}])).page(params[:page])
 
     unless @gig_year || @gig_month
       @prev_year = Date.today.year 
