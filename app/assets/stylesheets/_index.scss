@@ -12,7 +12,9 @@
   overflow: hidden;
 }
 .slide {
-  float: left;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 #wrapper.l #slides {

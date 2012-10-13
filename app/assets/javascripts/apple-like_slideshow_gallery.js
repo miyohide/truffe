@@ -1,36 +1,17 @@
 $(document).ready(function(){
-  /* This code is executed after the DOM has been completely loaded */
-  
-  var totWidth=0;
-  var positions = new Array();
-  
-  $('#slides .slide').each(function(i){
-    positions[i]= totWidth;
-    //console.log('positions'+i+':'+positions[i]);
-    totWidth += $(this).width();
-    if(!$(this).width()){
-      alert("Please, fill in width & height for all your images!");
-      return false;
-    }
-    
-  });
-  
-  $('#slides').width(totWidth);
-  //console.log('totWidth:'+totWidth);
+  $('#slides').width('800px');
 
-  //$('#menu li').click(function(e,keepScroll){
   $menuItem = $(".menuitem");
   $menuItem.on({
     "touchstart click" : function(e) {
     },
     "touchend click" : function(e,keepScroll) {
-      //console.log('#menu li:clicked');
       $menuItem.removeClass('act').addClass('inact');
       $(this).removeClass('inact').addClass('act');
       
       var pos = $(this).prevAll('.menuitem').length;
       
-      $('#slides').stop().animate({marginLeft:-positions[pos]+'px'},450);
+      $('.slide').eq(pos).stop().animate({'opacity':1},450).siblings().stop().animate({'opacity':0},450);
       
       e.preventDefault();
       
@@ -40,6 +21,7 @@ $(document).ready(function(){
   });
   
   /* On page load, mark the first thumbnail as active */
+  $('.slide:first').css('opacity',1).siblings().css('opacity',0);
   $('#menu li.menuitem:first').addClass('act').siblings().addClass('inact');
   
   
@@ -52,12 +34,10 @@ $(document).ready(function(){
   var current=1;
 
   function autoAdvance(){
-    //console.log('called autoAdvance');
     if(current==-1) return false;
     
     slide_images(current);
     $('#menu li').eq(current%$('#menu li').length).trigger('ontouchend',[true]);
-    // [true] will be passed as the keepScroll parameter of the click function on line 28
     current++;
   }
 
@@ -66,13 +46,12 @@ $(document).ready(function(){
 
   function slide_images(current) {
     $obj = $('#menu li').eq(current%$('#menu li').length)
-    //console.log('$obj:clicked');
     $menuItem = $('.menuitem');
     $menuItem.removeClass('act').addClass('inact');
     $obj.addClass('act');
     
     var pos = $obj.prevAll('.menuitem').length;
     
-    $('#slides').stop().animate({marginLeft:-positions[pos]+'px'},550);
+    $('.slide').eq(pos).stop().animate({'opacity':1},550).siblings().stop().animate({'opacity':0},550);
   }
 });
