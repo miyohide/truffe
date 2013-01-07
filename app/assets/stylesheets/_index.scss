@@ -117,6 +117,30 @@ h1.title {
   }
 }
 
+/* book style start... */
+#profile {
+  @include bg-img('shared/book_bg1.png');
+  border-radius: 0px;
+  background-color: transparent;
+
+  #profile_image {
+    margin: 40px;
+    margin-left: 75px;
+    margin-right: 85px;
+    img {
+      width: 200px;
+    }
+  }
+
+  #profile_detail {
+    padding-top: 30px;
+    width: 320px;
+    line-height: 1.8;
+  }
+}
+/* book style ...end */
+
+
 #photos {
   @include basic-column(100%)
 }
