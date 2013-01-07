@@ -18,6 +18,7 @@ body {
 header {
   display: -webkit-box;
   position: fixed;
+  top: 0px;
   z-index: 10;
   width: 800px;
   min-height: 50px;
@@ -93,16 +94,15 @@ header {
   padding-top: 50px;
 
   h1.page_title {
-    margin: 20px 0px 30px 20px;
-    padding-left: 10px;
+    margin: 20px 0px 0px 20px;
+    padding: 10px;
+    text-align: center;
     min-width: 200px;
     max-width: 320px;
     font-size: 28px;
     font-family: Cursive;
-    border-left: 10px solid #fab;
-    background-color: #fbfbfb;
     @include transform(rotate(-3deg));
-    @include box-shadow(1px 1px 5px rgba(0, 0, 0, 0.2));
+    @include bg-img('shared/frame_bg.png');
   }
 
   h2 {
