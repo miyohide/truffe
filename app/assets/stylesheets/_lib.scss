@@ -13,6 +13,7 @@ $themecolor1: rgba(250, 10, 150, 0.5);
 }
 
 @mixin basic-column($width: 720px) {
+  position: relative;
   margin: 20px;
   padding: 20px;
   width: $width;

@@ -1,3 +1,38 @@
 #gigs {
-  @include basic-column(100%)
+  @include basic-column(100%);
+  padding-bottom: 50px;
+
+  #gigs_nav_top {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+
+  #gigs_nav_bottom {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .nav_change_month {
+    margin: 20px;
+    min-width: 250px;
+    height: 58px;
+
+    a {
+      display: block;
+      float: left;
+      padding-left: 20px;
+      padding-right: 20px;
+      min-width: 80px;
+      height: 58px;
+      line-height: 62px;
+      text-align: center;
+      @include bg-img('shared/button_frame.png');
+
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
 }
