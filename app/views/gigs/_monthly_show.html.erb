@@ -5,8 +5,6 @@
   <%= link_to "#{ t('gigs.next_month') } ▶", :path => 'gigs#index', :year => @next_year, :month => @next_month %>
 </div>
 
-<p>今月のオススメライブは20日の▲▲Quartetです。ぜひお越しください。</p>
-
 <% unless @gigs.blank? %>
   <ul id="gigs_list">
   <% @gigs.each do |gig| %>
@@ -48,7 +46,7 @@
   </ul>
   <%= paginate @gigs %>
 <% else %>
-  <div>この月の出演情報はありません。</div>
+  <div id="no_gigs">この月の出演情報はありません。</div>
 <% end %>
 
 <%#= link_to "<< #{ t('gigs.this_month') } >>", :path => 'gigs#index', :year => Date.today.year, :month => Date.today.month %><br>
