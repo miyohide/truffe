@@ -8,37 +8,50 @@
 <p>今月のオススメライブは20日の▲▲Quartetです。ぜひお越しください。</p>
 
 <% unless @gigs.blank? %>
+  <ul id="gigs_list">
   <% @gigs.each do |gig| %>
-    <div>date:<%= gig.gig_date %><% if gig.gig_date_end != gig.gig_date %>〜<%= gig.gig_date_end %><% end %></div>
-    <% if gig.gig_title %>
-      <div>title:<%= gig.gig_title %></div>
-    <% end %>
-    <% if gig.group %>
-      <div>group:<%= gig.group %></div>
-    <% end %>
-    <% if gig.location %>
-      <div>@<%= gig.location %></div>
-    <% end %>
-    <% if gig.charge %>
-      <div>charge:<%= gig.charge %></div>
-    <% end %>
-    <% if gig.players %>
-      <div>players:<%= gig.players %></div>
-    <% end %>
-    <% if gig.comment %>
-      <div>comment:<%= gig.comment %></div>
-    <% end %>
-    <% if gig.updated_at && gig.updated_at >= Date.today.advance(:weeks => -1) %>
-      <div>new</div>
-    <% end %>
-    <br>
+    <li data-recommend="2">
+      <div class="date">
+        <span class="month"><%= gig.gig_date.month %></span>
+        <span class="day"><%= gig.gig_date.day %></span>
+        <% if gig.gig_date_end != gig.gig_date %>
+          <span class="date_end">〜 <%= gig.gig_date_end.month %>/<%= gig.gig_date_end.day %></span>
+        <% else %>
+          <span class="year"><%= gig.gig_date.year %></span>
+        <% end %>
+      </div>
+      <div class="title">
+        <% if gig.gig_title %>
+          <%= gig.gig_title %>
+        <% end %>
+        <% if gig.group %>
+          <span class="group"><%= gig.group %></span>
+        <% end %>
+        <% if gig.location %>
+          <span class="lacation">@<%= gig.location %></span>
+        <% end %>
+      </div>
+      <% if gig.charge %>
+        <div class="charge">charge: <%= gig.charge %></div>
+      <% end %>
+      <% if gig.players %>
+        <div class="players">players: <%= gig.players %></div>
+      <% end %>
+      <% if gig.comment %>
+        <div class="comment">comment: <%= gig.comment %></div>
+      <% end %>
+      <% if gig.updated_at && gig.updated_at >= Date.today.advance(:weeks => -1) %>
+        <div class="new">new</div>
+      <% end %>
+    </li>
   <% end %>
+  </ul>
   <%= paginate @gigs %>
 <% else %>
   <div>この月の出演情報はありません。</div>
 <% end %>
 
-<%= link_to "<< #{ t('gigs.this_month') } >>", :path => 'gigs#index', :year => Date.today.year, :month => Date.today.month %><br>
+<%#= link_to "<< #{ t('gigs.this_month') } >>", :path => 'gigs#index', :year => Date.today.year, :month => Date.today.month %><br>
 
 <div id="gigs_nav_bottom" class="nav_change_month">
   <%= link_to "◀ #{ t('gigs.prev_month') }", :path => 'gigs#index', :year => @prev_year, :month => @prev_month %>
