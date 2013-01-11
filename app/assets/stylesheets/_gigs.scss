@@ -67,11 +67,22 @@
   }
 
   #no_gigs {
+    position: relative;
     margin: 100px;
-    line-height: 50px;
+    line-height: 120px;
     text-align: center;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 180, 0.5);
+    @include bg-img('shared/paper.png');
+
+    #doe {
+      @include from-top-left(-40px, 5px);
+      @include size(113px, 139px);
+      @include bg-img('shared/doe.png');
+    }
+    #flowers {
+      @include from-top-left(55px, 400px);
+      @include size(98px, 83px);
+      @include bg-img('shared/flowers.png');
+    }
   }
 
   #gigs_nav_top {

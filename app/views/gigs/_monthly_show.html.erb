@@ -46,7 +46,7 @@
   </ul>
   <%= paginate @gigs %>
 <% else %>
-  <div id="no_gigs">この月の出演情報はありません。</div>
+	<div id="no_gigs"><div id="doe"></div>この月の出演情報はありません。<div id="flowers"></div></div>
 <% end %>
 
 <%#= link_to "<< #{ t('gigs.this_month') } >>", :path => 'gigs#index', :year => Date.today.year, :month => Date.today.month %><br>
