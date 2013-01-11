@@ -76,6 +76,7 @@
     line-height: 120px;
     text-align: center;
     @include bg-img('shared/paper.png');
+    @include box-shadow(0px 0px 20px 0px rgba(0,0,0,0.2) inset);
 
     #doe {
       @include from-top-left(-40px, 5px);
