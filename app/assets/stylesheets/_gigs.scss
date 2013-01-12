@@ -46,7 +46,11 @@
       }
 
       .title {
+        margin-left: 150px;
+        margin-bottom: 5px;
         font-size: 18px;
+        @include border-image(url('shared/line_a.png') 15);
+        border-width: 0px 0px 6px 0px;
       }
 
       .group {
