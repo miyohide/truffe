@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731053415) do
+ActiveRecord::Schema.define(:version => 20130112085421) do
 
   create_table "basic_data", :force => true do |t|
     t.string   "site_name"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(:version => 20120731053415) do
   end
 
   create_table "gigs", :force => true do |t|
-    t.date     "gig_date",     :null => false
+    t.date     "gig_date",                    :null => false
     t.date     "gig_date_end"
     t.string   "gig_title"
     t.string   "group"
@@ -53,8 +53,9 @@ ActiveRecord::Schema.define(:version => 20120731053415) do
     t.integer  "charge"
     t.string   "players"
     t.string   "comment"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.integer  "recommend",    :default => 0
   end
 
   create_table "links", :force => true do |t|

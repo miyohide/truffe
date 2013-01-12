@@ -9,6 +9,7 @@ gigs1:
   comment: 
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
+  recommend: 0
 gigs2:
   gig_date: 2012-10-01 00:00:00
   gig_date_end: 2012-10-01 00:00:00
@@ -20,6 +21,7 @@ gigs2:
   comment: 
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
+  recommend: 0
 gigs3:
   gig_date: 2012-06-05 00:00:00
   gig_date_end: 2012-06-13 00:00:00
@@ -31,6 +33,7 @@ gigs3:
   comment: 北海道ツアーです。いろいろなお店でやらせてもらいます。詳細はまだ未定です。
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
+  recommend: 2
 gigs4:
   gig_date: 2012-07-01 00:00:00
   gig_date_end: 2012-07-01 00:00:00
@@ -42,6 +45,7 @@ gigs4:
   comment: 
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
+  recommend: 2
 gigs5:
   gig_date: 2012-07-12 00:00:00
   gig_date_end: 2012-07-15 00:00:00
@@ -53,6 +57,7 @@ gigs5:
   comment: 
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
+  recommend: 0
 gigs6:
   gig_date: 2012-07-15 00:00:00
   gig_date_end: 2012-07-15 00:00:00
@@ -64,6 +69,7 @@ gigs6:
   comment: 
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
+  recommend: 0
 gigs7:
   gig_date: 2012-07-31 00:00:00
   gig_date_end: 2012-07-31 00:00:00
@@ -75,3 +81,100 @@ gigs7:
   comment: 
   created_at: "2012-07-08 00:00:00"
   updated_at: "2012-07-08 00:00:00"
+  recommend: 0
+gigs8:
+  gig_date: 2013-01-10 00:00:00
+  gig_date_end: 2013-01-10 00:00:00
+  gig_title: ▲▲トリオ
+  group:
+  location: 5
+  charge: 0
+  players: たくし(p)よこお(ds)大塚義将(b)
+  comment: NO CHARGE なのでお気軽にお越しください！
+  created_at: "2013-01-08 00:00:00"
+  updated_at: "2013-01-08 00:00:00"
+  recommend: 1
+gigs9:
+  gig_date: 2013-01-15 00:00:00
+  gig_date_end: 2013-01-15 00:00:00
+  gig_title: NEW YEARS CONCERT
+  group: YOUNG LIONS
+  location: 1
+  charge: 2000
+  players: たくし(p)よこお(ds)大塚義将(b)
+  comment: 若手がたくさん出演するライブです！オススメです！
+  created_at: "2013-01-08 00:00:00"
+  updated_at: "2013-01-08 00:00:00"
+  recommend: 2
+gigs10:
+  gig_date: 2013-01-15 00:00:00
+  gig_date_end: 2013-01-15 00:00:00
+  gig_title: ▲▲Quartet
+  group:
+  location: 1
+  charge: 2000
+  players: たくし(p)よこお(ds)大塚義将(b)
+  comment:
+  created_at: "2013-01-08 00:00:00"
+  updated_at: "2013-01-08 00:00:00"
+  recommend: 0
+gigs11:
+  gig_date: 2013-01-20 00:00:00
+  gig_date_end: 2013-01-20 00:00:00
+  gig_title: ▲▲Quartet
+  group:
+  location: 1
+  charge: 2000
+  players: たくし(p)よこお(ds)大塚義将(b)
+  comment:
+  created_at: "2013-01-08 00:00:00"
+  updated_at: "2013-01-08 00:00:00"
+  recommend: 0
+gigs12:
+  gig_date: 2013-01-22 00:00:00
+  gig_date_end: 2013-01-22 00:00:00
+  gig_title: ▲▲Quartet
+  group:
+  location: 1
+  charge: 2000
+  players: たくし(p)よこお(ds)大塚義将(b)
+  comment:
+  created_at: "2013-01-23 00:00:00"
+  updated_at: "2013-01-23 00:00:00"
+  recommend: 0
+gigs13:
+  gig_date: 2013-01-23 00:00:00
+  gig_date_end: 2013-01-23 00:00:00
+  gig_title: ▲▲Quartet
+  group:
+  location: 1
+  charge: 2000
+  players: たくし(p)よこお(ds)大塚義将(b)
+  comment:
+  created_at: "2013-01-08 00:00:00"
+  updated_at: "2013-01-08 00:00:00"
+  recommend: 3
+gigs14:
+  gig_date: 2013-01-28 00:00:00
+  gig_date_end: 2013-01-30 00:00:00
+  gig_title: ▲▲Quartet全国ツアー
+  group: ○○グループ
+  location: 1
+  charge:
+  players: たくし(p)よこお(ds)大塚義将(b)
+  comment:
+  created_at: "2013-01-08 00:00:00"
+  updated_at: "2013-01-08 00:00:00"
+  recommend: 0
+gigs15:
+  gig_date: 2013-02-15 00:00:00
+  gig_date_end: 2013-02-15 00:00:00
+  gig_title: ▲▲Quartet
+  group:
+  location: 1
+  charge: 2000
+  players: たくし(p)よこお(ds)大塚義将(b)
+  comment:
+  created_at: "2013-01-08 00:00:00"
+  updated_at: "2013-01-08 00:00:00"
+  recommend: 0

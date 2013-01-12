@@ -8,7 +8,7 @@
 <% unless @gigs.blank? %>
   <ul id="gigs_list">
   <% @gigs.each do |gig| %>
-    <li data-recommend="2">
+		<li data-recommend=<%= gig.recommend %>>
       <div class="date">
         <span class="month"><%= gig.gig_date.month %></span>
         <span class="day"><%= gig.gig_date.day %></span>
