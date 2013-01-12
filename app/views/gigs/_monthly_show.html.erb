@@ -8,7 +8,7 @@
 <% unless @gigs.blank? %>
   <ul id="gigs_list">
   <% @gigs.each do |gig| %>
-		<li data-recommend=<%= gig.recommend %>>
+    <li data-recommend=<%= gig.recommend %>>
       <div class="date">
         <span class="month"><%= gig.gig_date.month %></span>
         <span class="day"><%= gig.gig_date.day %></span>
@@ -23,7 +23,7 @@
           <%= gig.gig_title %>
         <% end %>
         <% if gig.group %>
-          <span class="group"><%= gig.group %></span>
+          <%= gig.gig_title.present? ? '/ ' : '' %><span class="group"><%= gig.group %></span>
         <% end %>
         <% if gig.location %>
           <span class="lacation">@<%= gig.location %></span>
@@ -46,7 +46,7 @@
   </ul>
   <%= paginate @gigs %>
 <% else %>
-	<div id="no_gigs"><div id="doe"></div>この月の出演情報はありません。<div id="flowers"></div></div>
+  <div id="no_gigs"><div id="doe"></div>この月の出演情報はありません。<div id="flowers"></div></div>
 <% end %>
 
 <%#= link_to "<< #{ t('gigs.this_month') } >>", :path => 'gigs#index', :year => Date.today.year, :month => Date.today.month %><br>

@@ -19,7 +19,6 @@
       .date {
         position: relative;
         float: left;
-        margin-right: 10px;
         font-family: Cursive;
         text-align: center;
         @include size(150px, 120px);
@@ -46,7 +45,7 @@
       }
 
       .title {
-        margin-left: 150px;
+        margin-left: 160px;
         margin-bottom: 5px;
         font-size: 18px;
         @include border-image(url('shared/line_a.png') 15);
@@ -60,12 +59,16 @@
       .location {
       }
       .charge {
+        margin-left: 160px;
       }
       .players {
+        margin-left: 160px;
       }
       .comment {
+        margin-left: 160px;
       }
       .new {
+        margin-left: 160px;
       }
     }
   }
