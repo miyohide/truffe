@@ -2,20 +2,25 @@
   <h2>New Release</h2>
   
   <% unless @discographies.blank? %>
+    <ul id="discographies_list">
     <% @discographies.each do |disc| %>
-      <div class="disc">
-        <% if disc.url %>
-          <div class="disc_image"><%= link_to image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '180x180'), disc.url, :target => '_blank' %></div>
-        <% else %>
-          <div class="disc_image"><%= image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140') %></div>
-        <% end %>
+      <li>
+        <div class="disc_image">
+          <% if disc.url %>
+            <%= link_to image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '180x180'), disc.url, :target => '_blank' %>
+          <% else %>
+            <%= image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '180x180') %>
+          <% end %>
+        </div>
         <div class="disc_detail">
           <% if disc.title && disc.artist %>
-            <% if disc.url %>
-              <div class="title"><%= link_to disc.title + ' / ' + disc.artist, disc.url, :target => '_blank' %></div>
-            <% else %>
-              <div class="title"><%= disc.title %>/<%= disc.artist %></div>
-            <% end %>
+            <div class="title">
+              <% if disc.url %>
+                <%= link_to disc.title + ' / ' + disc.artist, disc.url, :target => '_blank' %>
+              <% else %>
+                <%= disc.title %> / <%= disc.artist %>
+              <% end %>
+            </div>
           <% end %>
           <% if disc.updated_at && disc.updated_at >= Date.today.advance(:months => -1) %>
             <div class="new">new</div>
@@ -31,9 +36,10 @@
             <div class="comments">comments:<%= disc.comment %></div>
           <% end %>
         </div>
-      </div>
+      </li>
     <% end %>
+    </ul>
   <% else %>
-    <div>現在リリース情報はありません。</div>
+    <div id="no_discs"><div id="doe"></div>現在リリース情報はありません。<div id="flowers"></div></div>
   <% end %>
 </div>
