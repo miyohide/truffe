@@ -29,14 +29,16 @@
           <span class="lacation">@<%= gig.location %></span>
         <% end %>
       </div>
-      <% if gig.charge %>
-        <div class="charge">charge: <%= gig.charge %></div>
-      <% end %>
       <% if gig.players %>
-        <div class="players">players: <%= gig.players %></div>
+        <div class="players"><span>players:</span><%= gig.players %></div>
+      <% end %>
+      <% if gig.charge %>
+        <div class="charge">
+          <span>charge:</span><%= gig.charge == 0 ? '無料' : number_to_currency(gig.charge, :options => :unit) %>
+        </div>
       <% end %>
       <% if gig.comment %>
-        <div class="comment">comment: <%= gig.comment %></div>
+        <div class="comment"><%= gig.comment %></div>
       <% end %>
       <% if gig.updated_at && gig.updated_at >= Date.today.advance(:weeks => -1) %>
         <div class="new">new</div>

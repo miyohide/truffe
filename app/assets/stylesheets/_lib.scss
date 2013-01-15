@@ -6,6 +6,24 @@ $themecolor1: rgba(250, 10, 150, 0.5);
   left: $left;
 }
 
+@mixin from-top-right($top, $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin from-bottom-left($bottom, $left) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin from-bottom-right($bottom, $right) {
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
+}
+
 @mixin size($width, $height) {
   width: $width;
   height: $height;

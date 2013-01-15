@@ -4,6 +4,7 @@
 
   #gigs_list {
     li {
+      position: relative;
       display: block;
       margin: 10px;
       padding-top: 25px;
@@ -47,7 +48,7 @@
       .title {
         margin-left: 160px;
         margin-bottom: 5px;
-        font-size: 18px;
+        font-size: 20px;
         @include border-image(url('shared/line_a.png') 15);
         border-width: 0px 0px 6px 0px;
       }
@@ -57,18 +58,46 @@
       }
 
       .location {
+        font-size: 18px;
       }
-      .charge {
-        margin-left: 160px;
-      }
+
       .players {
         margin-left: 160px;
+        span {
+          float: left;
+          width: 70px;
+        }
       }
+
+      .charge {
+        margin-left: 160px;
+        span {
+          float: left;
+          width: 70px;
+        }
+      }
+      
       .comment {
+        position: relative;
         margin-left: 160px;
+        padding: 5px 15px;
+        font-size: 14px;
+        background-color: rgba(255, 200, 200, 0.5);
+        @include border-radius(10px);
+
+        &:before{
+          content : "";
+          @include from-top-left(-2px, -14px);
+          @include size(0, 0);
+          border-width : 10px 10px 10px 15px;
+          border-style : solid;
+          border-color : transparent transparent rgba(255, 200, 200, 0.5) transparent;
+          -webkit-transform: rotate(45deg);
+        }
       }
+
       .new {
-        margin-left: 160px;
+        @include from-top-right(30px, 20px);
       }
     }
   }
@@ -78,15 +107,11 @@
   }
 
   #gigs_nav_top {
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    @include from-top-right(0px, 0px);
   }
 
   #gigs_nav_bottom {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
+    @include from-bottom-right(0px, 0px);
   }
 
   .nav_change_month {
