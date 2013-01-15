@@ -142,10 +142,38 @@ h1.title {
 /* book style ...end */
 
 
+/* Photos */
 #photos {
-  @include basic-column(100%)
+  @include basic-column(100%);
+  padding-bottom: 50px;
+
+  #photos_list {
+    li {
+      display: block;
+      margin: 20px;
+      clear: both;
+      min-height: 120px;
+
+      .photo_date {
+      }
+      .image {
+      }
+      .album {
+      }
+      .title {
+      }
+      .comment {
+      }
+    }
+  }
+
+  #no_photos {
+    @include no_info_design;
+  }
 }
 
+
+/* Contacts */
 #contacts {
   @include basic-column(100%)
 }

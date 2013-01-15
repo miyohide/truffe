@@ -1,11 +1,17 @@
-<% unless @photos.blank? %>
-  <div id="photos">
-    <% @photos.each do |photo| %>
-      <div><% if photo.photo_date %><%= photo.photo_date %><% end %></div>
-      <div><% if photo.file_no %><%= image_tag('photos/photo_' + photo.file_no + '.jpg', :size => '320x240', :alt => 'truffe_photos') %><% end %></div>
-      <div><% if photo.album_no %>album:<%= photo.album_no %><% end %></div>
-      <div><% if photo.title %>title:<%= photo.title %><% end %></div>
-      <div><% if photo.comment %>comment:<%= photo.comment %><% end %></div>
-    <% end %>
-  </div>
-<% end %>
+<div id="photos">
+  <% unless @photos.blank? %>
+    <ul id="photos_list">
+      <% @photos.each do |photo| %>
+        <li>
+          <div class="photo_date"><% if photo.photo_date %><%= photo.photo_date %><% end %></div>
+          <div class="image"><% if photo.file_no %><%= image_tag('photos/photo_' + photo.file_no + '.jpg', :size => '160x120', :alt => 'truffe_photos') %><% end %></div>
+          <div class="album"><% if photo.album_no %>album:<%= photo.album_no %><% end %></div>
+          <div class="title"><% if photo.title %>title:<%= photo.title %><% end %></div>
+          <div class="comment"><% if photo.comment %>comment:<%= photo.comment %><% end %></div>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <div id="no_photos"><div id="doe"></div>現在写真はありません。<div id="flowers"></div></div>
+  <% end %>
+</div>
