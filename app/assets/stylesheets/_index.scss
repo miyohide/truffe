@@ -1,13 +1,28 @@
+$gallery-width: 485px;
+$gallery-height: $gallery-width / 1.618;
+
+h1#site_title {
+  @include from-top-left(70px, 20px);
+  font-family: Cursive;
+  line-height: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
 #gallery {
   /* The width of the gallery */
-  width: 800px;
+  margin-top: 20px;
+  padding-left: 780px - $gallery-width;
+  padding-right: 20px;
+  width: $gallery-width;
   overflow: hidden;
 }
-#wrapper.l #gallery { width: 800px; }
+#wrapper.l #gallery { width: $gallery-width; }
 #wrapper.s #gallery { width: 640px; }
 
 
 #slides {
+  position: relative;
   width: 640px; //jQuery changes
   overflow: hidden;
 }
@@ -18,12 +33,12 @@
 }
 
 #wrapper.l #slides {
-  height: 250px;
-  .slide { @include size(800px, 250px) }
-  .slide.a { @include bg-img('800x250e.jpg') }
-  .slide.b { @include bg-img('800x250f.jpg') }
-  .slide.c { @include bg-img('800x250g.jpg') }
-  .slide.d { @include bg-img('800x250h.jpg') }
+  height: $gallery-height;
+  .slide { @include size($gallery-width, $gallery-height) }
+  .slide.a { @include bg-img('slide_01.jpg') }
+  .slide.b { @include bg-img('slide_02.jpg') }
+  .slide.c { @include bg-img('slide_03.jpg') }
+  .slide.d { @include bg-img('slide_04.jpg') }
 }
 #wrapper.s #slides {
   height: 320px;
@@ -55,7 +70,7 @@ ul#menu {
   }
 }
 #wrapper.l ul#menu {
-  padding: 5px 360px 5px 360px;
+  padding: 5px (($gallery-width - 80) / 2);
 }
 
 
