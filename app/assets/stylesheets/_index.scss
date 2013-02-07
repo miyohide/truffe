@@ -12,7 +12,7 @@ h1#site_title {
 #gallery {
   /* The width of the gallery */
   margin-top: 20px;
-  padding-left: 780px - $gallery-width;
+  padding-left: 780px - $gallery-width - 3px;
   padding-right: 20px;
   width: $gallery-width;
   overflow: hidden;
@@ -24,6 +24,7 @@ h1#site_title {
 #slides {
   position: relative;
   width: 640px; //jQuery changes
+  border: 3px solid $themecolor1;
   overflow: hidden;
 }
 .slide {
