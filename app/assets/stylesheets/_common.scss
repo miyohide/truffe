@@ -27,21 +27,6 @@ header {
   -webkit-box-align: center;
   box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
 
-  #title {
-    display: block;
-    a {
-      display: block;
-      width: 230px;
-      height: 50px;
-      line-height: 50px;
-      color: #fff;
-      text-align: center;
-      @include background(linear-gradient(
-        color-stops(#aa8264 0%, #915f32 35%, #7d4b1e 65%, #6e3c0f 100%)
-      ));
-    }
-  }
-
   ul#nav {
     li {
       display: -webkit-box;
@@ -50,7 +35,7 @@ header {
       float: left;
       font-size: 18px;
       text-shadow: 0.5px 0.5px 0.5px #666;
-      @include size(95px, 50px);
+      @include size(133px, 50px);
       @include background(linear-gradient(
         color-stops(#aa8264 0%, #915f32 35%, #7d4b1e 65%, #6e3c0f 100%)
       ));
@@ -60,10 +45,10 @@ header {
         rgba(150, 150, 150, 0.1) -1px -1px 3px inset);
 
       &.Gigs {
-        width: 80px;
+        width: 128px;
       }
       &.Discography {
-        width: 110px;
+        width: 140px;
       }
 
       > a {
