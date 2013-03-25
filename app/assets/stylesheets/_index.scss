@@ -121,6 +121,7 @@ h1.title {
 
   #profile_image {
     float: left;
+    img { width: 240px; }
   }
 
   #profile_detail {
@@ -129,33 +130,12 @@ h1.title {
     max-width: 460px;
     h3 {
       margin-bottom: 20px;
+      font-size: 20px;
+      @include border-image(url('shared/line_a.png') 15);
+      border-width: 0px 0px 6px 0px;
     }
   }
 }
-
-/* book style start... */
-#profile {
-  @include bg-img('profile/book_bg1.png');
-  border-radius: 0px;
-  background-color: transparent;
-
-  #profile_image {
-    margin: 40px;
-    margin-left: 75px;
-    margin-right: 85px;
-    img {
-      width: 200px;
-      opacity: 0.7;
-    }
-  }
-
-  #profile_detail {
-    padding-top: 30px;
-    width: 320px;
-    line-height: 1.8;
-  }
-}
-/* book style ...end */
 
 
 /* Photos */
