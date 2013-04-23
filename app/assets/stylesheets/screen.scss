@@ -4,14 +4,6 @@
 @import 'compass/typography';
 @import 'compass/utilities';
 
-@import 'lib';
-@import 'reset';
-@import 'common';
+@import 'modules/base';
 
-@import 'login';
-@import 'index';
-@import 'users';
-@import 'gigs';
-@import 'discographies';
-@import 'blog_entries';
-@import 'links';
+@import 'partials/base';
