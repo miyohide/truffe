@@ -2,7 +2,7 @@ $gallery-width: 485px;
 $gallery-height: $gallery-width / 1.618;
 
 h1#site_title {
-  @include from-top-left(70px, 20px);
+  @include from-top-left(70px, 40px);
   font-family: Cursive;
   line-height: 50px;
   color: #fff;
@@ -11,9 +11,9 @@ h1#site_title {
 
 #gallery {
   /* The width of the gallery */
-  margin-top: 20px;
-  padding-left: 780px - $gallery-width - 3px;
-  padding-right: 20px;
+  margin-top: 40px;
+  padding-left: 800px - $gallery-width - 3px;
+  padding-right: 40px;
   width: $gallery-width;
   overflow: hidden;
 }
@@ -125,9 +125,9 @@ h1.title {
   }
 
   #profile_detail {
-    margin-left: 20px;
+    margin-left: 40px;
     float: left;
-    max-width: 460px;
+    max-width: 400px;
     h3 {
       margin-bottom: 20px;
       font-size: 20px;

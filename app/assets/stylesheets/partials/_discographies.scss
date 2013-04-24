@@ -4,13 +4,17 @@
   #discographies_list {
     li {
       display: block;
-      margin: 10px;
       margin-bottom: 40px;
       clear: both;
       min-height: 180px;
 
       .disc_image {
         float: left;
+        transition: opacity 0.2s linear 0;
+
+        &:hover {
+          opacity: 0.6;
+        }
       }
 
       .disc_detail {
