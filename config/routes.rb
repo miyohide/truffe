@@ -44,7 +44,7 @@ Truffe::Application.routes.draw do
   resources :users
   resources :gigs
   resources :discographies
-  # resources :blog_entries
+  resources :blog_entries
 
   # Sample resource route with sub-resources:
   #   resources :products do
