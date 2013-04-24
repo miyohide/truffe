@@ -197,22 +197,22 @@ ja:
       <<: *errors
   home:
   profile:
-    title: プロフィール
+    title: Profile
     name: 大塚 義将（おおつか よしまさ）
   gigs:
-    title: ライブスケジュール
+    title: Gigs
     this_month: 今月
     prev_month: 前月
     next_month: 翌月
     rate: 円
   discographies:
-    title: CD・活動記録
+    title: Discography
   photos:
-    title: ギャラリー
+    title: Photos
   contacts:
-    title: 連絡先・レッスンの案内
+    title: Contacts
   login:
-    title: 管理者専用ログインページ
+    title: Login
     login_id: ID / Email
     password: パスワード
     login: ログイン
