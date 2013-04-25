@@ -77,14 +77,14 @@ ActiveRecord::Schema.define(:version => 20130112085421) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login_name",                         :null => false
-    t.string   "hashed_password",                    :null => false
-    t.string   "name"
+    t.string   "name",                                  :null => false
     t.string   "email"
+    t.string   "encrypted_password",                    :null => false
+    t.string   "salt"
     t.date     "birthday"
-    t.boolean  "administrator",   :default => false
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
+    t.boolean  "administrator",      :default => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
   end
 
 end
