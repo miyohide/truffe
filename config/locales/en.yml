@@ -204,9 +204,10 @@ en:
     errors:
       <<: *errors
   home:
+    base_title: Jazz Bassist Yoshimasa Otsuka
   profile:
     title: Profile
-    name: Yoshimasa Ohtsuka
+    name: Yoshimasa Otsuka
   gigs:
     title: Gigs
     this_month: this month

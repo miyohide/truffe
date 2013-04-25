@@ -1,5 +1,13 @@
 # -*- encoding: utf-8 -*-
 module ApplicationHelper
+  def title
+    if @page_title.nil?
+      t('home.base_title')
+    else
+      "#{h(@page_title)} | #{t('home.base_title')}"
+    end
+  end
+
   def menu_link_to(item)
     if current_page?(item[:link])
       raw('<li class="' + item[:name] + ' selected"><p>') + item[:name] + raw('</p></li>')

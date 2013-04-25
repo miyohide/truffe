@@ -196,6 +196,7 @@ ja:
     errors:
       <<: *errors
   home:
+    base_title: Jazz Bassist 大塚義将
   profile:
     title: Profile
     name: 大塚 義将（おおつか よしまさ）
