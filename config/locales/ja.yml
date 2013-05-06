@@ -212,6 +212,9 @@ ja:
     title: Photos
   contacts:
     title: Contacts
+  signup:
+    title: Sign Up
+    new: 新規ユーザ作成
   login:
     title: Login
     login_id: ID / Email
