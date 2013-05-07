@@ -9,4 +9,15 @@ class UsersController < ApplicationController
     @user = User.new
     @page_title = t('signup.title')
   end
+
+  def create
+    @user = User.new(params[:user])
+    if @user.save
+			flash[:success] = "Welcome to Your Profile Page!"
+      redirect_to @user
+    else
+      @title = t('signup.title')
+      render 'new'
+    end
+  end
 end

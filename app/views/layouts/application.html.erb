@@ -18,11 +18,8 @@
   </header>
 
   <div id="container">
-    <% if flash[:notice] %>
-      <p class="notice"><%= flash[:notice] %></p>
-    <% end %>
-    <% if flash[:error] %>
-      <p class="error"><%= flash[:error] %></p>
+    <% flash.each do |key, value| %>
+      <p class="flash <%= key %>"><%= value %></p>
     <% end %>
     <% if @page_title %>
       <h1 class="page_title"><%= h(@page_title) %></h1>
