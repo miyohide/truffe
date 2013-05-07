@@ -17,6 +17,7 @@ group :test do
   gem 'puma'
   gem 'rspec', '2.11.0'
   gem 'webrat', '0.7.1'
+  gem 'factory_girl_rails', '1.0'
 end
 
 group :production do
