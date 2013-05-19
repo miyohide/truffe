@@ -25,6 +25,9 @@ Truffe::Application.routes.draw do
   #     end
   #   end
 
+  match 'signup',  :to => 'users#new'
+  match 'signin',  :to => 'sessions#new'
+  match 'signout', :to => 'sessions#destroy'
   match 'profile' => 'index#profile'
   match 'photos' => 'index#photos'
   match 'contacts' => 'index#contacts'
@@ -45,6 +48,7 @@ Truffe::Application.routes.draw do
   resources :gigs
   resources :discographies
   resources :blog_entries
+  resources :sessions, :only => [:new, :create, :destroy]
 
   # Sample resource route with sub-resources:
   #   resources :products do

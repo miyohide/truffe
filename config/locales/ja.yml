@@ -215,6 +215,13 @@ ja:
   signup:
     title: Sign Up
     new: 新規ユーザ作成
+  signin:
+    title: Sign in 
+    submit: ログイン
+    new_user: 新規ユーザですか？
+    go_to_signup: 今すぐユーザ登録しましょう！
+  signout:
+    submit: ログアウト
   login:
     title: Login
     login_id: ID / Email

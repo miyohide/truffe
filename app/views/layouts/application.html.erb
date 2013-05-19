@@ -29,7 +29,14 @@
   </div>
 
   <footer>
-    <div id="open_login"><%= link_to '★管理者ログイン★', login_index_path %></div>
+    <div id="open_login">
+      <% if signed_in? %>
+        <%= link_to "Your Profile", current_user %>
+        <%= link_to t('signout.submit'), signout_path, :method => :delte %>
+      <% else %>
+        <%= link_to t('signin.submit'), signin_path %>
+      <% end %>
+    </div>
   </footer>
   <%= debug(params) if Rails.env.development? %>
 </div>
