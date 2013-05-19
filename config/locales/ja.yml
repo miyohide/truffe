@@ -215,18 +215,15 @@ ja:
   signup:
     title: Sign Up
     new: 新規ユーザ作成
+    submit: ユーザ登録
   signin:
     title: Sign in 
     submit: ログイン
-    new_user: 新規ユーザですか？
-    go_to_signup: 今すぐユーザ登録しましょう！
+    new_user: 管理者のみログイン可能となっております。
+    go_to_signup: ☀
+    hidden_link: ★
   signout:
     submit: ログアウト
-  login:
-    title: Login
-    login_id: ID / Email
-    password: パスワード
-    login: ログイン
   admin:
     admin_tool: 管理ツール
   messages:

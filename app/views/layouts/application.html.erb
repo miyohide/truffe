@@ -34,7 +34,7 @@
         <%= link_to "Your Profile", current_user %>
         <%= link_to t('signout.submit'), signout_path, :method => :delte %>
       <% else %>
-        <%= link_to t('signin.submit'), signin_path %>
+        <%= link_to t('signin.hidden_link'), signin_path %>
       <% end %>
     </div>
   </footer>

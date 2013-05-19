@@ -223,18 +223,15 @@ en:
   signup:
     title: Sign Up
     new: Make a new user
+    submit: Sign up
   signin:
     title: Sign in
     submit: Sign in
-    new_user: New user?
-    go_to_signup: Sign up now!
+    new_user: Only Admin users can sign in.
+    go_to_signup: ☀SUN
+    hidden_link: ☆
   signout:
     submit: Sign out
-  login:
-    title: Login for Admistrator
-    login_id: ID or Email
-    password: Password
-    login: Log In
   admin:
     admin_tool: Admin Tool
   messages:

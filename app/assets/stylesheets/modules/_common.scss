@@ -102,26 +102,54 @@ header {
   }
 }
 
-footer{
-  #open_login{
+footer {
+  #open_login {
     margin-right: 20px;
     font-size: 10px;
     float: right;
   }
 }
 
-.disc{
+.disc {
   overflow: hidden;
-  .disc_image{
+  .disc_image {
     float: left;
   }
-  .disc_detail{
+  .disc_detail {
     margin-left: 20px;
     float: left;
   }
 }
 
-
+form {
+  .field {
+    margin-bottom: 10px;
+    label {
+      @include size(220px, 20px);
+      margin-bottom: 5px;
+      font-size: 17px;
+    }
+    input {
+      @include size(220px, 20px);
+      @include border-radius(4px);
+      padding: 5px;
+      font-size: 17px;
+      background-color: rgba(200, 200, 200, 0.5);
+    }
+  }
+  .actions {
+    input {
+      @include size(120px, 30px);
+      @include border-radius(4px);
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 5px;
+      font-size: 15px;
+      text-align: center;
+      background-color: rgba(150, 150, 200, 0.5);
+    }
+  }
+}
 
 
 
