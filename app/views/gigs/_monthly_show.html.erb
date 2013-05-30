@@ -8,6 +8,7 @@
 <% unless @gigs.blank? %>
   <ul id="gigs_list">
   <% @gigs.each do |gig| %>
+    <% # この中をpartialにしたほうがよかったです %>
     <li data-recommend=<%= gig.recommend %>>
       <div class="date">
         <span class="month"><%= gig.gig_date.month %></span>
@@ -19,6 +20,7 @@
         <% end %>
       </div>
       <div class="title">
+        <% #このifはいらないような %>
         <% if gig.gig_title %>
           <%= gig.gig_title %>
         <% end %>

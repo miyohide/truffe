@@ -1,31 +1,36 @@
 class GigsController < ApplicationController
+  # Trailing whitespaceがあります
+  # vimだったら:%s/ $//g で消せます。
+  #
   def index
     @page_title = t('gigs.title')
-    @gig_year  = Date.today.year  unless params[:year] 
-    @gig_month = Date.today.month unless params[:month]
-    unless params[:year].blank?
-      unless params[:year].to_i < 2010 || params[:year].to_i > 2200
-        @gig_year  = params[:year].to_i
-      else
-        @gig_year  = Date.today.year
-      end
-    end
-    unless params[:month].blank?
-      unless params[:month].to_i <= 0 || params[:month].to_i >= 13
-        @gig_month = params[:month].to_i
-      else
-        @gig_month  = Date.today.month
-      end
-    end
 
+    # ここは条件が変な気が。 y < 2010 and y > 2200 は存在しないです。
+    @gig_year = unless params[:year] && (params[:year].to_i < 2010 || params[:year].to_i > 2200)
+                  params[:year].to_i
+                else
+                  Date.today.year
+                end
+
+    @gig_year = unless params[:month] && params[:month].between? 1, 12
+                  params[:month].to_i
+                else
+                  Date.today.month
+                end
+
+    # ここってGigs.where("EXTRACT...")って感じではダメでしょうか。
     @gigs = Kaminari.paginate_array(Gigs.find_by_sql(["SELECT * FROM gigs WHERE (EXTRACT(MONTH FROM gig_date) = :month AND EXTRACT(YEAR FROM gig_date) = :year) LIMIT 100 OFFSET 0;", {:month => @gig_month, :year => @gig_year}])).page(params[:page])
 
+    # 条件文はなるべくifで始まる形にしたほうがわかりやすいです。
+    # 特に条件部分に || や && ははいる場合はifに変換すべし。
     unless @gig_year || @gig_month
-      @prev_year = Date.today.year 
-      @next_year = Date.today.year 
-      @prev_month = Date.today.month 
-      @next_month = Date.today.month 
+      @prev_year = Date.today.year
+      @next_year = Date.today.year
+      @prev_month = Date.today.month
+      @next_month = Date.today.month
     else
+      # ここらへん、1.month.since((Date.new(@gig_year, @gig_month))でを使えばすっきりしそう。 1.month.agoもあります。
+      # see: http://guides.rubyonrails.org/active_support_core_extensions.html#extensions-to-date
       unless @gig_month <= 1
         @prev_year = @gig_year
         @prev_month = @gig_month - 1
