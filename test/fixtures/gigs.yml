@@ -17,88 +17,88 @@
 #
 
 gigs1:
-  gig_date: 2012-08-10 00:00:00
-  gig_date_end: 2012-08-10 00:00:00
-  gig_title: 唐沢寧Duo
+  gig_date: 2013-08-10 00:00:00
+  gig_date_end: 2013-08-10 00:00:00
+  gig_title: XXX Duo
   group: 
   location: 1
   charge: 0
   players: 
   comment: 
-  created_at: "2012-07-08 00:00:00"
-  updated_at: "2012-07-08 00:00:00"
+  created_at: "2013-07-08 00:00:00"
+  updated_at: "2013-07-08 00:00:00"
   recommend: 0
 gigs2:
-  gig_date: 2012-10-01 00:00:00
-  gig_date_end: 2012-10-01 00:00:00
-  gig_title: 横山さん
+  gig_date: 2013-10-01 00:00:00
+  gig_date_end: 2013-10-01 00:00:00
+  gig_title: XXX Quartet
   group: 
   location: 2
   charge: 2500
-  players: 横山さん(ds)大塚義将(b)
+  players: 横尾○○(ds)大塚義将(b)
   comment: 
-  created_at: "2012-07-08 00:00:00"
-  updated_at: "2012-07-08 00:00:00"
+  created_at: "2013-07-08 00:00:00"
+  updated_at: "2013-07-08 00:00:00"
   recommend: 0
 gigs3:
-  gig_date: 2012-06-05 00:00:00
-  gig_date_end: 2012-06-13 00:00:00
-  gig_title: 椎名豊トリオ
+  gig_date: 2013-06-05 00:00:00
+  gig_date_end: 2013-06-13 00:00:00
+  gig_title: 島村△△トリオ
   group: 
   location: 1
   charge: 0
-  players: 椎名豊(p)広瀬じゅんじ(ds)大塚義将(b)
+  players: 島村△△(p)広川○○(ds)大塚義将(b)
   comment: 北海道ツアーです。いろいろなお店でやらせてもらいます。詳細はまだ未定です。
-  created_at: "2012-07-08 00:00:00"
-  updated_at: "2012-07-08 00:00:00"
+  created_at: "2013-07-08 00:00:00"
+  updated_at: "2013-07-08 00:00:00"
   recommend: 2
 gigs4:
-  gig_date: 2012-07-01 00:00:00
-  gig_date_end: 2012-07-01 00:00:00
-  gig_title: ジーンジャクソンQurtet
+  gig_date: 2013-07-01 00:00:00
+  gig_date_end: 2013-07-01 00:00:00
+  gig_title: 赤羽○○ Qurtet
   group: 
   location: 2
   charge: 2500
-  players: ジーンジャクソン(ds)大塚義将(b)
+  players: 赤羽○○(ds)大塚義将(b)
   comment: 
-  created_at: "2012-07-08 00:00:00"
-  updated_at: "2012-07-08 00:00:00"
+  created_at: "2013-07-08 00:00:00"
+  updated_at: "2013-07-08 00:00:00"
   recommend: 2
 gigs5:
-  gig_date: 2012-07-12 00:00:00
-  gig_date_end: 2012-07-15 00:00:00
+  gig_date: 2013-07-12 00:00:00
+  gig_date_end: 2013-07-15 00:00:00
   gig_title: バースデーライブ
   group: 
   location:
   charge: 2500
-  players: たくし(p)よこお(ds)大塚義将(b)
+  players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment: 
-  created_at: "2012-07-08 00:00:00"
-  updated_at: "2012-07-08 00:00:00"
+  created_at: "2013-07-08 00:00:00"
+  updated_at: "2013-07-08 00:00:00"
   recommend: 0
 gigs6:
-  gig_date: 2012-07-15 00:00:00
-  gig_date_end: 2012-07-15 00:00:00
+  gig_date: 2013-07-15 00:00:00
+  gig_date_end: 2013-07-15 00:00:00
   gig_title: バースデーライブ
   group: 
   location:
   charge: 2500
-  players: たくし(p)よこお(ds)大塚義将(b)
+  players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment: 
-  created_at: "2012-07-08 00:00:00"
-  updated_at: "2012-07-08 00:00:00"
+  created_at: "2013-07-08 00:00:00"
+  updated_at: "2013-07-08 00:00:00"
   recommend: 0
 gigs7:
-  gig_date: 2012-07-31 00:00:00
-  gig_date_end: 2012-07-31 00:00:00
+  gig_date: 2013-07-31 00:00:00
+  gig_date_end: 2013-07-31 00:00:00
   gig_title: ▲▲トリオ
   group: 
   location: 1
   charge: 1000
-  players: たくし(p)よこお(ds)大塚義将(b)
+  players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment: 
-  created_at: "2012-07-08 00:00:00"
-  updated_at: "2012-07-08 00:00:00"
+  created_at: "2013-07-08 00:00:00"
+  updated_at: "2013-07-08 00:00:00"
   recommend: 0
 gigs8:
   gig_date: 2013-01-10 00:00:00
@@ -107,7 +107,7 @@ gigs8:
   group:
   location: 5
   charge: 0
-  players: たくし(p)よこお(ds)大塚義将(b)
+  players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment: NO CHARGE なのでお気軽にお越しください！
   created_at: "2013-01-08 00:00:00"
   updated_at: "2013-01-08 00:00:00"
@@ -119,7 +119,7 @@ gigs9:
   group: YOUNG LIONS
   location: 1
   charge: 2000
-  players: たくし(p)よこお(ds)大塚義将(b)
+  players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment: 若手がたくさん出演するライブです！オススメです！
   created_at: "2013-01-08 00:00:00"
   updated_at: "2013-01-08 00:00:00"
@@ -131,7 +131,7 @@ gigs10:
   group:
   location: 1
   charge: 2000
-  players: たくし(p)よこお(ds)大塚義将(b)
+  players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment:
   created_at: "2013-01-08 00:00:00"
   updated_at: "2013-01-08 00:00:00"
@@ -143,7 +143,7 @@ gigs11:
   group:
   location: 1
   charge: 2000
-  players: たくし(p)よこお(ds)大塚義将(b)
+  players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment:
   created_at: "2013-01-08 00:00:00"
   updated_at: "2013-01-08 00:00:00"
@@ -155,7 +155,7 @@ gigs12:
   group:
   location: 1
   charge: 2000
-  players: たくし(p)よこお(ds)大塚義将(b)
+  players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment:
   created_at: "2013-01-23 00:00:00"
   updated_at: "2013-01-23 00:00:00"
@@ -167,7 +167,7 @@ gigs13:
   group:
   location: 1
   charge: 2000
-  players: たくし(p)よこお(ds)大塚義将(b)
+  players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment:
   created_at: "2013-01-08 00:00:00"
   updated_at: "2013-01-08 00:00:00"
@@ -179,7 +179,7 @@ gigs14:
   group: ○○グループ
   location: 1
   charge:
-  players: たくし(p)よこお(ds)大塚義将(b)
+  players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment:
   created_at: "2013-01-08 00:00:00"
   updated_at: "2013-01-08 00:00:00"
@@ -191,7 +191,7 @@ gigs15:
   group:
   location: 1
   charge: 2000
-  players: たくし(p)よこお(ds)大塚義将(b)
+  players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment:
   created_at: "2013-01-08 00:00:00"
   updated_at: "2013-01-08 00:00:00"

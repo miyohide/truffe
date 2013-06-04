@@ -1,5 +1,5 @@
 class IndexController < ApplicationController
-  USERS = { "solo" => "monk" }
+  USERS = { "aaaa" => "bbbb" }
 
   before_filter :authenticate
 
