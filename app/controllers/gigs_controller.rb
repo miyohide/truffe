@@ -5,18 +5,16 @@ class GigsController < ApplicationController
   def index
     @page_title = t('gigs.title')
 
-    # ここは条件が変な気が。 y < 2010 and y > 2200 は存在しないです。
-    @gig_year = unless params[:year] && (params[:year].to_i < 2010 || params[:year].to_i > 2200)
-                  params[:year].to_i
-                else
-                  Date.today.year
-                end
-
-    @gig_year = unless params[:month] && params[:month].between? 1, 12
-                  params[:month].to_i
-                else
-                  Date.today.month
-                end
+    @gig_year  = unless params[:year] && (params[:year].to_i >= 2010 && params[:year].to_i <= 2200)
+                   Date.today.year
+                 else
+                   params[:year].to_i
+                 end
+    @gig_month = unless params[:month] && params[:month].to_i.between?(1, 12)
+                   Date.today.month
+                 else
+                   params[:month].to_i
+                 end
 
     # ここってGigs.where("EXTRACT...")って感じではダメでしょうか。
     @gigs = Kaminari.paginate_array(Gigs.find_by_sql(["SELECT * FROM gigs WHERE (EXTRACT(MONTH FROM gig_date) = :month AND EXTRACT(YEAR FROM gig_date) = :year) LIMIT 100 OFFSET 0;", {:month => @gig_month, :year => @gig_year}])).page(params[:page])
