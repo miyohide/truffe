@@ -1,5 +1,26 @@
 <%# @side_bar_template_name = 'shared/side_bar' %>
 
 <div id="gigs">
-  <%= render :partial => 'gigs/monthly_show' %>
+  <h2><%= @gig_year %>年<%= @gig_month %>月のライブスケジュール</h2>
+  
+  <div id="gigs_nav_top" class="nav_change_month">
+    <%= link_to "◀ #{ t('gigs.prev_month') }", :path => 'gigs#index', :year => @prev_year, :month => @prev_month %>
+    <%= link_to "#{ t('gigs.next_month') } ▶", :path => 'gigs#index', :year => @next_year, :month => @next_month %>
+  </div>
+
+  <% unless @gigs.blank? %>
+    <ul id="gigs_list">
+      <%= render :partial => 'gigs/monthly_show' %>
+    </ul>
+    <%= paginate @gigs %>
+  <% else %>
+    <div id="no_gigs"><div id="doe"></div>この月の出演情報はありません。<div id="flowers"></div></div>
+  <% end %>
+
+  <%#= link_to "<< #{ t('gigs.this_month') } >>", :path => 'gigs#index', :year => Date.today.year, :month => Date.today.month %><br>
+  
+  <div id="gigs_nav_bottom" class="nav_change_month">
+    <%= link_to "◀ #{ t('gigs.prev_month') }", :path => 'gigs#index', :year => @prev_year, :month => @prev_month %>
+    <%= link_to "#{ t('gigs.next_month') } ▶", :path => 'gigs#index', :year => @next_year, :month => @next_month %>
+  </div>
 </div>

@@ -1,61 +1,39 @@
-<h2><%= @gig_year %>年<%= @gig_month %>月のライブスケジュール</h2>
-
-<div id="gigs_nav_top" class="nav_change_month">
-  <%= link_to "◀ #{ t('gigs.prev_month') }", :path => 'gigs#index', :year => @prev_year, :month => @prev_month %>
-  <%= link_to "#{ t('gigs.next_month') } ▶", :path => 'gigs#index', :year => @next_year, :month => @next_month %>
-</div>
-
-<% unless @gigs.blank? %>
-  <ul id="gigs_list">
-  <% @gigs.each do |gig| %>
-    <% # この中をpartialにしたほうがよかったです %>
-    <li data-recommend=<%= gig.recommend %>>
-      <div class="date">
-        <span class="month"><%= gig.gig_date.month %></span>
-        <span class="day"><%= gig.gig_date.day %></span>
-        <% if gig.gig_date_end != gig.gig_date %>
-          <span class="date_end">〜 <%= gig.gig_date_end.month %>/<%= gig.gig_date_end.day %></span>
-        <% else %>
-          <span class="year"><%= gig.gig_date.year %></span>
-        <% end %>
+<% @gigs.each do |gig| %>
+  <li data-recommend=<%= gig.recommend %>>
+    <div class="date">
+      <span class="month"><%= gig.gig_date.month %></span>
+      <span class="day"><%= gig.gig_date.day %></span>
+      <% if gig.gig_date_end != gig.gig_date %>
+        <span class="date_end">〜 <%= gig.gig_date_end.month %>/<%= gig.gig_date_end.day %></span>
+      <% else %>
+        <span class="year"><%= gig.gig_date.year %></span>
+      <% end %>
+    </div>
+    <div class="title">
+      <% #このifはいらないような %>
+      <% if gig.gig_title %>
+        <%= gig.gig_title %>
+      <% end %>
+      <% if gig.group %>
+        <%= gig.gig_title.present? ? '/ ' : '' %><span class="group"><%= gig.group %></span>
+      <% end %>
+      <% if gig.location %>
+        <span class="lacation">@<%= gig.location %></span>
+      <% end %>
+    </div>
+    <% if gig.players %>
+      <div class="players"><span>players:</span><%= gig.players %></div>
+    <% end %>
+    <% if gig.charge %>
+      <div class="charge">
+        <span>charge:</span><%= gig.charge == 0 ? '無料' : number_to_currency(gig.charge, :options => :unit) %>
       </div>
-      <div class="title">
-        <% #このifはいらないような %>
-        <% if gig.gig_title %>
-          <%= gig.gig_title %>
-        <% end %>
-        <% if gig.group %>
-          <%= gig.gig_title.present? ? '/ ' : '' %><span class="group"><%= gig.group %></span>
-        <% end %>
-        <% if gig.location %>
-          <span class="lacation">@<%= gig.location %></span>
-        <% end %>
-      </div>
-      <% if gig.players %>
-        <div class="players"><span>players:</span><%= gig.players %></div>
-      <% end %>
-      <% if gig.charge %>
-        <div class="charge">
-          <span>charge:</span><%= gig.charge == 0 ? '無料' : number_to_currency(gig.charge, :options => :unit) %>
-        </div>
-      <% end %>
-      <% if gig.comment %>
-        <div class="comment"><%= gig.comment %></div>
-      <% end %>
-      <% if gig.updated_at && gig.updated_at >= Date.today.advance(:weeks => -1) %>
-        <div class="new">new</div>
-      <% end %>
-    </li>
-  <% end %>
-  </ul>
-  <%= paginate @gigs %>
-<% else %>
-  <div id="no_gigs"><div id="doe"></div>この月の出演情報はありません。<div id="flowers"></div></div>
+    <% end %>
+    <% if gig.comment %>
+      <div class="comment"><%= gig.comment %></div>
+    <% end %>
+    <% if gig.updated_at && gig.updated_at >= Date.today.advance(:weeks => -1) %>
+      <div class="new">new</div>
+    <% end %>
+  </li>
 <% end %>
-
-<%#= link_to "<< #{ t('gigs.this_month') } >>", :path => 'gigs#index', :year => Date.today.year, :month => Date.today.month %><br>
-
-<div id="gigs_nav_bottom" class="nav_change_month">
-  <%= link_to "◀ #{ t('gigs.prev_month') }", :path => 'gigs#index', :year => @prev_year, :month => @prev_month %>
-  <%= link_to "#{ t('gigs.next_month') } ▶", :path => 'gigs#index', :year => @next_year, :month => @next_month %>
-</div>
