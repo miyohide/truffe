@@ -58,14 +58,6 @@ ActiveRecord::Schema.define(:version => 20130112085421) do
     t.integer  "recommend",    :default => 0
   end
 
-  create_table "links", :force => true do |t|
-    t.string   "link_name"
-    t.string   "url"
-    t.integer  "kind_no"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "photos", :force => true do |t|
     t.date     "photo_date"
     t.string   "file_no"
