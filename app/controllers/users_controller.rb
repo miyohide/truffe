@@ -27,4 +27,15 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @page_title = t('settings.title')
   end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      flash[:success] = t('settings.update')
+      redirect_to @user
+    else
+      @page_title = t('settings.title')
+      render 'edit'
+    end
+  end
 end

@@ -237,6 +237,7 @@ en:
     submit: Update
     profile: Profile
     edit: Settings
+    update: Profile updated.
   admin:
     admin_tool: Admin Tool
   messages:

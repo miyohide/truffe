@@ -229,6 +229,7 @@ ja:
     submit: 更新
     profile: プロフィール
     edit: アカウント設定
+    update: プロフィールを更新しました。
   admin:
     admin_tool: 管理ツール
   messages:
