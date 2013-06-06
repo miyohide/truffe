@@ -230,6 +230,9 @@ ja:
     profile: プロフィール
     edit: アカウント設定
     update: プロフィールを更新しました。
+  deny_access:
+    messages:
+      protected: このページにアクセスするにはログインしてください。
   admin:
     admin_tool: 管理ツール
   messages:

@@ -238,6 +238,9 @@ en:
     profile: Profile
     edit: Settings
     update: Profile updated.
+  deny_access:
+    messages:
+      protected: Please sign in to access this page.
   admin:
     admin_tool: Admin Tool
   messages:
