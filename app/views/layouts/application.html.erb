@@ -31,7 +31,8 @@
   <footer>
     <div id="open_login">
       <% if signed_in? %>
-        <%= link_to "Your Profile", current_user %>
+        <%= link_to t('settings.profile'), current_user %>
+        <%= link_to t('settings.edit'), edit_user_path(current_user) %>
         <%= link_to t('signout.submit'), signout_path, :method => :delte %>
       <% else %>
         <%= link_to t('signin.hidden_link'), signin_path %>

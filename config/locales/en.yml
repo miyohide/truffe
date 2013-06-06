@@ -232,6 +232,11 @@ en:
     hidden_link: ☆
   signout:
     submit: Sign out
+  settings:
+    title: Settings
+    submit: Update
+    profile: Profile
+    edit: Settings
   admin:
     admin_tool: Admin Tool
   messages:

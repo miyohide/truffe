@@ -224,6 +224,11 @@ ja:
     hidden_link: ★
   signout:
     submit: ログアウト
+  settings:
+    title: Settings
+    submit: 更新
+    profile: プロフィール
+    edit: アカウント設定
   admin:
     admin_tool: 管理ツール
   messages:

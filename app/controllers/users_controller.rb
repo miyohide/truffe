@@ -18,8 +18,13 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to Your Profile Page!"
       redirect_to @user
     else
-      @title = t('signup.title')
+      @page_title = t('signup.title')
       render 'new'
     end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+    @page_title = t('settings.title')
   end
 end
