@@ -212,6 +212,9 @@ ja:
     title: Photos
   contacts:
     title: Contacts
+  users:
+    title: All users
+    list: ユーザ一覧
   signup:
     title: Sign Up
     new: 新規ユーザ作成

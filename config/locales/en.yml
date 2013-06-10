@@ -220,6 +220,9 @@ en:
     title: Photos
   contacts:
     title: Contacts
+  users:
+    title: All users
+    list: Users
   signup:
     title: Sign Up
     new: Make a new user
