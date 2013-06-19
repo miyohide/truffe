@@ -1,7 +1,4 @@
 class GigsController < ApplicationController
-  # Trailing whitespaceがあります
-  # vimだったら:%s/ $//g で消せます。
-  #
   def index
     @page_title = t('gigs.title')
 
@@ -17,11 +14,15 @@ class GigsController < ApplicationController
                  end
 
     # ここってGigs.where("EXTRACT...")って感じではダメでしょうか。
-    @gigs = Kaminari.paginate_array(Gigs.find_by_sql(["SELECT * FROM gigs WHERE (EXTRACT(MONTH FROM gig_date) = :month AND EXTRACT(YEAR FROM gig_date) = :year) LIMIT 100 OFFSET 0;", {:month => @gig_month, :year => @gig_year}])).page(params[:page])
+    #
+    # -> 書き直しました！普通にwhere句の中で使えました。ありがとうございます。
+    @gigs = Kaminari.paginate_array(Gigs.where('EXTRACT(MONTH FROM gig_date) = ? and EXTRACT(YEAR FROM gig_date) = ?', @gig_month, @gig_year).limit(100).offset(0)).page(params[:page])
 
     # 条件文はなるべくifで始まる形にしたほうがわかりやすいです。
     # 特に条件部分に || や && ははいる場合はifに変換すべし。
-    unless @gig_year || @gig_month
+    #
+    # -> 変えました！
+    if @gig_year.nil? || @gig_month.nil?
       @prev_year = Date.today.year
       @next_year = Date.today.year
       @prev_month = Date.today.month
@@ -29,20 +30,11 @@ class GigsController < ApplicationController
     else
       # ここらへん、1.month.since((Date.new(@gig_year, @gig_month))でを使えばすっきりしそう。 1.month.agoもあります。
       # see: http://guides.rubyonrails.org/active_support_core_extensions.html#extensions-to-date
-      unless @gig_month <= 1
-        @prev_year = @gig_year
-        @prev_month = @gig_month - 1
-      else
-        @prev_year = @gig_year - 1
-        @prev_month = 12
-      end
-      unless @gig_month >= 12
-        @next_year = @gig_year
-        @next_month = @gig_month + 1
-      else
-        @next_year = @gig_year + 1
-        @next_month = 1
-      end
+      #
+      # ->  ありがとうございます。確かに、Datetimeとして扱えばもっと簡潔に書けるところでした！
+      current_date = (Date.new(@gig_year, @gig_month))
+      @prev_month = current_date.prev_month
+      @next_month = current_date.next_month
     end
   end
 end
