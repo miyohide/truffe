@@ -14,22 +14,27 @@ module ApplicationHelper
       #
       # あと, #content_tag, %記法を駆使すればもうちょっときれいになりそう
       # see: http://doc.ruby-lang.org/ja/1.9.3/doc/spec=2fliteral.html#percent
-      raw('<li class="' + item[:name] + ' selected"><p>') + item[:name] + raw('</p></li>')
+      #
+      # -> ありがとうございます！わかりやすくなりました！
+      content_tag :li, :class => item[:name] + %q( selected) do
+        content_tag :p, item[:name]
+      end
     elsif item[:disabled]
-      raw('<li class="disabled"><p>') + item[:name] + raw('<span>(準備中)</span></p></li>')
+      content_tag :li, :class => 'disabled' do
+        content_tag :p, item[:name] + '（準備中）'
+      end
     else
-      raw('<li class=' + item[:name] + '>') + link_to(item[:name], item[:link]) + raw('</li>')
+      content_tag :li, :class => item[:name] do
+        link_to(item[:name], item[:link])
+      end
     end
   end
 
   # 指定した文字数だけを取り出す
   def slice_by_length(str, str_length)
     # str[0..str_length-1] でどうか
-    c = 0
-    str.split(//).inject(""){ |result, char|
-      result += char if c < str_length
-      c += 1
-      result
-    }
+    #
+    # -> これで済みました！
+    str[0..str_length-1]
   end
 end
