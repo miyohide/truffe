@@ -16,7 +16,8 @@ class GigsController < ApplicationController
     # ここってGigs.where("EXTRACT...")って感じではダメでしょうか。
     #
     # -> 書き直しました！普通にwhere句の中で使えました。ありがとうございます。
-    @gigs = Kaminari.paginate_array(Gigs.where('EXTRACT(MONTH FROM gig_date) = ? and EXTRACT(YEAR FROM gig_date) = ?', @gig_month, @gig_year).limit(100).offset(0)).page(params[:page])
+		# -> Kaminari.paginate_array いらなかったです！
+    @gigs = Gigs.where('EXTRACT(MONTH FROM gig_date) = ? and EXTRACT(YEAR FROM gig_date) = ?', @gig_month, @gig_year).limit(100).offset(0).page(params[:page])
 
     # 条件文はなるべくifで始まる形にしたほうがわかりやすいです。
     # 特に条件部分に || や && ははいる場合はifに変換すべし。

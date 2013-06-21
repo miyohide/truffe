@@ -13,4 +13,6 @@
 #
 
 class Photos < ActiveRecord::Base
+  default_scope :order => 'updated_at DESC'
+  paginates_per 30
 end
