@@ -41,6 +41,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'bcrypt-ruby', '~> 3.0.0', require: 'bcrypt'
 gem 'jquery-rails'
 gem 'kaminari'
 

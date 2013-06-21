@@ -15,7 +15,9 @@
 
 class User < ActiveRecord::Base
   # has_secure_passwordを使えばよさそう
-  attr_accessor :password
+  #
+  # -> Rails3.0 の参考書を読んでいました...！修正しました！
+  has_secure_password
   attr_accessible :name, :email, :password, :password_confirmation
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
