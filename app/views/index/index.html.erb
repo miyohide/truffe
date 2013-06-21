@@ -27,6 +27,7 @@
 
         <% if disc.url %>
           <% # アートワーク写真はpaperclipあたりを使いたい所ですねえ。 %>
+          <% # -> そうしたいです！調べて置き換えてみます！ %>
           <div class="disc_image"><%= link_to image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140'), disc.url, :target => '_blank' %></div>
         <% else %>
           <div class="disc_image"><%= image_tag('discographies/disc_' + disc.id.to_s + '.jpg', :size => '140x140') %></div>
