@@ -1,13 +1,13 @@
 ja:
   date:
     abbr_day_names:
-    - 日
-    - 月
-    - 火
-    - 水
-    - 木
-    - 金
-    - 土
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
     abbr_month_names:
     - 
     - 1月
@@ -32,7 +32,7 @@ ja:
     - 土曜日
     formats:
       default: ! '%Y/%m/%d'
-      long: ! '%Y年%m月%d日(%a)'
+      long: ! '%Y年%m月%d日'
       short: ! '%m/%d'
     month_names:
     - 

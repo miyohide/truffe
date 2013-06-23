@@ -7,13 +7,12 @@
       position: relative;
       display: block;
       margin: 10px;
-      padding-top: 25px;
       clear: both;
       min-height: 125px;
       @for $i from 0 through 3 {
         &[data-recommend="#{$i}"] {
           @include bg-img('shared/date_frame_' + $i + '.png');
-          background-size: 150px 150px;
+          background-size: 115px 94px;
         }
       }
 
@@ -22,35 +21,57 @@
         float: left;
         font-family: Cursive;
         text-align: center;
-        @include size(150px, 120px);
+        @include size(125px, 100px);
         .year {
-          @include from-top-left(54px, 55px);
+          @include from-top-left(61px, 34px);
           width: 50px;
           font-size: 20px;
         }
         .month {
-          @include from-top-left(9px, 46px);
+          @include from-top-left(6px, 23px);
           width: 30px;
           font-size: 25px;
         }
         .day {
-          @include from-top-left(17px, 84px);
+          @include from-top-left(20px, 62px);
           width: 30px;
           font-size: 30px;
         }
+        .wday {
+          @include from-top-left(64px, 32px);
+          width: 50px;
+          font-size: 18px;
+        }
         .date_end {
-          @include from-top-left(57px, 44px);
+          @include from-top-left(64px, 22px);
           width: 70px;
           font-size: 17px;
         }
       }
 
       .title {
-        margin-left: 160px;
-        margin-bottom: 5px;
+        margin-left: 135px;
+        margin-bottom: 10px;
         font-size: 20px;
         @include border-image(url('shared/line_a.png') 15);
         border-width: 0px 0px 6px 0px;
+      }
+
+      .group, .location, .players, .charge, .comments {
+        margin-bottom: 4px;
+        min-height: 22px;
+        line-height: 20px;
+
+        span {
+          display: block;
+          margin-right: 10px;
+          @include size(100px, 20px);
+          float: left;
+          font-size: 12px;
+          text-align: center;
+          @include border-radius(10px);
+          background-color: $themecolor5;
+        }
       }
 
       .group {
@@ -62,7 +83,7 @@
       }
 
       .players {
-        margin-left: 160px;
+        margin-left: 135px;
         span {
           float: left;
           width: 70px;
@@ -70,20 +91,26 @@
       }
 
       .charge {
-        margin-left: 160px;
+        margin-left: 135px;
         span {
           float: left;
           width: 70px;
         }
       }
       
-      .comment {
-        @include comment-balloon($themecolor3);
-        margin-left: 160px;
+      .comments {
+        @include comment-balloon($themecolor5);
+        margin-left: 135px;
       }
 
       .new {
-        @include from-top-right(30px, 20px);
+        @include from-top-right(5px, 20px);
+          @include size(50px, 20px);
+          line-height: 20px;
+          font-size: 12px;
+          text-align: center;
+          @include border-radius(10px);
+          background-color: $themecolor5;
       }
     }
   }
