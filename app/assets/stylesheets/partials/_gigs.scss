@@ -78,22 +78,8 @@
       }
       
       .comment {
-        position: relative;
+        @include comment-balloon($themecolor3);
         margin-left: 160px;
-        padding: 5px 15px;
-        font-size: 14px;
-        background-color: rgba(255, 200, 200, 0.5);
-        @include border-radius(10px);
-
-        &:before{
-          content : "";
-          @include from-top-left(-2px, -14px);
-          @include size(0, 0);
-          border-width : 10px 10px 10px 15px;
-          border-style : solid;
-          border-color : transparent transparent rgba(255, 200, 200, 0.5) transparent;
-          -webkit-transform: rotate(45deg);
-        }
       }
 
       .new {

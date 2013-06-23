@@ -216,6 +216,9 @@ en:
     rate: yen
   discographies:
     title: Discographies
+    release_date: Release Date
+    artists: Artists
+    label: Label
   photos:
     title: Photos
   contacts:

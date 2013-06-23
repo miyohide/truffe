@@ -94,20 +94,8 @@ h1.title {
 
 #records {
   @include basic-column(100%);
-  .disc {
-    .disc_image {
-      float: left;
-    }
-
-    .disc_detail {
-      float: left;
-      max-width: 560px;
-
-      .title {
-        font-size: 20px;
-        font-weight: bold;
-      }
-    }
+  .discographies_list li {
+    margin-bottom: 0px;
   }
 }
 

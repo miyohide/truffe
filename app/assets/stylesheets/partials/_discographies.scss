@@ -1,38 +1,62 @@
 #release {
   @include basic-column(100%);
-
-  #discographies_list {
-    li {
-      display: block;
-      margin-bottom: 40px;
-      clear: both;
-      min-height: 180px;
-
-      .disc_image {
-        float: left;
-        transition: opacity 0.2s linear 0;
-
-        &:hover {
-          opacity: 0.6;
-        }
-      }
-
-      .disc_detail {
-        margin-left: 200px;
-        max-width: 520px;
-
-        .title {
-          margin-bottom: 5px;
-          font-size: 22px;
-          font-weight: bold;
-          @include border-image(url('shared/line_a.png') 15);
-          border-width: 0px 0px 6px 0px;
-        }
-      }
-    }
-  }
-
+  
   #no_discs {
     @include no_info_design;
+  }
+}
+
+.discographies_list {
+  li {
+    display: block;
+    margin-bottom: 40px;
+    clear: both;
+    min-height: 180px;
+
+    .disc_image {
+      float: left;
+      transition: opacity 0.2s linear 0;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    .disc_detail {
+      margin-left: 200px;
+      max-width: 520px;
+
+      .title {
+        margin-bottom: 10px;
+        font-size: 22px;
+        font-weight: bold;
+        @include border-image(url('shared/line_a.png') 15);
+        border-width: 0px 0px 6px 0px;
+      }
+
+      .release_date, .artists, .label, .comments {
+        margin-bottom: 4px;
+        min-height: 22px;
+        line-height: 20px;
+        float: left;
+      }
+
+      .comments {
+        @include comment-balloon($themecolor4);
+        margin-top: 10px;
+      }
+
+      span {
+        display: block;
+        margin-right: 10px;
+        @include size(100px, 20px);
+        float: left;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+        @include border-radius(10px);
+        background-color: $themecolor2;
+      }
+    }
   }
 }

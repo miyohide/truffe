@@ -208,6 +208,9 @@ ja:
     rate: 円
   discographies:
     title: Discography
+    release_date: 発売日
+    artists: アーティスト
+    label: レーベル
   photos:
     title: Photos
   contacts:
