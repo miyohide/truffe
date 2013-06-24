@@ -36,7 +36,7 @@
         <%= link_to t('settings.edit'), edit_user_path(current_user) %>
         <%= link_to t('signout.submit'), signout_path, :method => :delte %>
       <% else %>
-        <%= link_to t('signin.hidden_link'), signin_path %>
+        <span><%= link_to t('signin.hidden_link'), signin_path %></span>
       <% end %>
     </div>
   </footer>
