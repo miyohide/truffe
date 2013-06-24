@@ -33,9 +33,7 @@ class GigsController < ApplicationController
       # see: http://guides.rubyonrails.org/active_support_core_extensions.html#extensions-to-date
       #
       # ->  ありがとうございます。確かに、Datetimeとして扱えばもっと簡潔に書けるところでした！
-      current_date = (Date.new(@gig_year, @gig_month))
-      @prev_month = current_date.prev_month
-      @next_month = current_date.next_month
+      @current_date = (Date.new(@gig_year, @gig_month))
     end
   end
 end

@@ -18,9 +18,6 @@
       <% if gig.group %>
         <%= gig.gig_title.present? ? '/ ' : '' %><span class="group"><%= gig.group %></span>
       <% end %>
-      <% if gig.location %>
-        <span class="location">@<%= gig.location %></span>
-      <% end %>
     </div>
     <% if gig.players %>
       <div class="players"><span>players</span><%= gig.players %></div>
@@ -29,6 +26,9 @@
       <div class="charge">
         <span>charge</span><%= gig.charge == 0 ? '無料' : number_to_currency(gig.charge, :options => :unit) %>
       </div>
+    <% end %>
+    <% if gig.location %>
+      <div class="location"><span>location</span><%= gig.location %></div>
     <% end %>
     <% if gig.comment %>
       <div class="comments"><%= gig.comment %></div>

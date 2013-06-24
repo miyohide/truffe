@@ -1,12 +1,19 @@
 #gigs {
   @include basic-column(100%);
-  padding-bottom: 50px;
+  padding-bottom: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
 
   #gigs_list {
+    margin-bottom: 60px;
+
     li {
       position: relative;
       display: block;
       margin: 10px;
+      margin-bottom: 20px;
       clear: both;
       min-height: 125px;
       @for $i from 0 through 3 {
@@ -22,11 +29,6 @@
         font-family: Cursive;
         text-align: center;
         @include size(125px, 100px);
-        .year {
-          @include from-top-left(61px, 34px);
-          width: 50px;
-          font-size: 20px;
-        }
         .month {
           @include from-top-left(6px, 23px);
           width: 30px;
@@ -78,11 +80,7 @@
         font-size: 18px;
       }
 
-      .location {
-        font-size: 18px;
-      }
-
-      .players {
+      .location, .players, .charge {
         margin-left: 135px;
         span {
           float: left;
@@ -90,33 +88,99 @@
         }
       }
 
-      .charge {
-        margin-left: 135px;
-        span {
-          float: left;
-          width: 70px;
-        }
-      }
-      
       .comments {
         @include comment-balloon($themecolor5);
         margin-left: 135px;
+        margin-bottom: 20px;
       }
 
       .new {
         @include from-top-right(5px, 20px);
-          @include size(50px, 20px);
-          line-height: 20px;
-          font-size: 12px;
-          text-align: center;
-          @include border-radius(10px);
-          background-color: $themecolor5;
+        @include size(50px, 20px);
+        line-height: 20px;
+        font-size: 12px;
+        text-align: center;
+        @include border-radius(10px);
+        background-color: $themecolor5;
       }
     }
   }
 
   #no_gigs {
     @include no_info_design;
+  }
+
+  #gigs_nav_months {
+    margin-bottom: 60px;
+    @include size(680px, 40px);
+
+    li {
+      float: left;
+      margin-right: 10px;
+      @include size(72px, 40px);
+      line-height: 40px;
+      font-size: 12px;
+      text-align: center;
+      @include border-radius(10px);
+      background-color: $themecolor6;
+
+      &:hover {
+        background-color: lighten($themecolor6, 10%);
+      }
+
+      a {
+        display: block;
+        @include size(72px, 40px);
+        @include border-radius(10px);
+      }
+    }
+
+    li.current_page {
+      color: white;
+      background-color: $themecolor2;
+    }
+
+    li.prev_month, li.next_month {
+      position: relative;
+      @include size(0px, 0px);
+      @include border-radius(0px);
+      background-color: transparent;
+
+      a {
+        display: block;
+        @include size(20px, 40px);
+      }
+    }
+
+    li.prev_month {
+      border-top: 20px solid transparent;
+      border-right: 20px solid $themecolor6;
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid transparent;
+
+      &:hover {
+        border-right-color: lighten($themecolor6, 10%);
+      }
+
+      a {
+        @include from-top-left(-20px, 0px);
+      }
+    }
+
+    li.next_month {
+      border-top: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid $themecolor6;
+
+      &:hover {
+        border-left-color: lighten($themecolor6, 10%);
+      }
+
+      a {
+        @include from-top-left(-20px, -20px);
+      }
+    }
   }
 
   #gigs_nav_top {

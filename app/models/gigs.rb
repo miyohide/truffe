@@ -18,5 +18,5 @@
 
 class Gigs < ActiveRecord::Base
   default_scope :order => 'gig_date ASC'
-  paginates_per 30
+  paginates_per 50
 end
