@@ -122,10 +122,10 @@ h1.title {
       background-color: $themecolor2;
     }
 
-		.date {
+    .date {
       @include size(90px, 20px);
       float: left;
-		}
+    }
   }
 }
 
@@ -158,21 +158,36 @@ h1.title {
   padding-bottom: 50px;
 
   #photos_list {
+    position: relative;
+    height: 800px;
+
+    div.background {
+      display: none;
+      @include from-top-left(0px, 0px);
+      @include size(680px, 590px);
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
     li {
       display: block;
+      float: left;
       margin: 20px;
-      clear: both;
       min-height: 120px;
 
-      .photo_date {
+      .photo_date, .album, .title, .comments {
+        display: none;
       }
-      .image {
-      }
-      .album {
-      }
-      .title {
-      }
-      .comment {
+
+      &.show {
+        @include from-top-left(30px, 30px);
+        .image img {
+          margin-bottom: 20px;
+          @include size(577px, 432px);
+        }
+        .photo_date, .album, .title, .comments {
+          display: block;
+          color: white;
+        }
       }
     }
   }
