@@ -28,3 +28,11 @@ photos2:
   comment: "目黒にあるお店です。"
   created_at: "2012-07-15 00:00:00"
   updated_at: "2012-07-15 00:00:00"
+photos3:
+  photo_date: 2012-08-22 00:00:00
+  file_no: "003"
+  album_no: 
+  title: "XXX Trio"
+  comment:
+  created_at: "2012-07-15 00:00:00"
+  updated_at: "2012-07-15 00:00:00"
