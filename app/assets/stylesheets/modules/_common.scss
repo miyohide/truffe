@@ -19,9 +19,7 @@ body {
 
 header {
   display: -webkit-box;
-  position: fixed;
-  top: 0px;
-  z-index: 10;
+  position: relative;
   width: 840px;
   min-height: 52px;
   color: #fff;
@@ -80,25 +78,22 @@ header {
 
 #container {
   position: relative;
-  padding-top: 50px;
 
   h1.page_title {
     margin: 40px 0px 0px 40px;
+    padding-left: 10px;
     text-align: left;
     min-width: 320px;
     max-width: 350px;
     font-size: 32px;
-    font-family: 'Autour One', cursive;
+    font-family: cursive;
+    border: solid $themecolor1;
+    border-width: 0px 0px 0px 15px;
   }
 
   h2 {
-    margin-bottom: 40px;
-    font-family: 'Autour One', cursive;
-  }
-
-  .page_footer {
-    @include size(100%, 55px);
-    @include bg-img('shared/border_leaves.png');
+    margin-bottom: 20px;
+    font-family: cursive;
   }
 }
 

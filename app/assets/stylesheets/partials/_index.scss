@@ -2,21 +2,18 @@ $gallery-width: 485px;
 $gallery-height: $gallery-width / 1.618;
 
 #site_title {
-  @include from-top-left(90px, 40px);
-  padding: 15px 20px;
+  @include from-top-left(0px, 40px);
+  padding: 18px 30px;
   background-color: $themecolor1;
-  @include border-radius(10px);
+  @include border-radius(5px);
 
   h1 {
     font-size: 20px;
-    font-family: 'Autour One', cursive;
+    font-family: cursive;
     line-height: 45px;
+    letter-spacing: 0.1em;
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  }
-
-  span {
-    letter-spacing: 0.2em;
   }
 }
 
@@ -156,8 +153,7 @@ h1.title {
     h3 {
       margin-bottom: 20px;
       font-size: 20px;
-      @include border-image(url('shared/line_a.png') 15);
-      border-width: 0px 0px 6px 0px;
+      @include under-line;
     }
   }
 }

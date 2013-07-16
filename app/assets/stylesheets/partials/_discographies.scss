@@ -30,8 +30,7 @@
         margin-bottom: 10px;
         font-size: 22px;
         font-weight: bold;
-        @include border-image(url('shared/line_a.png') 15);
-        border-width: 0px 0px 6px 0px;
+        @include under-line;
       }
 
       .release_date, .artists, .label, .comments {
@@ -42,7 +41,7 @@
       }
 
       .comments {
-        @include comment-balloon($themecolor4);
+        @include comment-balloon($themecolor6);
         margin-top: 10px;
       }
 

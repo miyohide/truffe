@@ -55,8 +55,7 @@
         margin-left: 135px;
         margin-bottom: 10px;
         font-size: 20px;
-        @include border-image(url('shared/line_a.png') 15);
-        border-width: 0px 0px 6px 0px;
+        @include under-line;
       }
 
       .group, .location, .players, .charge, .comments {
@@ -121,7 +120,7 @@
       line-height: 40px;
       font-size: 12px;
       text-align: center;
-      @include border-radius(10px);
+      @include border-radius(5px);
       background-color: $themecolor6;
 
       &:hover {
@@ -131,7 +130,7 @@
       a {
         display: block;
         @include size(72px, 40px);
-        @include border-radius(10px);
+        @include border-radius(5px);
       }
     }
 
