@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130112085421) do
+ActiveRecord::Schema.define(:version => 20131127043001) do
 
   create_table "basic_data", :force => true do |t|
     t.string   "site_name"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(:version => 20130112085421) do
     t.string   "heading"
     t.text     "body"
     t.string   "note"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "name",       :null => false
+    t.string   "email",      :null => false
+    t.text     "body",       :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -56,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20130112085421) do
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
     t.integer  "recommend",    :default => 0
+    t.time     "start_time"
   end
 
   create_table "photos", :force => true do |t|

@@ -35,9 +35,10 @@
           font-size: 25px;
         }
         .day {
-          @include from-top-left(20px, 62px);
-          width: 30px;
-          font-size: 30px;
+          @include from-top-left(0px, 28px);
+          width: 60px;
+          font-size: 45px;
+          text-align: center;
         }
         .wday {
           @include from-top-left(64px, 32px);
@@ -58,7 +59,7 @@
         @include under-line;
       }
 
-      .group, .location, .players, .charge, .comments {
+      .group, .start, .location, .players, .charge, .comments {
         margin-bottom: 4px;
         min-height: 22px;
         line-height: 20px;
@@ -79,7 +80,7 @@
         font-size: 18px;
       }
 
-      .location, .players, .charge {
+      .start, .location, .players, .charge {
         margin-left: 135px;
         span {
           float: left;
@@ -116,9 +117,9 @@
     li {
       float: left;
       margin-right: 10px;
-      @include size(72px, 40px);
+      @include size(70px, 40px);
       line-height: 40px;
-      font-size: 12px;
+      font-size: 24px;
       text-align: center;
       @include border-radius(5px);
       background-color: $themecolor6;
@@ -135,8 +136,12 @@
     }
 
     li.current_page {
+      width: 90px;
       color: white;
       background-color: $themecolor2;
+      span {
+        font-size: 15px;
+      }
     }
 
     li.prev_month, li.next_month {

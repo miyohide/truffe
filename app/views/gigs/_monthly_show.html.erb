@@ -1,7 +1,6 @@
 <% @gigs.each do |gig| %>
   <li data-recommend=<%= gig.recommend %>>
     <div class="date">
-      <span class="month"><%= gig.gig_date.month %></span>
       <span class="day"><%= gig.gig_date.day %></span>
       <% if gig.gig_date_end != gig.gig_date %>
         <span class="date_end">〜 <%= gig.gig_date_end.month %>/<%= gig.gig_date_end.day %></span>
@@ -19,6 +18,9 @@
     </div>
     <% if gig.players %>
       <div class="players"><span>players</span><%= gig.players %></div>
+    <% end %>
+    <% if gig.start_time %>
+      <div class="start"><span>start</span><%= l(gig.start_time, :format => '%H:%M') %>〜</div>
     <% end %>
     <% if gig.charge %>
       <div class="charge">

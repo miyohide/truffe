@@ -14,6 +14,7 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  recommend    :integer          default(0)
+#  start_time   :time
 #
 
 gigs1:
@@ -22,6 +23,7 @@ gigs1:
   gig_title: XXX Duo
   group: 
   location: 1
+  start_time:
   charge: 0
   players: 
   comment: 
@@ -34,6 +36,7 @@ gigs2:
   gig_title: XXX Quartet
   group: 
   location: 2
+  start_time:
   charge: 2500
   players: 横尾○○(ds)大塚義将(b)
   comment: 
@@ -46,6 +49,7 @@ gigs3:
   gig_title: 島村△△トリオ
   group: 
   location: 1
+  start_time:
   charge: 0
   players: 島村△△(p)広川○○(ds)大塚義将(b)
   comment: 北海道ツアーです。いろいろなお店でやらせてもらいます。詳細はまだ未定です。
@@ -58,6 +62,7 @@ gigs4:
   gig_title: 赤羽○○ Qurtet
   group: 
   location: 2
+  start_time: "19:00:00"
   charge: 2500
   players: 赤羽○○(ds)大塚義将(b)
   comment: 
@@ -70,6 +75,7 @@ gigs5:
   gig_title: バースデーライブ
   group: 
   location:
+  start_time:
   charge: 2500
   players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment: 
@@ -82,6 +88,7 @@ gigs6:
   gig_title: バースデーライブ
   group: 
   location:
+  start_time: "19:30:00"
   charge: 2500
   players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment: 
@@ -94,6 +101,7 @@ gigs7:
   gig_title: ▲▲トリオ
   group: 
   location: 1
+  start_time:
   charge: 1000
   players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment: 
@@ -106,6 +114,7 @@ gigs8:
   gig_title: ▲▲トリオ
   group:
   location: 5
+  start_time:
   charge: 0
   players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment: NO CHARGE なのでお気軽にお越しください！
@@ -118,6 +127,7 @@ gigs9:
   gig_title: NEW YEARS CONCERT
   group: YOUNG LIONS
   location: 1
+  start_time:
   charge: 2000
   players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment: 若手がたくさん出演するライブです！オススメです！
@@ -130,6 +140,7 @@ gigs10:
   gig_title: ▲▲Quartet
   group:
   location: 1
+  start_time:
   charge: 2000
   players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment:
@@ -142,6 +153,7 @@ gigs11:
   gig_title: ▲▲Quartet
   group:
   location: 1
+  start_time:
   charge: 2000
   players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment:
@@ -154,6 +166,7 @@ gigs12:
   gig_title: ▲▲Quartet
   group:
   location: 1
+  start_time:
   charge: 2000
   players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment:
@@ -166,6 +179,7 @@ gigs13:
   gig_title: ▲▲Quartet
   group:
   location: 1
+  start_time:
   charge: 2000
   players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment:
@@ -178,6 +192,7 @@ gigs14:
   gig_title: ▲▲Quartet全国ツアー
   group: ○○グループ
   location: 1
+  start_time:
   charge:
   players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment:
@@ -190,6 +205,7 @@ gigs15:
   gig_title: ▲▲Quartet
   group:
   location: 1
+  start_time:
   charge: 2000
   players: 鈴木△△(p)佐藤○○(ds)大塚義将(b)
   comment:

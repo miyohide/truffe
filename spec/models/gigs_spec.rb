@@ -14,6 +14,7 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  recommend    :integer          default(0)
+#  start_time   :time
 #
 
 require 'spec_helper'
