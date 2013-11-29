@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131127043001) do
+ActiveRecord::Schema.define(:version => 20131129092120) do
+
+  create_table "articles", :force => true do |t|
+    t.string   "heading"
+    t.text     "content"
+    t.date     "published_on"
+    t.string   "tags"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "basic_data", :force => true do |t|
     t.string   "site_name"
