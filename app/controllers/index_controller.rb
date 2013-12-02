@@ -14,8 +14,6 @@ class IndexController < ApplicationController
 
     def photos
       @page_title = t('photos.title')
-      # Kaminari.paginate_array って要るんでしたっけ？
-			# -> いらなかったです！
       @photos = Photos.order('photo_date asc').limit(100).page(params[:page])
     end
 

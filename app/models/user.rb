@@ -14,10 +14,6 @@
 #
 
 class User < ActiveRecord::Base
-  # has_secure_passwordを使えばよさそう
-  #
-  # -> Rails3.0 の参考書を読んでいました...！修正しました！
-  #has_secure_password
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
 

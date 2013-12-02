@@ -1,7 +1,5 @@
         <li>
           <div class="disc_image">
-          <% # アートワーク写真はpaperclipあたりを使いたい所ですねえ。 %>
-          <% # -> そうしたいです！調べて置き換えてみます！ %>
           <% if discographies.url %>
             <%= link_to image_tag('discographies/disc_' + discographies.id.to_s + '.jpg', :size => '180x180'), discographies.url, :target => '_blank' %>
           <% else %>
