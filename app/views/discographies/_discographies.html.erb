@@ -14,19 +14,19 @@
               <% else %>
                 <%= discographies.title %> / <%= discographies.artist %>
               <% end %>
+              <% if discographies.updated_at && discographies.updated_at >= Date.today.advance(:months => -1) %>
+                <div class="new">new</div>
+              <% end %>
             </div>
           <% end %>
-          <% if discographies.updated_at && discographies.updated_at >= Date.today.advance(:months => -1) %>
-            <div class="new">new</div>
-          <% end %>
           <div class="release_date"><span><%= t('discographies.release_date') %></span><%= l(discographies.release_date, :format => :long) %></div>
-          <% if discographies.players %>
+          <% if discographies.players.present? %>
             <div class="artists"><span><%= t('discographies.artists') %></span><%= discographies.players %></div>
           <% end %>
-          <% if discographies.record_co %>
+          <% if discographies.record_co.present? %>
             <div class="label"><span><%= t('discographies.label') %></span><%= discographies.record_co %></div>
           <% end %>
-          <% if discographies.comment %>
+          <% if discographies.comment.present? %>
             <div class="comments"><%= discographies.comment %></div>
           <% end %>
         </div>
