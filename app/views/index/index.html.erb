@@ -34,5 +34,7 @@
   <ul id="news_list">
     <%= render @articles %>
   </ul>
+  <% else %>
+    <div id="no_articles">現在、ニュースはありません。</div>
   <% end %>
 </div>

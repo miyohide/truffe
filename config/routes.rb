@@ -46,6 +46,7 @@ Truffe::Application.routes.draw do
   end
 
   resources :users
+  resources :articles
   resources :gigs
   resources :discographies
   resources :blog_entries

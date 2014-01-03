@@ -2,8 +2,11 @@
 
 <div id="news">
   <% unless @articles.blank? %>
-  <ul id="news_list">
-    <%= render @articles %>
-  </ul>
+    <ul id="news_list">
+      <%= render @articles %>
+    </ul>
+    <%= paginate @articles %>
+  <% else %>
+    <div id="no_articles">現在、ニュースはありません。</div>
   <% end %>
 </div>
