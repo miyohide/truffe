@@ -4,7 +4,8 @@ class IndexController < ApplicationController
   before_filter :authenticate
 
     def index
-      @discographies = Discographies.order('release_date desc').limit(1)
+      #@discographies = Discographies.order('release_date desc').limit(1)
+      @articles = Article.limit(5)
     end
 
     def profile

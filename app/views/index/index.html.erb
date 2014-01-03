@@ -30,9 +30,17 @@
 
 <div id="news">
   <h2>News</h2>
+  <% unless @articles.blank? %>
   <ul id="news_list">
-    <% 3.times do %>
-      <li><span class="news">news</span><span class="date"><%= l(Time.now, :format => "%Y/%m/%d") %></span><span>Webサイトがオープンしました。</span></li>
+    <% @articles.each do |article| %>
+      <% if article.published_on && article.published_on <= Date.today %>
+      <li>
+        <span class="news"><%= article.tags.present? ? article.tags : 'news' %></span>
+        <span class="date"><%= l(article.published_on, :format => "%Y/%m/%d") %></span>
+        <span class="heading"><%= article.heading.present? ? article.heading : '' %></span>
+      </li>
+      <% end %>
     <% end %>
   </ul>
+  <% end %>
 </div>
