@@ -4,6 +4,19 @@
   #no_discs {
     @include no_info_design;
   }
+
+  form {
+    label {
+      display: block;
+      float: left;
+      width: 130px;
+    }
+    .players, .url, .comment {
+      textarea {
+        width: 450px;
+      }
+    }
+  }
 }
 
 .discographies_list {
@@ -44,6 +57,7 @@
 
       .release_date, .artists, .label, .comments {
         margin-bottom: 4px;
+        min-width: 480px;
         min-height: 22px;
         line-height: 20px;
         float: left;
@@ -64,6 +78,18 @@
         text-align: center;
         @include border-radius(10px);
         background-color: $themecolor2;
+      }
+
+      .edit_button {
+        @include size(100px, 20px);
+        @include border-radius(4px);
+        float: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 5px;
+        font-size: 15px;
+        text-align: center;
+        background-color: rgba(150, 150, 200, 0.5);
       }
     }
   }

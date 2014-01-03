@@ -1,4 +1,6 @@
 <div id="user_profile">
+  <%= render 'shared/side_bar' %>
+
   <%= gravatar_for @user %>
   <%= @user.name %>
   <%= @user.email %>

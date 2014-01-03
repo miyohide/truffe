@@ -33,7 +33,7 @@
         <%= link_to t('users.list'), users_path %>
         <%= link_to t('settings.profile'), current_user %>
         <%= link_to t('settings.edit'), edit_user_path(current_user) %>
-        <%= link_to t('signout.submit'), signout_path, :method => :delte %>
+        <%= link_to t('signout.submit'), signout_path, :method => :delete %>
       <% else %>
         <span><%= link_to t('signin.hidden_link'), signin_path %></span>
       <% end %>

@@ -218,9 +218,16 @@ en:
     rate: yen
   discographies:
     title: Discographies
+    disc_title: Title
     release_date: Release Date
     artists: Artists
-    label: Label
+    players: Players
+    record_co: Label
+    url: URL
+    comment: Comment
+    submit: Update
+    edit: Edit
+    updated: Discography Updated.
   photos:
     title: Photos
   contacts:

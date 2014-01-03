@@ -210,9 +210,16 @@ ja:
     rate: 円
   discographies:
     title: Discography
+    disc_title: タイトル
     release_date: 発売日
     artists: アーティスト
-    label: レーベル
+    players: プレイヤー
+    record_co: レーベル
+    url: URL
+    comment: コメント
+    submit: 更新
+    edit: 編集する
+    updated: アルバム情報を更新しました。
   photos:
     title: Photos
   contacts:

@@ -1,0 +1,8 @@
+#side_bar {
+  @include size(110px, 100px);
+  @include border-radius(5px);
+  @include from-top-right(20px, 20px);
+  padding: 20px;
+  font-size: 14px;
+  background-color: rgba(150, 150, 150, 0.5);
+}

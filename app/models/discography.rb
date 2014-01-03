@@ -14,5 +14,8 @@
 #  updated_at   :datetime         not null
 #
 
-class Discographies < ActiveRecord::Base
+class Discography < ActiveRecord::Base
+  attr_accessible :release_date, :title, :artist, :players, :record_co, :url, :comment
+
+  validates :title, :presence => true
 end
