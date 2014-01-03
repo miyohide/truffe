@@ -1,0 +1,38 @@
+<li data-recommend=<%= gig.recommend %>>
+  <div class="date">
+    <span class="day"><%= gig.gig_date.day %></span>
+    <% if gig.gig_date_end != gig.gig_date %>
+      <span class="date_end">〜 <%= gig.gig_date_end.month %>/<%= gig.gig_date_end.day %></span>
+    <% else %>
+      <span class="wday"><%= l(gig.gig_date, :format => '%a') %></span>
+    <% end %>
+  </div>
+  <div class="title">
+    <% if gig.gig_title %>
+      <%= gig.gig_title %>
+    <% end %>
+    <% if gig.group %>
+      <%= gig.gig_title.present? ? '/ ' : '' %><span class="group"><%= gig.group %></span>
+    <% end %>
+  </div>
+  <% if gig.players %>
+    <div class="players"><span>players</span><%= gig.players %></div>
+  <% end %>
+  <% if gig.start_time %>
+    <div class="start"><span>start</span><%= l(gig.start_time, :format => '%H:%M') %>〜</div>
+  <% end %>
+  <% if gig.charge %>
+    <div class="charge">
+      <span>charge</span><%= gig.charge == 0 ? '無料' : number_to_currency(gig.charge, :options => :unit) %>
+    </div>
+  <% end %>
+  <% if gig.location %>
+    <div class="location"><span>location</span><%= gig.location %></div>
+  <% end %>
+  <% if gig.comment %>
+    <div class="comments"><%= gig.comment %></div>
+  <% end %>
+  <% if gig.updated_at && gig.updated_at >= Date.today.advance(:weeks => -1) %>
+    <div class="new">new</div>
+  <% end %>
+</li>

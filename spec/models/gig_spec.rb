@@ -17,7 +17,8 @@
 #  start_time   :time
 #
 
-class Gigs < ActiveRecord::Base
-  default_scope :order => 'gig_date ASC'
-  paginates_per 50
+require 'spec_helper'
+
+describe Gig do
+
 end

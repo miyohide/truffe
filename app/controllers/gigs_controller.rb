@@ -13,7 +13,7 @@ class GigsController < ApplicationController
                    params[:month].to_i
                  end
 
-    @gigs = Gigs.where('EXTRACT(MONTH FROM gig_date) = ? and EXTRACT(YEAR FROM gig_date) = ?', @gig_month, @gig_year).limit(100).offset(0).page(params[:page])
+    @gigs = Gig.where('EXTRACT(MONTH FROM gig_date) = ? and EXTRACT(YEAR FROM gig_date) = ?', @gig_month, @gig_year).limit(100).offset(0).page(params[:page])
 
     if @gig_year.nil? || @gig_month.nil?
       @prev_year = Date.today.year

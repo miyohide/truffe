@@ -13,7 +13,7 @@
 
   <% unless @gigs.blank? %>
     <ul id="gigs_list">
-      <%= render :partial => 'gigs/monthly_show' %>
+      <%= render @gigs %>
     </ul>
     <%= paginate @gigs %>
   <% else %>
