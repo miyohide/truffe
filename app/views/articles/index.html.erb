@@ -1,0 +1,9 @@
+<%# @side_bar_template_name = 'shared/side_bar' %>
+
+<div id="news">
+  <% unless @articles.blank? %>
+  <ul id="news_list">
+    <%= render @articles %>
+  </ul>
+  <% end %>
+</div>

@@ -29,6 +29,7 @@ Truffe::Application.routes.draw do
   match 'signin',  :to => 'sessions#new'
   match 'signout', :to => 'sessions#destroy'
   match 'profile' => 'index#profile'
+  match 'news' => 'articles#index'
   match 'photos' => 'index#photos'
   match 'contacts' => 'index#contacts'
   match 'gigs/:year(/:month)' => 'gigs#index', :constraints => { :year => /\d{4}/ }

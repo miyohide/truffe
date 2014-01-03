@@ -208,6 +208,8 @@ en:
   profile:
     title: Profile
     name: Yoshimasa Otsuka
+  articles:
+    title: News
   gigs:
     title: Gigs
     this_month: this month

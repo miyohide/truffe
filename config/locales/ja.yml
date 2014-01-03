@@ -200,6 +200,8 @@ ja:
   profile:
     title: Profile
     name: 大塚 義将（おおつか よしまさ）
+  articles:
+    title: News
   gigs:
     title: Gigs
     this_month: 今月
