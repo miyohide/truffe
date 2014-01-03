@@ -15,7 +15,7 @@ class IndexController < ApplicationController
 
     def photos
       @page_title = t('photos.title')
-      @photos = Photos.order('photo_date asc').limit(100).page(params[:page])
+      @photos = Photo.order('photo_date asc').limit(100).page(params[:page])
     end
 
     def contacts

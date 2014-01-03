@@ -12,7 +12,7 @@
 #  updated_at :datetime         not null
 #
 
-class Photos < ActiveRecord::Base
+class Photo < ActiveRecord::Base
   default_scope :order => 'updated_at DESC'
   paginates_per 30
 end
