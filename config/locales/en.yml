@@ -212,7 +212,7 @@ en:
     title: News
   gigs:
     title: Gigs
-    this_month: this month
+    this_month: Go back to this month
     prev_month: prev month
     next_month: next month
     rate: yen
@@ -244,7 +244,10 @@ en:
     record_co: Label
     url: URL
     comment: Comment
-    submit: Update
+    new: Register a new discography
+    create: Register
+    created: New Discography Created.
+    update: Update
     edit: Edit
     updated: Discography Updated.
     delete: Delete
@@ -256,6 +259,7 @@ en:
   users:
     title: All users
     list: Users
+    mypage: My Page
   signup:
     title: Sign Up
     new: Make a new user
@@ -265,14 +269,14 @@ en:
     submit: Sign in
     new_user: Only Admin users can sign in.
     go_to_signup: ☀SUN
-    hidden_link: ☆
+    hidden_link: ☆For Admin
   signout:
     submit: Sign out
   settings:
     title: Settings
     submit: Update
     profile: Profile
-    edit: Settings
+    edit: Edit Account Settings
     update: Profile updated.
   deny_access:
     messages:

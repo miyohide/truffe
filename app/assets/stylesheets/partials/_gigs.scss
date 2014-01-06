@@ -103,23 +103,6 @@
         @include border-radius(10px);
         background-color: $themecolor5;
       }
-
-      .buttons {
-        height: 30px;
-        margin-bottom: 40px;
-      }
-
-      .edit_button, .delete_button {
-        @include size(100px, 20px);
-        @include border-radius(4px);
-        margin-top: 20px;
-        margin-right: 20px;
-        padding: 5px;
-        font-size: 15px;
-        text-align: center;
-        background-color: rgba(150, 150, 200, 0.5);
-        float: left;
-      }
     }
   }
 
@@ -255,6 +238,27 @@
       textarea {
         width: 450px;
       }
+    }
+  }
+
+  .buttons {
+    height: 30px;
+    margin-bottom: 60px;
+  
+    .new_button, .edit_button, .delete_button {
+      @include size(100px, 20px);
+      @include border-radius(4px);
+      float: left;
+      margin-top: 20px;
+      margin-right: 20px;
+      padding: 5px;
+      font-size: 15px;
+      text-align: center;
+      background-color: rgba(150, 150, 200, 0.5);
+    }
+  
+    .new_button {
+      width: 200px;
     }
   }
 }

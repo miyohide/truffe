@@ -1,5 +1,10 @@
-<ul class="users">
-  <% @users.each do |user| %>
-    <%= render @users %>
-  <% end %>
-</ul>
+<div id="users_list">
+  <%= render 'shared/side_bar' %>
+
+  <h2>Users List</h2>
+  <ul class="users">
+    <% @users.each do |user| %>
+      <%= render @users %>
+    <% end %>
+  </ul>
+</div>

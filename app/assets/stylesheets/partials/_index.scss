@@ -107,36 +107,6 @@ h1.title {
   }
 }
 
-#news {
-  @include basic-column(100%);
-
-  ul#news_list {
-    li {
-      display: block;
-      margin-bottom: 4px;
-      min-height: 22px;
-      line-height: 20px;
-    }
-
-    .news {
-      display: block;
-      margin-right: 10px;
-      @include size(100px, 20px);
-      float: left;
-      color: white;
-      font-size: 12px;
-      text-align: center;
-      @include border-radius(10px);
-      background-color: $themecolor2;
-    }
-
-    .date {
-      @include size(90px, 20px);
-      float: left;
-    }
-  }
-}
-
 #profile {
   @include basic-column(100%);
   overflow: hidden;

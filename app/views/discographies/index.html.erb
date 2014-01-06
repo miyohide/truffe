@@ -1,6 +1,12 @@
 <div id="release">
-  <h2>New Release</h2>
+  <h2>Discographies</h2>
   
+  <% if signed_in? %>
+    <div class="buttons">
+      <div class="new_button"><%= link_to t('discographies.new'), new_discography_path %></div>
+    </div>
+  <% end %>
+
   <% unless @discographies.blank? %>
     <ul class="discographies_list">
       <%= render @discographies %>

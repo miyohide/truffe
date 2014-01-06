@@ -1,5 +1,23 @@
+#users_list,
 #user_profile,
 #signup {
   @include basic-column(100%);
   overflow: hidden;
 }
+
+      .buttons {
+        height: 30px;
+        margin-bottom: 40px;
+      }
+
+      .edit_button, .delete_button {
+        @include size(200px, 20px);
+        @include border-radius(4px);
+        margin-top: 20px;
+        margin-right: 20px;
+        padding: 5px;
+        font-size: 15px;
+        text-align: center;
+        background-color: rgba(150, 150, 200, 0.5);
+        float: left;
+      }

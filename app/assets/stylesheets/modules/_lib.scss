@@ -44,7 +44,7 @@ $themecolor6: rgba(30, 107, 125, 0.4);
 
 @mixin basic-column($width: 720px) {
   position: relative;
-  margin: 20px 40px;
+  margin: 40px;
   padding: 40px;
   width: $width;
   max-width: 680px;

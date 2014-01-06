@@ -14,11 +14,6 @@ describe GigsController do
       get :index
       response.should have_selector("title", :content => @page_title)
     end
-
-    it "should have the page title" do
-      get :index
-      response.should have_selector("h1.page_title", :content => @page_title)
-    end
   end
 
   describe "GET 'new'" do

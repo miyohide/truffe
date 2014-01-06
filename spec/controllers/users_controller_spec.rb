@@ -33,11 +33,6 @@ describe UsersController do
         response.should have_selector("title", :content => @page_title)
       end
 
-      it "should have the page title" do
-        get :index
-        response.should have_selector("h1.page_title", :content => @page_title)
-      end
-
       it "should have an element for each user" do
         get :index
         @users.each do |user|
@@ -68,11 +63,6 @@ describe UsersController do
       response.should have_selector("title", :content => @page_title)
     end
 
-    it "should include the user's name" do
-      get :show, :id => @user
-      response.should have_selector("h1", :content => @user.name)
-    end
-
     it "should have a profile image" do
       get :show, :id => @user
       response.should have_selector("img", :class => "gravatar")
@@ -88,11 +78,6 @@ describe UsersController do
     it "should have the right title" do
       get :new
       response.should have_selector("title", :content => @page_title)
-    end
-
-    it "should have the page title" do
-      get :new
-      response.should have_selector("h1.page_title", :content => @page_title)
     end
   end
 
@@ -177,11 +162,6 @@ describe UsersController do
       response.should have_selector("title", :content => @page_title)
     end
 
-    it "should have the page title" do
-      get :edit, :id => @user
-      response.should have_selector("h1.page_title", :content => @page_title)
-    end
-
     it "should have a link to change the Gravatar" do
       get :edit, :id => @user
       gravatar_url = "http://gravatar.com/emails"
@@ -211,11 +191,6 @@ describe UsersController do
       it "should have the right title" do
         put :update, :id => @user, :user => @attr
         response.should have_selector("title", :content => @page_title)
-      end
-
-      it "should have the page title" do
-        put :update, :id => @user, :user => @attr
-        response.should have_selector("h1.page_title", :content => @page_title)
       end
     end
 

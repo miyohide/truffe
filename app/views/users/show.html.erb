@@ -1,7 +1,11 @@
 <div id="user_profile">
   <%= render 'shared/side_bar' %>
 
+  <h2><%= t('users.mypage') %></h2>
+
   <%= gravatar_for @user %>
-  <%= @user.name %>
-  <%= @user.email %>
+  <span class="name"><%= @user.name %></span>
+  <div class="email"><%= @user.email %></div>
+  <br><br>
+  <div class="edit_button"><%= link_to t('settings.edit'), edit_user_path(current_user) %></div>
 </div>

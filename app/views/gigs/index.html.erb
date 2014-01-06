@@ -1,5 +1,3 @@
-<%# @side_bar_template_name = 'shared/side_bar' %>
-
 <div id="gigs">
   <h2><%= @gig_year %>年<%= @gig_month %>月のライブスケジュール</h2>
   
@@ -9,6 +7,12 @@
 
   <%#= link_to t('gigs.this_month'), :path => 'gigs#index', :year => Date.today.year, :month => Date.today.month %><br>
   
+  <% if signed_in? %>
+    <div class="buttons">
+      <div class="new_button"><%= link_to t('gigs.new'), new_gig_path %></div>
+    </div>
+  <% end %>
+
   <%= render 'nav_months' %>
 
   <% unless @gigs.blank? %>

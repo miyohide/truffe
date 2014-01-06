@@ -204,7 +204,7 @@ ja:
     title: News
   gigs:
     title: Gigs
-    this_month: 今月
+    this_month: 今月に戻る
     prev_month: 前月
     next_month: 翌月
     rate: 円
@@ -236,7 +236,9 @@ ja:
     record_co: レーベル
     url: リンク先
     comment: コメント
-    submit: 登録
+    new: 新しいアルバム情報を登録
+    create: 登録する
+    created: 新しいアルバム情報を登録しました。
     update: 更新
     edit: 編集する
     updated: アルバム情報を更新しました。
@@ -249,6 +251,7 @@ ja:
   users:
     title: All users
     list: ユーザ一覧
+    mypage: My Page
   signup:
     title: Sign Up
     new: 新規ユーザ作成
@@ -258,14 +261,14 @@ ja:
     submit: ログイン
     new_user: 管理者のみログイン可能となっております。
     go_to_signup: ☀
-    hidden_link: ★
+    hidden_link: ★管理者ページ
   signout:
     submit: ログアウト
   settings:
     title: Settings
     submit: 更新
-    profile: プロフィール
-    edit: アカウント設定
+    profile: マイページ
+    edit: アカウント情報を変更する
     update: プロフィールを更新しました。
   deny_access:
     messages:
