@@ -111,4 +111,40 @@ describe DiscographiesController do
       end
     end
   end
+
+  describe "DELETE 'destroy'" do
+
+    before(:each) do
+      @discography = Factory(:discography)
+      @user = Factory(:user)
+      test_sign_in(@user)
+    end
+
+    it "should destroy the discography" do
+      lambda do
+        delete :destroy, :id => @discography
+      end.should change(Discography, :count).by(-1)
+    end
+
+    it "should redirect to the discographies index page" do
+      delete :destroy, :id => @discography
+      response.should redirect_to(discographies_path)
+    end
+  end
+
+  describe "authentication of destroy action" do
+
+    before(:each) do
+      @discography = Factory(:discography)
+      @user = Factory(:user)
+    end
+
+    describe "for non-signed-in users" do
+
+      it "should deny access" do
+        delete :destroy, :id => @discography
+        response.should redirect_to(signin_path)
+      end
+    end
+  end
 end

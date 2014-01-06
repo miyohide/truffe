@@ -1,5 +1,5 @@
 class DiscographiesController < ApplicationController
-  before_filter :authenticate, :only => [:edit, :update]
+  before_filter :authenticate, :only => [:edit, :update, :destroy]
 
   def index
     @page_title = t('discographies.title')
@@ -20,5 +20,11 @@ class DiscographiesController < ApplicationController
       @page_title = t('discographies.title')
       render 'edit'
     end
+  end
+
+  def destroy
+    Discography.find(params[:id]).destroy
+    flash[:success] = t('discographies.deleted')  
+    redirect_to discographies_path
   end
 end

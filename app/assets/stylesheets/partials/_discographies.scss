@@ -80,12 +80,17 @@
         background-color: $themecolor2;
       }
 
-      .edit_button {
+      .buttons {
+        height: 30px;
+        margin-bottom: 60px;
+      }
+
+      .edit_button, .delete_button {
         @include size(100px, 20px);
         @include border-radius(4px);
         float: left;
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-right: 20px;
         padding: 5px;
         font-size: 15px;
         text-align: center;

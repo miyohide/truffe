@@ -247,6 +247,8 @@ en:
     submit: Update
     edit: Edit
     updated: Discography Updated.
+    delete: Delete
+    deleted: Discography Deleted.
   photos:
     title: Photos
   contacts:

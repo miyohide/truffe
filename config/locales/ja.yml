@@ -240,6 +240,8 @@ ja:
     update: 更新
     edit: 編集する
     updated: アルバム情報を更新しました。
+    delete: 削除する 
+    deleted: アルバム情報を削除しました。
   photos:
     title: Photos
   contacts:
