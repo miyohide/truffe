@@ -46,6 +46,7 @@ describe UsersController do
 
     before(:each) do
       @user = Factory(:user)
+      test_sign_in(@user)
     end
 
     it "should be successful" do
@@ -70,6 +71,12 @@ describe UsersController do
   end
 
   describe "GET 'new'" do
+
+    before(:each) do
+      admin = Factory(:user, :email => "admin@example.com", :administrator => true)
+      test_sign_in(admin)
+    end
+
     it "should be successful" do
       get :new
       response.should be_success
@@ -86,6 +93,8 @@ describe UsersController do
     describe "failure" do
 
       before(:each) do
+        admin = Factory(:user, :email => "admin@example.com", :administrator => true)
+        test_sign_in(admin)
         @attr = {
           :name => "",
           :email => "",
@@ -114,6 +123,8 @@ describe UsersController do
     describe "success" do
       
       before(:each) do
+        admin = Factory(:user, :email => "admin@example.com", :administrator => true)
+        test_sign_in(admin)
         @attr = {
           :name => "New User",
           :email => "user@example.com",
@@ -145,6 +156,26 @@ describe UsersController do
     end
   end
 
+  describe "authentication of new/create pages" do
+
+    before(:each) do
+      @user = Factory(:user)
+    end
+
+    describe "for non-signed-in users" do
+
+      it "should deny access to 'new'" do
+        get :new, :id => @user
+        response.should redirect_to(signin_path)
+      end
+
+      it "should deny access to 'create'" do
+        put :create, :id => @user, :user => {}
+        response.should redirect_to(signin_path)
+      end
+    end
+  end
+
   describe "GET 'edit'" do
 
     before(:each) do
@@ -165,7 +196,7 @@ describe UsersController do
     it "should have a link to change the Gravatar" do
       get :edit, :id => @user
       gravatar_url = "http://gravatar.com/emails"
-      response.should have_selector("a", :href => gravatar_url, :content => "change")
+      response.should have_selector("a", :href => gravatar_url)
     end
   end
 
@@ -254,6 +285,47 @@ describe UsersController do
       it "should require matching users for 'update'" do
         put :update, :id => @user, :user => {}
         response.should redirect_to(root_path)
+      end
+    end
+  end
+
+  describe "DELETE 'destroy'" do
+
+    before(:each) do
+      @user = Factory(:user)
+    end
+
+    describe "as a non-signed-in user" do
+      it "should deny access" do
+        delete :destroy, :id => @user
+        response.should redirect_to(signin_path)
+      end
+    end
+
+    describe "as a non-admin user" do
+      it "should protect the page" do
+        test_sign_in(@user)
+        delete :destroy, :id => @user
+        response.should redirect_to(root_path)
+      end
+    end
+
+    describe "as an admin user" do
+
+      before(:each) do
+        admin = Factory(:user, :email => "admin@example.com", :administrator => true)
+        test_sign_in(admin)
+      end
+
+      it "should destroy the user" do
+        lambda do
+          delete :destroy, :id => @user
+        end.should change(User, :count).by(-1)
+      end
+
+      it "should redirect to the users page" do
+        delete :destroy, :id => @user
+        response.should redirect_to(users_path)
       end
     end
   end

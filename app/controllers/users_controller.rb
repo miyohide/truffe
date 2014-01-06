@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:index, :edit, :update]
+  before_filter :authenticate
   before_filter :correct_user, :only => [:edit, :update]
+  before_filter :admin_user,   :only => [:new, :create, :destroy]
 
   def index
     @page_title = t('users.title')
@@ -21,7 +22,6 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       # tab
-      sign_in @user
       flash[:success] = "Welcome to Your Profile Page!"
       redirect_to @user
     else
@@ -44,6 +44,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = t('users.deleted')
+    redirect_to users_path
+  end
+
   private
 
   def authenticate
@@ -53,5 +59,9 @@ class UsersController < ApplicationController
   def correct_user
     @user = User.find(params[:id])
     redirect_to(root_path) unless current_user?(@user)
+  end
+
+  def admin_user
+    redirect_to(root_path) unless current_user.administrator?
   end
 end

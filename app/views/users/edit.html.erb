@@ -2,19 +2,19 @@
   <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages', :object => f.object %>
     <div class="field">
-      <%= f.label :name %><br>
+      <%= f.label t('users.name') %><br>
       <%= f.text_field :name %>
     </div>
     <div class="field">
-      <%= f.label :email %><br>
+      <%= f.label t('users.email') %><br>
       <%= f.text_field :email %>
     </div>
     <div class="field">
-      <%= f.label :password %><br>
+      <%= f.label t('users.password') %><br>
       <%= f.password_field :password %>
     </div>
     <div class="field">
-      <%= f.label :password_confirmation, "Confirmation" %><br>
+      <%= f.label t('users.password_confirmation') %><br>
       <%= f.password_field :password_confirmation %>
     </div>
     <div class="actions">
@@ -23,6 +23,6 @@
   <% end %>
   <div>
     <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails">change</a>
+    <%= link_to t('users.change_gravatar'), "http://gravatar.com/emails" %>
   </div>
 </div>

@@ -252,6 +252,13 @@ ja:
     title: All users
     list: ユーザ一覧
     mypage: My Page
+    name: ユーザ名
+    email: メールアドレス
+    password: パスワード
+    password_confirmation: パスワード（確認用）
+    change_gravatar: 画像を変更する
+    delete: ユーザ削除
+    deleted: ユーザを消去しました。
   signup:
     title: Sign Up
     new: 新規ユーザ作成
@@ -259,8 +266,8 @@ ja:
   signin:
     title: Sign in 
     submit: ログイン
-    new_user: 管理者のみログイン可能となっております。
-    go_to_signup: ☀
+    new_user: 管理者用ログインページです。
+    go_to_signup: 新規ユーザを登録
     hidden_link: ★管理者ページ
   signout:
     submit: ログアウト

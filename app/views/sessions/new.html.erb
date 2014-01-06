@@ -1,4 +1,6 @@
 <div id="signin">
+  <h2><%= t('signin.title') %></h2>
+
   <%= form_for(:session, :url => sessions_path) do |f| %>
     <div class="field">
       <%= f.label :email %><br>
@@ -13,5 +15,5 @@
     </div>
   <% end %>
   
-  <p><%= t('signin.new_user') %><%= link_to t('signin.go_to_signup'), signup_path %></p>
+	<p><%= t('signin.new_user') %></p>
 </div>

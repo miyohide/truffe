@@ -1,6 +1,8 @@
 <div id="signup">
+  <h2><%= t('signup.title') %></h2>
+
   <%= form_for(@user) do |f| %>
-		<%= render 'shared/error_messages', :object => f.object %>
+    <%= render 'shared/error_messages', :object => f.object %>
     <div class="field">
       <%= f.label :name %><br>
       <%= f.text_field :name %>

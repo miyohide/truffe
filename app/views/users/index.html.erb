@@ -3,8 +3,10 @@
 
   <h2>Users List</h2>
   <ul class="users">
-    <% @users.each do |user| %>
-      <%= render @users %>
-    <% end %>
+    <%= render @users %>
   </ul>
+
+  <% if current_user.administrator? %>
+		<div class="new_button"><%= link_to t('signin.go_to_signup'), signup_path %></div>
+  <% end %>
 </div>

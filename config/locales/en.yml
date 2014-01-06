@@ -260,6 +260,13 @@ en:
     title: All users
     list: Users
     mypage: My Page
+    name: User Name
+    email: Email
+    password: Password 
+    password_confirmation: Password Confirmation
+    change_gravatar: Change Gravater
+    delete: Delete
+    deleted: User destroyed.
   signup:
     title: Sign Up
     new: Make a new user
@@ -268,7 +275,7 @@ en:
     title: Sign in
     submit: Sign in
     new_user: Only Admin users can sign in.
-    go_to_signup: ☀SUN
+    go_to_signup: Sign up new user
     hidden_link: ☆For Admin
   signout:
     submit: Sign out
