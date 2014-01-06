@@ -80,7 +80,7 @@
         font-size: 18px;
       }
 
-      .start, .location, .players, .charge, .comments, .edit_button {
+      .start, .location, .players, .charge, .comments, .buttons {
         margin-left: 135px;
         span {
           float: left;
@@ -104,15 +104,21 @@
         background-color: $themecolor5;
       }
 
-      .edit_button {
+      .buttons {
+        height: 30px;
+        margin-bottom: 40px;
+      }
+
+      .edit_button, .delete_button {
         @include size(100px, 20px);
         @include border-radius(4px);
         margin-top: 20px;
-        margin-bottom: 40px;
+        margin-right: 20px;
         padding: 5px;
         font-size: 15px;
         text-align: center;
         background-color: rgba(150, 150, 200, 0.5);
+        float: left;
       }
     }
   }

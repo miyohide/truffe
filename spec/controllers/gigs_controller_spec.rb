@@ -229,4 +229,40 @@ describe GigsController do
       end
     end
   end
+
+  describe "DELETE 'destroy'" do
+
+    before(:each) do
+      @gig  = Factory(:gig)
+      @user = Factory(:user)
+      test_sign_in(@user)
+    end
+
+    it "should destroy the gig" do
+      lambda do
+        delete :destroy, :id => @gig
+      end.should change(Gig, :count).by(-1)
+    end
+
+    it "should redirect to the gigs index page" do
+      delete :destroy, :id => @gig
+      response.should redirect_to(gigs_path)
+    end
+  end
+
+  describe "authentication of destroy action" do
+
+    before(:each) do
+      @gig = Factory(:gig)
+      @user = Factory(:user)
+    end
+
+    describe "for non-signed-in users" do
+
+      it "should deny access" do
+        delete :destroy, :id => @gig
+        response.should redirect_to(signin_path)
+      end
+    end
+  end
 end

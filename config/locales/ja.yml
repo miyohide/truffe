@@ -225,6 +225,8 @@ ja:
     update: 更新
     edit: 編集する
     updated: ライブ情報を更新しました。
+    delete: 削除する
+    deleted: ライブ情報を削除しました。
   discographies:
     title: Discography
     disc_title: タイトル

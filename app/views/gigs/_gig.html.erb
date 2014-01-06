@@ -37,6 +37,9 @@
   <% end %>
 
   <% if signed_in? %>
-    <div class="edit_button"><%= link_to t('gigs.edit'), edit_gig_path(:id => gig.id) %></div>
+    <div class="buttons">
+      <div class="edit_button"><%= link_to t('gigs.edit'), edit_gig_path(:id => gig.id) %></div>
+      <div class="delete_button"><%= link_to t('gigs.delete'), gig, :method => :delete, :confirm => "You sure?", :title => "Delete gig"  %></div>
+    </div>
   <% end %>
 </li>

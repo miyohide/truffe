@@ -1,5 +1,5 @@
 class GigsController < ApplicationController
-  before_filter :authenticate, :only => [:new, :create, :edit, :update]
+  before_filter :authenticate, :only => [:new, :create, :edit, :update, :destroy]
 
   def index
     @page_title = t('gigs.title')
@@ -59,5 +59,11 @@ class GigsController < ApplicationController
       @page_title = t('gigs.title')
       render 'edit'
     end
+  end
+
+  def destroy
+    Gig.find(params[:id]).destroy
+    flash[:success] = t('gigs.deleted')
+    redirect_to gigs_path
   end
 end

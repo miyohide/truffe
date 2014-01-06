@@ -233,6 +233,8 @@ en:
     update: Update
     edit: Edit
     updated: Gig Updated.
+    delete: Delete
+    deleted: Gig Deleted.
   discographies:
     title: Discographies
     disc_title: Title
