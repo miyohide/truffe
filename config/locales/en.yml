@@ -227,7 +227,9 @@ en:
     players: Players
     comment: Comment
     recommend: Reccomend
-    submit: Submit
+    new: Register a new gig
+    create: Register
+    created: New Gig Created.
     update: Update
     edit: Edit
     updated: Gig Updated.

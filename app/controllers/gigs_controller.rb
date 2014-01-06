@@ -1,5 +1,5 @@
 class GigsController < ApplicationController
-  before_filter :authenticate, :only => [:edit, :update]
+  before_filter :authenticate, :only => [:new, :create, :edit, :update]
 
   def index
     @page_title = t('gigs.title')
@@ -27,6 +27,22 @@ class GigsController < ApplicationController
     end
   end
 
+  def new
+    @page_title = t('gigs.new')
+    @gig = Gig.new
+  end
+
+  def create
+    @gig = Gig.new(params[:gig])
+    if @gig.save
+      flash[:success] = t('gigs.created')
+      redirect_to gigs_path
+    else
+      @page_title = t('gigs.new')
+      render'new'
+    end
+  end
+    
   def edit
     @page_title = t('gigs.title')
     @gig = Gig.find(params[:id])

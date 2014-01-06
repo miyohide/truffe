@@ -219,7 +219,9 @@ ja:
     players: プレイヤー
     comment: コメント
     recommend: お勧めのライブとして登録する
-    submit: 登録
+    new: 新しいライブを登録
+    create: 登録
+    created: 新しいライブ情報を登録しました。
     update: 更新
     edit: 編集する
     updated: ライブ情報を更新しました。

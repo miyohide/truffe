@@ -5,11 +5,11 @@
     <%= render 'shared/error_messages', :object => f.object %>
     <div class="field gig_date">
       <%= f.label t('gigs.gig_date') %>
-      <%= f.date_select(:gig_date, { :start_year => 2000, :end_year => 2200 }) %>
+      <%= f.date_select(:gig_date, { :use_month_numbers => true, :start_year => 2000, :end_year => 2200 }) %>
     </div>
     <div class="field gig_date_end">
       <%= f.label t('gigs.gig_date_end') %>
-      〜 <%= f.date_select(:gig_date_end, { :start_year => 2000, :end_year => 2200 }) %>
+      〜 <%= f.date_select(:gig_date_end, { :use_month_numbers => true, :start_year => 2000, :end_year => 2200 }) %>
       <%= content_tag(:span, t('gigs.explanation_of_date_end')) %>
     </div>
     <div class="field start_time">
