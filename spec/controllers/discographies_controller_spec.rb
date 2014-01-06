@@ -84,7 +84,7 @@ describe DiscographiesController do
         @discography.title.should == @attr[:title]
       end
 
-      it "should redirect to the discography show page" do
+      it "should redirect to the discography index page" do
         put :update, :id => @discography, :discography => @attr
         response.should redirect_to(discographies_path)
       end

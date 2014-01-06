@@ -1,4 +1,6 @@
 class GigsController < ApplicationController
+  before_filter :authenticate, :only => [:edit, :update]
+
   def index
     @page_title = t('gigs.title')
 
@@ -22,6 +24,24 @@ class GigsController < ApplicationController
       @next_month = Date.today.month
     else
       @current_date = (Date.new(@gig_year, @gig_month))
+    end
+  end
+
+  def edit
+    @page_title = t('gigs.title')
+    @gig = Gig.find(params[:id])
+  end
+
+  def update
+    @gig = Gig.find(params[:id])
+    if @gig.update_attributes(params[:gig])
+      flash[:success] = t('gigs.updated')
+      redirect_to :action => 'index'
+      # todo
+      # 編集したライブ情報の月のページへ遷移する
+    else
+      @page_title = t('gigs.title')
+      render 'edit'
     end
   end
 end

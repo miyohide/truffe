@@ -216,11 +216,26 @@ en:
     prev_month: prev month
     next_month: next month
     rate: yen
+    gig_date: Date
+    gig_date_end: Last Day
+    explanation_of_date_end: (ex.Last day of a tour) 
+    start_time: Start Time
+    gig_title: Event Title
+    group: Artist/Group Name
+    location: Livehouse
+    charge: Charge
+    players: Players
+    comment: Comment
+    recommend: Reccomend
+    submit: Submit
+    update: Update
+    edit: Edit
+    updated: Gig Updated.
   discographies:
     title: Discographies
     disc_title: Title
     release_date: Release Date
-    artists: Artists
+    artist: Artists
     players: Players
     record_co: Label
     url: URL

@@ -15,11 +15,11 @@
       <%= gig.gig_title.present? ? '/ ' : '' %><span class="group"><%= gig.group %></span>
     <% end %>
   </div>
-  <% if gig.players %>
-    <div class="players"><span>players</span><%= gig.players %></div>
-  <% end %>
   <% if gig.start_time %>
     <div class="start"><span>start</span><%= l(gig.start_time, :format => '%H:%M') %>〜</div>
+  <% end %>
+  <% if gig.players %>
+    <div class="players"><span>players</span><%= gig.players %></div>
   <% end %>
   <% if gig.charge %>
     <div class="charge">
@@ -34,5 +34,9 @@
   <% end %>
   <% if gig.updated_at && gig.updated_at >= Date.today.advance(:weeks => -1) %>
     <div class="new">new</div>
+  <% end %>
+
+  <% if signed_in? %>
+    <div class="edit_button"><%= link_to t('gigs.edit'), edit_gig_path(:id => gig.id) %></div>
   <% end %>
 </li>

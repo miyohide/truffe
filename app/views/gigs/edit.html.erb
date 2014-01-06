@@ -1,0 +1,51 @@
+<div id="gigs">
+  <h2>Edit gig</h2>
+  
+  <%= form_for(@gig) do |f| %>
+    <%= render 'shared/error_messages', :object => f.object %>
+    <div class="field gig_date">
+      <%= f.label t('gigs.gig_date') %>
+      <%= f.date_select(:gig_date, { :start_year => 2000, :end_year => 2200 }) %>
+    </div>
+    <div class="field gig_date_end">
+      <%= f.label t('gigs.gig_date_end') %>
+      〜 <%= f.date_select(:gig_date_end, { :start_year => 2000, :end_year => 2200 }) %>
+      <%= content_tag(:span, t('gigs.explanation_of_date_end')) %>
+    </div>
+    <div class="field start_time">
+      <%= f.label t('gigs.start_time') %>
+      <%= f.time_select(:start_time) %>〜
+    </div>
+    <div class="field gig_title">
+      <%= f.label t('gigs.gig_title') %>
+      <%= f.text_field :gig_title %>
+    </div>
+    <div class="field group">
+      <%= f.label t('gigs.group') %>
+      <%= f.text_area :group %>
+    </div>
+    <div class="field location">
+      <%= f.label t('gigs.location') %>
+      <%= f.text_area :location %>
+    </div>
+    <div class="field charge">
+      <%= f.label t('gigs.charge') %>
+      <%= f.text_field :charge %> 円
+    </div>
+    <div class="field players">
+      <%= f.label t('gigs.players') %>
+      <%= f.text_area :players %>
+    </div>
+    <div class="field comment">
+      <%= f.label t('gigs.comment') %>
+      <%= f.text_area :comment %>
+    </div>
+    <div class="field recommend">
+      <%= f.label t('gigs.recommend') %>
+      <%= f.check_box :recommend %>
+    </div>
+    <div class="actions">
+      <%= f.submit t('gigs.update') %>
+    </div>
+  <% end %>
+</div>

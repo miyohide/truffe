@@ -208,16 +208,32 @@ ja:
     prev_month: 前月
     next_month: 翌月
     rate: 円
+    gig_date: 日付
+    gig_date_end: 最終日
+    explanation_of_date_end: （ツアーなどの場合に設定）
+    start_time: 開始時間
+    gig_title: ライブ名
+    group: アーティスト名/グループ名
+    location: 店名
+    charge: チャージ
+    players: プレイヤー
+    comment: コメント
+    recommend: お勧めのライブとして登録する
+    submit: 登録
+    update: 更新
+    edit: 編集する
+    updated: ライブ情報を更新しました。
   discographies:
     title: Discography
     disc_title: タイトル
     release_date: 発売日
-    artists: アーティスト
+    artist: アーティスト
     players: プレイヤー
     record_co: レーベル
-    url: URL
+    url: リンク先
     comment: コメント
-    submit: 更新
+    submit: 登録
+    update: 更新
     edit: 編集する
     updated: アルバム情報を更新しました。
   photos:

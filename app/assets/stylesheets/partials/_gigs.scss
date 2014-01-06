@@ -80,7 +80,7 @@
         font-size: 18px;
       }
 
-      .start, .location, .players, .charge {
+      .start, .location, .players, .charge, .comments, .edit_button {
         margin-left: 135px;
         span {
           float: left;
@@ -102,6 +102,17 @@
         text-align: center;
         @include border-radius(10px);
         background-color: $themecolor5;
+      }
+
+      .edit_button {
+        @include size(100px, 20px);
+        @include border-radius(4px);
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding: 5px;
+        font-size: 15px;
+        text-align: center;
+        background-color: rgba(150, 150, 200, 0.5);
       }
     }
   }
@@ -213,6 +224,30 @@
 
       &:last-child {
         margin-left: 10px;
+      }
+    }
+  }
+
+  form {
+    label {
+      display: block;
+      float: left;
+      margin-right: 20px;
+      width: 170px;
+    }
+    .gig_date_end {
+      span {
+        font-size: 13px;
+      }
+    }
+    .gig_title {
+      input {
+        width: 450px;
+      }
+    }
+    .group, .location, .players, .comment {
+      textarea {
+        width: 450px;
       }
     }
   }

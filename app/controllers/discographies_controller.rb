@@ -21,10 +21,4 @@ class DiscographiesController < ApplicationController
       render 'edit'
     end
   end
-
-  private
-
-    def authenticate
-      deny_access unless signed_in?
-    end
 end

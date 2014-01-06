@@ -3,23 +3,23 @@
   
   <%= form_for(@discography) do |f| %>
     <%= render 'shared/error_messages', :object => f.object %>
-    <div class="field">
+    <div class="field release_date">
       <%= f.label t('discographies.release_date') %>
       <%= f.date_select(:release_date, { :start_year => 2000, :end_year => 2200 }) %>
     </div>
-    <div class="field">
+    <div class="field disc_title">
       <%= f.label t('discographies.disc_title') %>
       <%= f.text_field :title %>
     </div>
-    <div class="field">
-      <%= f.label t('discographies.artists') %>
+    <div class="field artist">
+      <%= f.label t('discographies.artist') %>
       <%= f.text_field :artist %>
     </div>
     <div class="field players">
       <%= f.label t('discographies.players') %>
       <%= f.text_area :players %>
     </div>
-    <div class="field">
+    <div class="field record_co">
       <%= f.label t('discographies.record_co') %>
       <%= f.text_field :record_co %>
     </div>
@@ -32,7 +32,7 @@
       <%= f.text_area :comment %>
     </div>
     <div class="actions">
-      <%= f.submit t('discographies.submit') %>
+      <%= f.submit t('discographies.update') %>
     </div>
   <% end %>
 </div>
