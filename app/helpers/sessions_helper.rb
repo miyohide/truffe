@@ -1,5 +1,12 @@
 module SessionsHelper
 
+  USERS = { ENV['USERS_NAME'] => ENV['USERS_PASS'] }
+  def digest_authenticate
+    authenticate_or_request_with_http_digest do |username|
+      USERS[username]
+    end
+  end
+
   def sign_in(user)
     cookies.permanent.signed[:remember_token] = [user.id, user.salt]
     current_user = user
