@@ -17,5 +17,6 @@
 class Discography < ActiveRecord::Base
   attr_accessible :release_date, :title, :artist, :players, :record_co, :url, :comment
 
-  validates :title, :presence => true
+  validates :title,  :presence => true
+  validates :artist, :presence => true
 end

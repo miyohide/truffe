@@ -16,6 +16,81 @@ describe DiscographiesController do
     end
   end
 
+  describe "GET 'new'" do
+
+    before(:each) do
+      @user = Factory(:user)
+      test_sign_in(@user)
+    end
+
+    it "should be successful" do
+      get :new
+      response.should be_success
+    end
+  end
+
+  describe "POST 'create'" do
+
+    before(:each) do
+      @discography = Factory(:discography)
+      @user = Factory(:user)
+      test_sign_in(@user)
+    end
+
+    describe "failure" do
+
+      before(:each) do
+        @attr = { :release_date => "",
+                  :title => "",
+                  :artist => "",
+                  :players => "",
+                  :record_co => "",
+                  :url => "",
+                  :comment => "" }
+      end
+
+      it "should not create a discography" do
+        lambda do
+          post :create, :discography => @attr
+        end.should_not change(Discography, :count)
+      end
+
+      it "should have the right title" do
+        post :create, :discography => @attr
+        response.should have_selector("title", :content => @page_title)
+      end
+
+      it "should render the 'new' page" do
+        post :create, :discography => @attr
+        response.should render_template('new')
+      end
+    end
+
+    describe "success" do
+
+      before(:each) do
+        @attr = { :release_date => "2013-10-04",
+                  :title => "New Album",
+                  :artist => "Yoshimasa Otsuka",
+                  :players => "",
+                  :record_co => "YYY Records",
+                  :url => "",
+                  :comment => "" }
+      end
+
+      it "should create a discography" do
+        lambda do
+          post :create, :discography => @attr
+        end.should change(Discography, :count).by(1)
+      end
+
+      it "should redirect to the discography index page" do
+        post :create, :discography => @attr
+        response.should redirect_to(discographies_path)
+      end
+    end
+  end
+
   describe "GET 'edit'" do
 
     before(:each) do

@@ -6,6 +6,22 @@ class DiscographiesController < ApplicationController
     @discographies = Discography.order('release_date desc').limit(100)
   end
 
+  def new
+    @page_title = t('discographies.title')
+    @discography = Discography.new
+  end
+
+  def create
+    @discography = Discography.new(params[:discography])
+    if @discography.save
+      flash[:success] = t('discographies.created')
+      redirect_to discographies_path 
+    else
+      @page_title = t('discographies.title')
+      render 'new'
+    end
+  end
+
   def edit
     @page_title = t('discographies.title')
     @discography = Discography.find(params[:id])

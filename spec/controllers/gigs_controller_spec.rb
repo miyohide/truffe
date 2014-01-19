@@ -19,7 +19,6 @@ describe GigsController do
   describe "GET 'new'" do
 
     before(:each) do
-      @gig  = Factory(:gig)
       @user = Factory(:user)
       test_sign_in(@user)
     end
