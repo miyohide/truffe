@@ -217,7 +217,7 @@ en:
     next_month: next month
     rate: yen
     gig_date: Date
-    gig_date_end: Last Day
+    gig_date_end: ' '
     explanation_of_date_end: (ex.Last day of a tour) 
     start_time: Start Time
     gig_title: Event Title

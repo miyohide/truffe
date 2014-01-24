@@ -20,7 +20,8 @@
 class Gig < ActiveRecord::Base
   attr_accessible :gig_date, :gig_date_end, :gig_title, :group, :location, :charge, :players, :comment, :recommend, :start_time
 
-  validates :gig_date,     :presence => true
+  validates :gig_date, :presence => true
+  validates :charge, numericality: { only_integer: true, :greater_than_or_equal_to => 0 }, unless: "charge.nil?"
 
   default_scope :order => 'gig_date ASC'
   paginates_per 50

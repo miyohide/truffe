@@ -224,20 +224,37 @@
       margin-right: 20px;
       width: 170px;
     }
-    .gig_date_end {
-      span {
-        font-size: 13px;
+    .gig_date {
+      select:nth-child(3), select:nth-child(4) {
+        width: 60px;
       }
     }
-    .gig_title {
+    .gig_date_end {
+      text-align: right;
+      select:nth-child(3), select:nth-child(4) {
+        width: 60px;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+    .gig_title, .group, .location {
       input {
         width: 450px;
       }
     }
-    .group, .location, .players, .comment {
+    .charge {
+      input {
+        width: 120px;
+      }
+    }
+    .players, .comment {
       textarea {
         width: 450px;
       }
+    }
+    .group {
+      margin-bottom: 30px;
     }
   }
 

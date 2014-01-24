@@ -130,6 +130,7 @@ form {
     input, textarea, select {
       @include size(220px, 20px);
       @include border-radius(4px);
+      margin-bottom: 5px;
       padding: 5px;
       font-size: 17px;
       background-color: rgba(200, 200, 200, 0.5);

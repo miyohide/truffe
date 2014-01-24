@@ -209,7 +209,7 @@ ja:
     next_month: 翌月
     rate: 円
     gig_date: 日付
-    gig_date_end: 最終日
+    gig_date_end: ' ' 
     explanation_of_date_end: （ツアーなどの場合に設定）
     start_time: 開始時間
     gig_title: ライブ名
