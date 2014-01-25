@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131129092120) do
+ActiveRecord::Schema.define(:version => 20140125035013) do
 
   create_table "articles", :force => true do |t|
     t.string   "heading"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(:version => 20131129092120) do
   end
 
   create_table "gigs", :force => true do |t|
-    t.date     "gig_date",                    :null => false
+    t.date     "gig_date",                        :null => false
     t.date     "gig_date_end"
     t.string   "gig_title"
     t.string   "group"
@@ -70,10 +70,11 @@ ActiveRecord::Schema.define(:version => 20131129092120) do
     t.integer  "charge"
     t.string   "players"
     t.string   "comment"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.integer  "recommend",    :default => 0
     t.time     "start_time"
+    t.boolean  "visible",      :default => false
   end
 
   create_table "photos", :force => true do |t|

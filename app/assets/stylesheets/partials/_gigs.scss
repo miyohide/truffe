@@ -22,6 +22,11 @@
           background-size: 115px 94px;
         }
       }
+      .gig_contents {
+        &[data-visible="invisible"] {
+          opacity: 0.4;
+        }
+      }
 
       .date {
         position: relative;

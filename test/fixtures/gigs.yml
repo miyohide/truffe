@@ -15,6 +15,7 @@
 #  updated_at   :datetime         not null
 #  recommend    :integer          default(0)
 #  start_time   :time
+#  visible      :boolean          default(FALSE)
 #
 
 gigs1:

@@ -15,7 +15,11 @@ class GigsController < ApplicationController
                    params[:month].to_i
                  end
 
-    @gigs = Gig.where('EXTRACT(MONTH FROM gig_date) = ? and EXTRACT(YEAR FROM gig_date) = ?', @gig_month, @gig_year).limit(100).offset(0).page(params[:page])
+    if signed_in?
+      @gigs = Gig.where('EXTRACT(MONTH FROM gig_date) = ? and EXTRACT(YEAR FROM gig_date) = ?', @gig_month, @gig_year).limit(100).offset(0).page(params[:page])
+    else
+      @gigs = Gig.where('visible = ? and EXTRACT(MONTH FROM gig_date) = ? and EXTRACT(YEAR FROM gig_date) = ?', false, @gig_month, @gig_year).limit(100).offset(0).page(params[:page])
+    end
 
     if @gig_year.nil? || @gig_month.nil?
       @prev_year = Date.today.year

@@ -219,6 +219,7 @@ ja:
     players: プレイヤー
     comment: コメント
     recommend: お勧めのライブとして登録する
+    visible: 下書きとして保存
     new: 新しいライブを登録
     create: 登録
     created: 新しいライブ情報を登録しました。
