@@ -195,6 +195,8 @@ ja:
   activerecord:
     errors:
       <<: *errors
+  common:
+    in_preparation: ただいま準備中です。
   home:
     base_title: Jazz Bassist 大塚義将
   profile:

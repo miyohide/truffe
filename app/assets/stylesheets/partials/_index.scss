@@ -177,5 +177,9 @@ h1.title {
 
 /* Contacts */
 #contacts {
-  @include basic-column(100%)
+  @include basic-column(100%);
+
+  #in_preparation {
+    @include no_info_design;
+  }
 }

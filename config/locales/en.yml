@@ -203,6 +203,8 @@ en:
   activerecord:
     errors:
       <<: *errors
+  common:
+    in_preparation: This page is in preparation.
   home:
     base_title: Jazz Bassist Yoshimasa Otsuka
   profile:
