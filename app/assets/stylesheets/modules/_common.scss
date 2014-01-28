@@ -36,7 +36,7 @@ header {
       font-size: 18px;
       letter-spacing: 0.1em;
       text-shadow: 0.5px 0.5px 0.5px #666;
-      @include size(138px, 52px);
+      @include size(133px, 52px);
       @include background(linear-gradient(
         color-stops(#aa8264 0%, #915f32 35%, #7d4b1e 65%, #6e3c0f 100%)
       ));
@@ -45,8 +45,8 @@ header {
         rgba(255, 255, 255, 0.2) 1px 1px 3px inset,
         rgba(150, 150, 150, 0.1) -1px -1px 3px inset);
 
-      &.Gigs {
-        width: 128px;
+      &.Schedule {
+        width: 148px;
       }
       &.Discography {
         width: 160px;
