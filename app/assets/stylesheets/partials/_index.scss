@@ -44,18 +44,17 @@ $gallery-height: $gallery-width / 1.618;
 #wrapper.l #slides {
   height: $gallery-height;
   .slide { @include size($gallery-width, $gallery-height) }
-  .slide.a { @include bg-img('slide_01.jpg') }
-  .slide.b { @include bg-img('slide_02.jpg') }
-  .slide.c { @include bg-img('slide_03.jpg') }
-  .slide.d { @include bg-img('slide_04.jpg') }
+  @for $n from 1 through 3 {
+    .slide.img_#{$n} { @include bg-img('slides/slide_' + $n + '.jpg') }
+  }
 }
 #wrapper.s #slides {
   height: 320px;
   .slide { @include size(640px, 320px) }
-  .slide.a { @include bg-img('640x320e.jpg') }
-  .slide.b { @include bg-img('640x320f.jpg') }
-  .slide.c { @include bg-img('640x320g.jpg') }
-  .slide.d { @include bg-img('640x320h.jpg') }
+  .slide.img_1 { @include bg-img('640x320e.jpg') }
+  .slide.img_2 { @include bg-img('640x320f.jpg') }
+  .slide.img_3 { @include bg-img('640x320g.jpg') }
+  .slide.img_4 { @include bg-img('640x320h.jpg') }
 }
 
 ul#menu {

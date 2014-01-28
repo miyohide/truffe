@@ -4,16 +4,14 @@
 
 <div id="gallery">
   <div id="slides">
-    <div class="slide a"></div>
-    <div class="slide b"></div>
-    <div class="slide c"></div>
-    <div class="slide d"></div>
+    <% for n in 1..3 %>
+      <div class="slide <%= 'img_' + n.to_s %>"></div>
+    <% end %>
   </div>
   <ul id="menu">
-    <li class="menuitem"></li>
-    <li class="menuitem"></li>
-    <li class="menuitem"></li>
-    <li class="menuitem"></li>
+    <% 3.times do %>
+      <li class="menuitem"></li>
+    <% end %>
   </ul>
 </div>
 
