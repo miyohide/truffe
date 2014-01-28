@@ -23,7 +23,7 @@ header {
   width: 840px;
   min-height: 52px;
   color: #fff;
-  font-family: Cursive;
+  font-family: cursive, serif;
   -webkit-box-align: center;
   box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.2);
 
@@ -86,14 +86,14 @@ header {
     min-width: 320px;
     max-width: 350px;
     font-size: 32px;
-    font-family: cursive;
+    font-family: cursive, serif;
     border: solid $themecolor1;
     border-width: 0px 0px 0px 15px;
   }
 
   h2 {
     margin-bottom: 20px;
-    font-family: cursive;
+    font-family: cursive, serif;
   }
 }
 
