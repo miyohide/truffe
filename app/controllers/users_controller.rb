@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def index
     @page_title = t('users.title')
-    @users = User.all
+    @users = User.order('created_at asc')
   end
 
   def show
