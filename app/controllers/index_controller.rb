@@ -1,5 +1,5 @@
 class IndexController < ApplicationController
-  before_filter :digest_authenticate
+  #before_filter :digest_authenticate
 
   def index
     #@discographies = Discographies.order('release_date desc').limit(1)
