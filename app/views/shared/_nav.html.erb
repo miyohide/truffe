@@ -9,8 +9,18 @@
   { :link => contacts_path,      :name => 'Contacts' }
 ] %>
 
-<ul id="nav">
+<ul id="pc_nav">
   <% menu_items.each_with_index do |item, index| %>
     <%= menu_link_to item %>
   <% end %>
 </ul>
+
+<div id="mobile_nav">
+  <div id="title_bar">Yoshimasa Otsuka.com</div>
+  <div id="menu_lists">＝</div>
+  <ul id="pulldown_nav">
+    <% menu_items.each_with_index do |item, index| %>
+      <%= menu_link_to item %>
+    <% end %>
+  </ul>
+</div>

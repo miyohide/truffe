@@ -1,14 +1,19 @@
 $(document).ready ->
   if Modernizr.touch
     $(".image").bind 'touchend', (event) ->
-      # console.log("touched")
       btnClick($(this).parent().attr('data-no'))
   else
     $(".image").click ->
-      # console.log("clicked")
       btnClick($(this).parent().attr('data-no'))
 
   setTimeout("scrollTo(0,1)",100)
+
+  if Modernizr.touch
+    $("#menu_lists").bind 'touchend', (event) ->
+      viewLists()
+  else
+    $("#menu_lists").click ->
+      viewLists()
 
 btnClick = (num) ->
   # console.log(num)
@@ -20,3 +25,12 @@ btnClick = (num) ->
     $('.background').css('display', 'block')
     $('ul#photos_list > li').removeClass('show')
     $selectedImage.addClass('show')
+
+viewLists = () ->
+  $lists = $('#pulldown_nav')
+  if $lists.hasClass('show')
+    $lists.removeClass('show')
+    $lists.css('display', 'none')
+  else
+    $lists.css('display', 'block')
+    $lists.addClass('show')

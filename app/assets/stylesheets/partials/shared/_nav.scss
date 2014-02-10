@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+ul#pc_nav {
+  li {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    float: left;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-shadow: 0.5px 0.5px 0.5px #666;
+    @include size(133px, 52px);
+    @include background(linear-gradient(
+      color-stops(#aa8264 0%, #915f32 35%, #7d4b1e 65%, #6e3c0f 100%)
+    ));
+    @include box-shadow(
+      rgba(100, 100, 100, 0.3) 0px 0px 3px,
+      rgba(255, 255, 255, 0.2) 1px 1px 3px inset,
+      rgba(150, 150, 150, 0.1) -1px -1px 3px inset);
+
+    &.Schedule {
+      width: 148px;
+    }
+    &.Discography {
+      width: 160px;
+    }
+
+    > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 52px;
+      color: #fff;
+      text-align: center;
+    }
+
+    &:not(.selected):hover {
+      @include background(linear-gradient(
+        color-stops(#C69F79 0%, #A47D57 50%, #925C47 100%)
+      ));
+    }
+    &:not(.selected):active {
+      @include box-shadow(
+        rgba(100, 100, 100, 0.3) 0px 0px 3px,
+        rgba(150, 150, 150, 0.1) 1px 1px 3px inset,
+        rgba(255, 255, 255, 0.2) -1px -1px 3px inset);
+    }
+  }
+}
+
+#mobile_nav {
+  #title_bar, #menu_lists {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    float: left;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-shadow: 0.5px 0.5px 0.5px #666;
+    @include background(linear-gradient(
+      color-stops(#aa8264 0%, #915f32 35%, #7d4b1e 65%, #6e3c0f 100%)
+    ));
+    @include box-shadow(
+      rgba(100, 100, 100, 0.3) 0px 0px 3px,
+      rgba(255, 255, 255, 0.2) 1px 1px 3px inset,
+      rgba(150, 150, 150, 0.1) -1px -1px 3px inset);
+  }
+
+  #title_bar {
+    @include size(266px, 52px);
+  }
+
+  #menu_lists {
+    @include size(54px, 52px);
+  }
+
+  ul#pulldown_nav {
+    @include from-top-left(62px, 129px);
+    z-index: 100;
+    color: #555;
+    display: none;
+    opacity: 0;
+    //transition: opacity 0.1s linear 0;
+
+    &.show {
+      opacity: 0.9;
+    }
+
+    li {
+      @include size(120px, 30px);
+      padding: 5px 10px;
+      line-height: 30px;
+      border-bottom: 1px solid #ccc;
+      background-color: #fff;
+      &:first-child {
+        @include border-radius(5px 5px 0px 0px);
+      }
+      &:last-child {
+        @include border-radius(0px 0px 5px 5px);
+      }
+      &:hover {
+        background-color: #ddd;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+}

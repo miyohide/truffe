@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/* Media Query */
+
+@media screen and (min-width: 480px) {
+  #wrapper.l {
+    width: 840px;
+
+    #mobile_nav {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #wrapper.l {
+    width: 320px;
+
+    #pc_nav {
+      display: none;
+    }
+
+    header {
+      #mobile_nav {
+        width: 320px;
+        li {
+          width: 160px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    footer {
+      #open_login {
+        margin: 20px;
+        float: initial;
+      }
+    }
+
+    #container {
+      #site_title {
+        position: initial;
+        margin: 20px;
+        width: 220px;
+      }
+
+      #gallery {
+          padding-left: 20px;
+          @include size(276px, 200px);
+        #slides {
+          @include size(270px, 167px);
+          .slide {
+            @include size(270px, 167px);
+          }
+        }
+        #menu {
+          padding: 5px 115px;
+        }
+      }
+
+      #news, #profile, #gigs, #discographies, #release, #contacts, #signin, #signup, #user_profile, #users_list {
+         margin: 20px;
+         padding: 20px;
+         max-width: 240px;
+       }
+
+       #user_profile, #users_list {
+         #side_bar {
+           display: none;
+         }
+       }
+
+      #no_gigs, #no_discographies {
+        margin: 10px;
+        padding: 40px;
+      }
+      #in_preparation {
+        margin: 10px;
+      }
+
+      #profile_image {
+        margin-bottom: 20px;
+      }
+      #profile_detail {
+        margin-left: 0px;
+        h3 {
+          font-size: 16px;
+        }
+        #introduction {
+          font-size: 14px;
+        }
+      }
+
+      #gigs {
+        #gigs_nav_months {
+          margin-left: -25px;
+          width: 300px;
+
+          li{
+            width: 42px;
+            &.current_page {
+              width: 86px;
+            }
+            &.prev_month, &.next_month {
+              width: 0px;
+            }
+            &:nth-child(2), &:nth-child(3), &:nth-child(7), &:nth-child(8) {
+              display: none;
+            }
+            a {
+              width: 40px;
+            }
+          }
+        }
+        #gigs_list {
+          .gig_contents {
+            div {
+              margin-left: 0px;
+            }
+            div.date {
+              float: initial;
+            }
+          }
+        }
+      }
+
+      #release {
+        ul.discographies_list {
+          li {
+            .disc_image {
+              float: initial;
+              margin-bottom: 20px;
+              a img {
+                @include size(150px, 150px);
+              }
+            }
+            div {
+              float: initial;
+            }
+            .disc_detail {
+              margin-left: 0px;
+              margin-bottom: 20px;
+              .artist {
+                min-width: 250px;
+              }
+            }
+            .comments {
+              min-width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

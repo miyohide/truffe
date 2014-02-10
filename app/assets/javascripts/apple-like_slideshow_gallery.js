@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  $('#slides').width('485px');
 
   $menuItem = $(".menuitem");
   $menuItem.on({
