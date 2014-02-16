@@ -1,6 +1,27 @@
 <div id="contacts">
-  <h2>お問い合わせ</h2>
-  <div id="in_preparation"><%= t('common.in_preparation') %></div>
+  <h2><%= t('contacts.inquiry') %></h2>
   <div id="inquiry_form">
+    <%= form_for(@contact, :url => contacts_path) do |f| %>
+      <%= render 'shared/error_messages', :object => f.object %>
+      <div class="field name">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field email">
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
+      <div class="field subject">
+        <%= f.label :subject %><br>
+        <%= f.text_field :subject %>
+      </div>
+      <div class="field message">
+        <%= f.label :message %><br>
+        <%= f.text_area :message %>
+      </div>
+      <div class="actions">
+        <%= f.submit t('contacts.go_to_confirm') %>
+      </div>
+    <% end %>
   </div>
 </div>

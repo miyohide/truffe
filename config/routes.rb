@@ -32,6 +32,7 @@ Truffe::Application.routes.draw do
   match 'news' => 'articles#index'
   match 'photos' => 'index#photos'
   match 'contacts' => 'index#contacts'
+  match 'send_inquiry' => 'index#send_inquiry'
   match 'gigs/:year(/:month)' => 'gigs#index', :constraints => { :year => /\d{4}/ }
 
   namespace :admin do

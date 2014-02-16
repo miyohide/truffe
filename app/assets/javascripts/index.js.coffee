@@ -15,6 +15,13 @@ $(document).ready ->
     $("#menu_lists").click ->
       viewLists()
 
+  if Modernizr.touch
+    $("p.flash").bind 'touchend', (event) ->
+      hideFlash()
+  else
+    $("p.flash").click ->
+      hideFlash()
+
 btnClick = (num) ->
   # console.log(num)
   $selectedImage = $('li[data-no=' + num + ']')
@@ -34,3 +41,7 @@ viewLists = () ->
   else
     $lists.css('display', 'block')
     $lists.addClass('show')
+
+hideFlash = () ->
+  $flash = $('p.flash')
+  $flash.css('display', 'none')

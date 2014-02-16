@@ -31,6 +31,18 @@ header {
 #container {
   position: relative;
 
+  p.flash {
+    @include from-top-left(40px, 200px);
+    @include border-radius(10px);
+    padding: 20px;
+    background-color: rgba(70, 195, 190, 0.5);
+    width: 360px;
+    text-align: center;
+    z-index: 100;
+    transition: opacity 0.2s linear 0;
+    @include animation(flash, 7s, 1, linear, forwards);
+  }
+
   h1.page_title {
     margin: 40px 0px 0px 40px;
     padding-left: 10px;
@@ -108,4 +120,33 @@ form {
       background-color: rgba(150, 150, 200, 0.5);
     }
   }
+}
+
+@-webkit-keyframes flash {
+  0%   { opacity: 0 }
+  15%  { opacity: 0.5 }
+  25%  { opacity: 0.9 }
+  75%  { opacity: 0.9 }
+  100% { opacity: 0 }
+}
+@-moz-keyframes flash {
+  0%   { opacity: 0 }
+  15%  { opacity: 0.5 }
+  25%  { opacity: 0.9 }
+  75%  { opacity: 0.9 }
+  100% { opacity: 0 }
+}
+@-ms-keyframes flash {
+  0%   { opacity: 0 }
+  15%  { opacity: 0.5 }
+  25%  { opacity: 0.9 }
+  75%  { opacity: 0.9 }
+  100% { opacity: 0 }
+}
+@keyframes flash {
+  0%   { opacity: 0 }
+  15%  { opacity: 0.5 }
+  25%  { opacity: 0.9 }
+  75%  { opacity: 0.9 }
+  100% { opacity: 0 }
 }

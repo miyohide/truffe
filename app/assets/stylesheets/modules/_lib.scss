@@ -42,6 +42,29 @@ $themecolor6: rgba(30, 107, 125, 0.4);
   }
 }
 
+@mixin animation ($name, $duration, $iteration-count, $timing-function: ease, $fill-mode: none) { 
+  -moz-animation-name: $name;
+  -moz-animation-duration: $duration;
+  -moz-animation-iteration-count: $iteration-count;
+  -moz-animation-timing-function: $timing-function;
+  -moz-animation-fill-mode: $fill-mode;
+  -webkit-animation-name: $name;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-iteration-count: $iteration-count;
+  -webkit-animation-timing-function: $timing-function;
+  -webkit-animation-fill-mode: $fill-mode;
+  -ms-animation-name: $name;
+  -ms-animation-duration: $duration;
+  -ms-animation-iteration-count: $iteration-count;
+  -ms-animation-timing-function: $timing-function;
+  -ms-animation-fill-mode: $fill-mode;
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: $iteration-count;
+  animation-timing-function: $timing-function;
+  animation-fill-mode: $fill-mode;
+}
+
 @mixin basic-column($width: 720px) {
   position: relative;
   margin: 40px;

@@ -251,6 +251,13 @@ ja:
     title: Photos
   contacts:
     title: Contacts
+    inquiry: お問い合わせ
+    confirm: お問い合わせ内容の確認
+    go_to_confirm: 確認
+    submit: 送信
+    message: |-
+      お問い合わせ内容を送信しました。
+      ありがとうございました。
   users:
     title: All users
     list: ユーザ一覧

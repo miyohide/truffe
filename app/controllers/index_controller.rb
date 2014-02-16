@@ -18,5 +18,21 @@ class IndexController < ApplicationController
 
   def contacts
     @page_title = t('contacts.title')
+
+    unless params[:contact]
+      @contact = Contact.new
+    else
+      @contact = Contact.new(params[:contact])
+      render @contact.valid? ? :confirm : :contacts
+    end
+  end
+
+  def send_inquiry
+    @page_title = t('contacts.title')
+
+    @contact = params[:contact]
+    # TODO send mail
+    flash[:notice] = t('contacts.message')
+    redirect_to contacts_path
   end
 end

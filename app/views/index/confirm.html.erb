@@ -1,0 +1,31 @@
+<div id="contacts">
+  <h2><%= t('contacts.confirm') %></h2>
+  <div id="inquiry_form">
+    <%= form_for(@contact, :url => send_inquiry_path) do |f| %>
+      <%= f.hidden_field :name %>
+      <%= f.hidden_field :email %>
+      <%= f.hidden_field :subject %>
+      <%= f.hidden_field :message %>
+
+      <div class="field name">
+        <%= f.label :name %><br>
+        <p><%= @contact.name %></p>
+      </div>
+      <div class="field email">
+        <%= f.label :email %><br>
+        <p><%= @contact.email %></p>
+      </div>
+      <div class="field subject">
+        <%= f.label :subject %><br>
+        <p><%= @contact.subject %></p>
+      </div>
+      <div class="field message">
+        <%= f.label :message %><br>
+        <p><%= @contact.message %></p>
+      </div>
+      <div class="actions">
+        <%= f.submit t('contacts.submit') %>
+      </div>
+    <% end %>
+  </div>
+</div>

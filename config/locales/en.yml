@@ -259,6 +259,13 @@ en:
     title: Photos
   contacts:
     title: Contacts
+    inquiry: Inquiry
+    confirm: Confirm your inquiry
+    go_to_confirm: Confirm
+    submit: Send
+    message: |-
+      Sent your inquiry.
+      Thank you so much!
   users:
     title: All users
     list: Users
