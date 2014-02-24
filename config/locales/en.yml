@@ -198,6 +198,12 @@ en:
     pm: pm
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
+    attributes:
+      contact:
+        name: Name
+        email: Email
+        subject: Subject
+        message: Message
     errors:
       <<: *errors
   activerecord:

@@ -190,6 +190,12 @@ ja:
     pm: 午後
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
+    attributes:
+      contact:
+        name: 氏名
+        email: メールアドレス
+        subject: 件名
+        message: 本文
     errors:
       <<: *errors
   activerecord:

@@ -31,7 +31,7 @@ class IndexController < ApplicationController
     @page_title = t('contacts.title')
 
     @contact = params[:contact]
-    # TODO send mail
+    InquiryMailer.inquiry_email(@contact).deliver
     flash[:notice] = t('contacts.message')
     redirect_to contacts_path
   end

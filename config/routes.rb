@@ -53,6 +53,10 @@ Truffe::Application.routes.draw do
   resources :blog_entries
   resources :sessions, :only => [:new, :create, :destroy]
 
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
