@@ -308,3 +308,11 @@ en:
     admin_tool: Admin Tool
   messages:
     logout: You have successfully Logged out
+  inquiry:
+    title: Contact Notice Mail
+    about: This mail was delivered from Yoshimasa Otsuka Official Website.
+    notice: Here, inquiry from your customer.
+    name: Name
+    email: Email
+    subject: Subject
+    message: Message

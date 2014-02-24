@@ -1,12 +1,13 @@
 class InquiryMailer < ActionMailer::Base
-  default to: Proc.new { "rubymydear.n@gmail.com" },
+  default to: ENV['ADMIN_MAIL_ADDRESS'],
+          cc: "rubymydear.n@gmail.com",
           from: "rubymydear.n@gmail.com"
 
   def inquiry_email(contact)
     @contact = contact 
-    @user_1 = User.find(1) # Natsumi Mail Address
-    @user_2 = User.find(2) # Yoshimasa Mail Address
+    @user_1 = User.find(1) # N's Mail Address
+    @user_2 = User.find(2) # Y's Mail Address
     @url = "http://yoshimasaotsuka.com/"
-    mail(subject: "Contact Notice Mail *** YoshimasaOtsuka.com")
+    mail(subject: t('inquiry.title') + " *** YoshimasaOtsuka.com")
   end
 end

@@ -300,3 +300,11 @@ ja:
     admin_tool: 管理ツール
   messages:
     logout: ログアウトしました
+  inquiry:
+    title: お問い合わせ通知メール
+    about: Webサイトにお問い合わせがありましたので、お知らせいたします。
+    notice: 以下、お客様からのお問い合わせ情報です。
+    name: 氏名
+    email: メールアドレス
+    subject: 件名
+    message: 本文

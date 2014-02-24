@@ -1,18 +1,19 @@
-Dear <%= @user_1.name %>
-===============================================
+Dear <%= @user_2.name %>
  
-Here, inquiry from your customer.
+<%= t('inquiry.about') %>
+<%= t('inquiry.notice') %>
+===============================================
 
-[name]
+[<%= t('inquiry.name') %>]
 <%= @contact[:name] %>
 
-[email]
+[<%= t('inquiry.email') %>]
 <%= @contact[:email] %>
 
-[subject]
+[<%= t('inquiry.subject') %>]
 <%= @contact[:subject] %>
 
-[message]
+[<%= t('inquiry.message') %>]
 <%= @contact[:message] %>
 
 ===============================================
