@@ -78,6 +78,11 @@
         margin: 10px;
       }
 
+      p.flash {
+        left: 40px;
+        width: 200px;
+      }
+
       #profile_image {
         margin-bottom: 20px;
       }
@@ -88,6 +93,15 @@
         }
         #introduction {
           font-size: 14px;
+        }
+      }
+
+      #contacts {
+        form p {
+          width: 220px;
+        }
+        .subject input, .message textarea {
+          width: 230px;
         }
       }
 
