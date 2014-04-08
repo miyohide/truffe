@@ -206,12 +206,12 @@ ja:
   home:
     base_title: Jazz Bassist 大塚義将
   profile:
-    title: Profile
+    title: プロフィール
     name: 大塚 義将（おおつか よしまさ）
   articles:
-    title: News
+    title: ニュース
   gigs:
-    title: Gigs
+    title: スケジュール
     this_month: 今月に戻る
     prev_month: 前月
     next_month: 翌月
@@ -237,7 +237,7 @@ ja:
     delete: 削除する
     deleted: ライブ情報を削除しました。
   discographies:
-    title: Discography
+    title: ディスコグラフィ
     disc_title: タイトル
     release_date: 発売日
     artist: アーティスト
@@ -256,7 +256,7 @@ ja:
   photos:
     title: Photos
   contacts:
-    title: Contacts
+    title: お問い合わせ
     inquiry: お問い合わせ
     confirm: お問い合わせ内容の確認
     go_to_confirm: 確認
