@@ -34,6 +34,7 @@ Truffe::Application.routes.draw do
   match 'contacts' => 'index#contacts'
   match 'send_inquiry' => 'index#send_inquiry'
   match 'gigs/:year(/:month)' => 'gigs#index', :constraints => { :year => /\d{4}/ }
+  match 'sitemap', :to => redirect('/sitemap.xml')
 
   namespace :admin do
     resources :index, :users, :gigs, :discographies
