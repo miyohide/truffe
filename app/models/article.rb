@@ -12,6 +12,13 @@
 #
 
 class Article < ActiveRecord::Base
+  TAGS = {
+    news:     'News',
+    schedule: 'Schedule',
+    release:  'Release',
+    books:    'Books'
+  }
+
   default_scope :order => 'published_on desc'
   paginates_per 20
 end

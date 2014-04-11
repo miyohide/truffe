@@ -1,6 +1,6 @@
       <% if article.published_on && article.published_on <= Date.today %>
       <li>
-        <span class="news"><%= article.tags.present? ? article.tags : 'news' %></span>
+        <span class="news"><%= Article::TAGS[article.tags.to_sym] %></span>
         <span class="date"><%= l(article.published_on, :format => "%Y/%m/%d") %></span>
         <span class="heading"><%= article.heading.present? ? article.heading : '' %></span>
       </li>

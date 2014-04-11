@@ -1,6 +1,12 @@
 <div id="news">
   <h2>News</h2>
 
+  <% if signed_in? %>
+    <div class="buttons">
+      <div class="new_button"><%= link_to t('articles.new'), new_article_path %></div>
+    </div>
+  <% end %>
+
   <% unless @articles.blank? %>
     <ul id="news_list">
       <%= render @articles %>

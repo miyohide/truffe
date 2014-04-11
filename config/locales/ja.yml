@@ -210,6 +210,18 @@ ja:
     name: 大塚 義将（おおつか よしまさ）
   articles:
     title: ニュース
+    heading: タイトル
+    content: 内容
+    published_on: 配信日
+    tags: タグ
+    new: 新しい記事を登録
+    create: 登録
+    created: 新しい記事を登録しました。
+    update: 更新
+    edit: 編集する
+    updated: 記事を更新しました。
+    delete: 削除する
+    deleted: 記事を削除しました。
   gigs:
     title: スケジュール
     this_month: 今月に戻る
