@@ -22,10 +22,8 @@ class GigsController < ApplicationController
     end
 
     if @gig_year.nil? || @gig_month.nil?
-      @prev_year = Date.today.year
-      @next_year = Date.today.year
-      @prev_month = Date.today.month
-      @next_month = Date.today.month
+      @prev_year,  @next_year  = Date.today.year
+      @prev_month, @next_month = Date.today.month
     else
       @current_date = (Date.new(@gig_year, @gig_month))
     end
