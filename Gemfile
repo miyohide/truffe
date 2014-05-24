@@ -45,7 +45,7 @@ end
 gem 'bcrypt-ruby', '~> 3.0.0', require: 'bcrypt'
 gem 'jquery-rails'
 gem 'kaminari'
-gem 'newrelic_rpm'
+gem 'newrelic_rpm', '~> 3.8.0.218'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

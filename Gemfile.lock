@@ -85,7 +85,7 @@ GEM
     mime-types (1.19)
     multi_json (1.3.6)
     mysql2 (0.3.11)
-    newrelic_rpm (3.7.1.180)
+    newrelic_rpm (3.8.0.218)
     nokogiri (1.5.5)
     pg (0.14.0)
     polyglot (0.3.3)
@@ -170,7 +170,7 @@ DEPENDENCIES
   kaminari
   letter_opener_web
   mysql2
-  newrelic_rpm
+  newrelic_rpm (~> 3.8.0.218)
   pg
   puma
   rails (= 3.2.1)
