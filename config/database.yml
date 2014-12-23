@@ -14,7 +14,7 @@ development:
   reconnect: false
   database: truffe_development
   pool: 5
-  username: root
+  username:
   password:
   socket: /tmp/mysql.sock
 
@@ -27,7 +27,7 @@ test:
   reconnect: false
   database: truffe_test
   pool: 5
-  username: root
+  username:
   password:
   socket: /tmp/mysql.sock
 
@@ -37,7 +37,7 @@ production:
   reconnect: false
   database: truffe_production
   pool: 5
-  username: root
+  username:
   password:
   socket: /tmp/mysql.sock
   port: 5432
