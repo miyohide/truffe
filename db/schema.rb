@@ -14,9 +14,9 @@
 ActiveRecord::Schema.define(:version => 20140125035013) do
 
   create_table "articles", :force => true do |t|
-    t.string   "heading"
+    t.string   "heading",      :null => false
     t.text     "content"
-    t.date     "published_on"
+    t.date     "published_on", :null => false
     t.string   "tags"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
@@ -37,14 +37,6 @@ ActiveRecord::Schema.define(:version => 20140125035013) do
     t.string   "heading"
     t.text     "body"
     t.string   "note"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "contacts", :force => true do |t|
-    t.string   "name",       :null => false
-    t.string   "email",      :null => false
-    t.text     "body",       :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
