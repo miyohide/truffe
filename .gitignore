@@ -21,4 +21,5 @@ doc/app
 *~
 .DS_Store
 .sass-cache
+.ruby-version
 vendor/bundle
