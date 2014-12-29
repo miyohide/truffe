@@ -1,8 +1,8 @@
 <div id="contacts">
   <h2><%= t('contacts.inquiry') %></h2>
   <div id="inquiry_form">
-    <%= form_for(@contact, :url => contacts_path) do |f| %>
-      <%= render 'shared/error_messages', :object => f.object %>
+    <%= form_for(@contact, url: contacts_path) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
       <div class="field name">
         <%= f.label :name %><br>
         <%= f.text_field :name %>

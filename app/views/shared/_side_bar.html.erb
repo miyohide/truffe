@@ -3,7 +3,7 @@
     <ul id="admin_list">
       <li><%= link_to t('users.list'), users_path %></li>
       <li><%= link_to t('settings.profile'), current_user %></li>
-      <li><%= link_to t('signout.submit'), signout_path, :method => :delete %></li>
+      <li><%= link_to t('signout.submit'), signout_path, method: :delete %></li>
     </ul>
   <% else %>
     <span><%= link_to t('signin.hidden_link'), signin_path %></span>

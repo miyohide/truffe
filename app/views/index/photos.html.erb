@@ -6,8 +6,8 @@
       <div class="background"></div>
       <% @photos.each do |photo| %>
         <li data-no=<%= photo.file_no.to_i %>>
-          <div class="image"><% if photo.file_no %><%= image_tag('photos/photo_' + photo.file_no + '.jpg', :size => '160x120', :alt => 'truffe_photos') %><% end %></div>
-          <div class="photo_date"><% if photo.photo_date %><%= l(photo.photo_date, :format => :default) %><% end %></div>
+          <div class="image"><% if photo.file_no %><%= image_tag('photos/photo_' + photo.file_no + '.jpg', size: '160x120', alt: 'truffe_photos') %><% end %></div>
+          <div class="photo_date"><% if photo.photo_date %><%= l(photo.photo_date, format: :default) %><% end %></div>
           <div class="album"><% if photo.album_no %><%= photo.album_no %><% end %></div>
           <div class="title"><% if photo.title %><%= photo.title %><% end %></div>
           <div class="comments"><% if photo.comment %><%= photo.comment %><% end %></div>

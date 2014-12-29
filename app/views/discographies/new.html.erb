@@ -2,10 +2,10 @@
   <h2>New discography</h2>
   
   <%= form_for(@discography) do |f| %>
-    <%= render 'shared/error_messages', :object => f.object %>
+    <%= render 'shared/error_messages', object: f.object %>
     <div class="field release_date">
       <%= f.label t('discographies.release_date') %>
-      <%= f.date_select(:release_date, { :use_month_numbers => true, :start_year => 2000, :end_year => 2200 }) %>
+      <%= f.date_select(:release_date, { use_month_numbers: true, start_year: 2000, end_year: 2200 }) %>
     </div>
     <div class="field disc_title">
       <%= f.label t('discographies.disc_title') %>

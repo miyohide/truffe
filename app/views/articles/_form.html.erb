@@ -1,5 +1,5 @@
   <%= form_for(@article) do |f| %>
-    <%= render 'shared/error_messages', :object => f.object %>
+    <%= render 'shared/error_messages', object: f.object %>
     <div class="field heading">
       <%= f.label t('articles.heading') %>
       <%= f.text_field :heading %>
@@ -10,7 +10,7 @@
     </div>
     <div class="field published_on">
       <%= f.label t('articles.published_on') %>
-      <%= f.date_select(:published_on, { :use_month_numbers => true, :start_year => 2000, :end_year => 2200 }) %>
+      <%= f.date_select(:published_on, { use_month_numbers: true, start_year: 2000, end_year: 2200 }) %>
     </div>
     <div class="field tags">
       <%= f.label t('articles.tags') %>

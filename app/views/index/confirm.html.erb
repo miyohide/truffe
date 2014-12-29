@@ -1,7 +1,7 @@
 <div id="contacts">
   <h2><%= t('contacts.confirm') %></h2>
   <div id="inquiry_form">
-    <%= form_for(@contact, :url => send_inquiry_path) do |f| %>
+    <%= form_for(@contact, url: send_inquiry_path) do |f| %>
       <%= f.hidden_field :name %>
       <%= f.hidden_field :email %>
       <%= f.hidden_field :subject %>

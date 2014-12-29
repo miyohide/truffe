@@ -1,12 +1,12 @@
 <ul id="gigs_nav_months">
-  <li class="prev_month"><%= link_to "", :path => 'gigs#index', :target_date => @current_date.prev_month %></li>
+  <li class="prev_month"><%= link_to "", path: 'gigs#index', target_date: @current_date.prev_month %></li>
   <% -3.upto(3) do |num| %>
-    <% index = @current_date.advance(:months => num) %>
+    <% index = @current_date.advance(months: num) %>
       <% if index == @current_date %>
         <li class="current_page"><div class="current_page"><%= index.month.to_s %><%= content_tag :span, '. ' + index.year.to_s %></div></li>
       <% else %>
-        <li><%= link_to index.month.to_s, :path => 'gigs#index', :target_date => index %></li>
+        <li><%= link_to index.month.to_s, path: 'gigs#index', target_date: index %></li>
       <% end %>
   <% end %>
-  <li class="next_month"><%= link_to "", :path => 'gigs#index', :target_date => @current_date.next_month %></li>
+  <li class="next_month"><%= link_to "", path: 'gigs#index', target_date: @current_date.next_month %></li>
 </ul>

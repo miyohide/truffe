@@ -1,7 +1,7 @@
 <li>
-  <%= gravatar_for user, :size => 30 %>
+  <%= gravatar_for user, size: 30 %>
   <%= link_to user.name, user %>
   <% if current_user.administrator? %>
-		<div class="delete_button"><%= link_to t('users.delete'), user, :method => :delete, :confirm => "You sure?", :title => "Delete #{user.name}" %></div>
+		<div class="delete_button"><%= link_to t('users.delete'), user, method: :delete, confirm: "You sure?", title: "Delete #{user.name}" %></div>
   <% end %>
 </li>

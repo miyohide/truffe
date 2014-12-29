@@ -8,17 +8,17 @@
   <meta name="apple-mobile-web-app-title" content="Yoshimasa">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title><%= title %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= render :partial => 'shared/google_analytics' %>
+<%= render partial: 'shared/google_analytics' %>
 
 <div id="wrapper" class="l">
   <header>
-    <%= render :partial => 'shared/nav' %>
+    <%= render partial: 'shared/nav' %>
   </header>
 
   <div id="container">
@@ -33,7 +33,7 @@
       <% if signed_in? %>
         <%= link_to t('users.list'), users_path %>
         <%= link_to t('settings.profile'), current_user %>
-        <%= link_to t('signout.submit'), signout_path, :method => :delete %>
+        <%= link_to t('signout.submit'), signout_path, method: :delete %>
       <% end %>
     </div>
   </footer>

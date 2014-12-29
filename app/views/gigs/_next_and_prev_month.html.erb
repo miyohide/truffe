@@ -1,2 +1,2 @@
-<%= link_to "◀ #{ t('gigs.prev_month') }", :path => 'gigs#index', :year => @current_date.prev_month.year, :month => @current_date.prev_month.month %>
-<%= link_to "#{ t('gigs.next_month') } ▶", :path => 'gigs#index', :year => @current_date.next_month.year, :month => @current_date.next_month.month %>
+<%= link_to "◀ #{ t('gigs.prev_month') }", path: 'gigs#index', target_date: @current_date.prev_month %>
+<%= link_to "#{ t('gigs.next_month') } ▶", path: 'gigs#index', target_date: @current_date.next_month %>
