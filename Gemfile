@@ -1,22 +1,23 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.21'
 gem 'gravatar_image_tag', '0.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development do
+group :development, :test do
   gem 'mysql2'
   gem 'puma'
+end
+
+group :development do
   gem 'rspec-rails', '2.11.0'
   gem 'annotate', '>=2.5.0'
   gem 'letter_opener_web'
 end
 
 group :test do
-  gem 'mysql2'
-  gem 'puma'
   gem 'rspec', '2.11.0'
   gem 'webrat', '0.7.1'
   gem 'factory_girl_rails', '1.0'
